@@ -1,0 +1,33 @@
+* {
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    width: 100vw;
+}
+
+.general-button {
+    border-radius: var(--border-radius);
+    height: var(--button-height-lg);
+    padding: 0px 24px;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-lg);
+    line-height: 1;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.button-blue-lg {
+    box-shadow: rgba(14, 14, 14,0.4) 0px 1px 0px 0px;
+    background-color: var(--color-inverse);
+    color: var(--color-tertiary);
+    border: 0px;
+}
+
+.button-white-lg {
+    background-color: transparent;
+    color: var(--color-primary);
+    box-shadow: none;
+    border: 2px solid;
+    border-color: var(--color-primary);
+}

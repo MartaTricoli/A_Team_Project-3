@@ -1,0 +1,33 @@
+:root {
+    --color-primary: #7d4ed2;
+    --color-fourth: #27262c;
+    --color-inverse: #1fc7d4ff;
+    --color-hover: #a8a1c8;
+    --color-hover-nav: #353547;
+    /*colors lm*/
+    --color-secondary: #faf9fa;
+    --color-tertiary: #ffffff;
+    --color-text: #280d5f;
+    --color-text-sub: #7a6eaa;
+    --color-inverse-hover: #6ddbe3;
+    /*colors dm*/
+    --color-secondary-dm: #08060b;
+    --color-text-dm: #eef4ff;
+    --color-inverse-hover-dm: #228f99;
+    /*dimensions*/
+    --font-weight-lg: 600;
+    --font-weight-md: 400;
+    --font-size-xxxl: 88px;
+    --font-size-xxl: 40px;
+    --font-size-xl: 32px;
+    --font-size-lg: 24px;
+    --font-size-md: 20px;
+    --font-size-sm: 16px;
+    --font-size-xs: 14px;
+    --font-size-xxs: 12px;
+    --font-size-xxxs: 9px;
+    /*button height*/
+    --button-height-lg: 48px;
+    --button-height-sm: 32px;
+    --border-radius: 16px;
+}
