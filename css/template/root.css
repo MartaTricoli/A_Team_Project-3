@@ -28,6 +28,6 @@
     --font-size-xxxs: 9px;
     /*button height*/
     --button-height-lg: 48px;
-    --button-height-sm: 32px;
+    --active-utilities: 32px;
     --border-radius: 16px;
 }
