@@ -1,0 +1,119 @@
+.header {
+  border: solid 2px red;
+  margin-top: 127px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.central-header {
+  width: 80%;
+  min-width:auto;
+  background-color: red;
+  height: 898px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.home1 {
+  width: 80%;
+  height: 232px;
+  background-color: rgb(88, 172, 88);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swipper {
+  background-color: aqua;
+  width: 1128px;
+  height: 192px;
+  border-radius: 30px;
+  margin: 0 10px;
+}
+
+.home2 {
+  width:90%;
+  height: 636px;
+  background-color: rgb(184, 148, 218);
+  padding-left: 30px;
+}
+
+.description-DEX {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(54, 38, 38);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.flyBunny{
+  width: 50%;
+}
+
+.description-DEX-textes {
+  width: 50%;
+
+}
+
+.big-text {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+h2 {
+  font-size: 88px;
+  display: flex;
+  color: var(--color-text);
+  width: 100%;
+}
+
+#favourite {
+  color: #7645D9;
+  white-space: normal;
+}
+
+.DEX-description {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-lg);
+  color: var(--color-text-sub);
+  margin-bottom: 24px;
+  width: 570px;
+}
+
+.DEX-buttons button{
+  position: relative;
+  align-items: center;
+  border: 0px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-lg);
+  justify-content: center;
+  line-height: 1;
+  opacity: 1;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 48px;
+  padding: 0px 24px;
+  margin-right: 8px;
+}
+
+#connetti{
+background-color: var(--color-inverse);
+color: white;
+transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+}
+
+#connetti:hover{
+  opacity: 0.5;
+}
