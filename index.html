@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="./assets/img/head/pancakes.ico">
-    <title>Home | PancakeSwap</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/img/head/pancakes.ico">
+  <title>Home | PancakeSwap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            color_primary: '#7d4ed2',
+            color_fourth: '#27262c',
+            color_inverse: '#1fc7d4ff',
+            color_hover: '#a8a1c8',
+            color_hover_nav: '#353547',
+            color_secondary: '#faf9fa',
+            color_tertiary: '#ffffff',
+            color_text: '#280d5f',
+            color_text_sub: '#7a6eaa',
+            color_inverse_hover: '#6ddbe3',
+            color_secondary_dm: '#08060b',
+            color_text_dm: '#eef4ff',
+            color_inverse_hover_dm: '#228f99',
+          },
+          fontSize: {
+            fs_xxxl: '88px',
+            fs_xxl: '40px',
+            fs_xl: '32px',
+            fs_lg: '24px',
+            fs_md: '20px',
+            fs_sm: '16px',
+            fs_xs: '14px',
+            fs_xxs: '12px',
+            fs_xxxs: ' 9px',
+          },
+          boxShadow: {
+            "bs_sha": '0px 1px 0px 0px rgba(14, 14, 14,0.4)'
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer components {  
+      .btn {
+        @apply rounded-2xl py-0 px-6 text-fs_sm font-semibold leading-none opacity-100 cursor-pointer;
+      }
+      .btn_blue {
+        @apply text-color_tertiary shadow-bs_sha bg-color_inverse border-none;
+      }
+      .btn_white {
+        @apply text-color_inverse bg-transparent shadow-none border-solid border-2 border-color_inverse;
+      }
+      .btn:hover {
+        @apply  opacity-60 duration-200;
+      }
+      a {
+        @apply no-underline;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="w-screen">
 </body>
 </html>
