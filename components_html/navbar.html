@@ -5,153 +5,337 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/template/components/navbar.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../javascript/components/navbar/tailwind.js"></script>
+    <style type="text/tailwindcss">
+        @layer components {  
+        .btn {
+          @apply rounded-2xl py-0 px-6 text-fs_sm font-semibold leading-none opacity-100 cursor-pointer;
+        }
+        .btn_blue {
+          @apply text-color_tertiary shadow-bs_sha bg-color_inverse border-none;
+        }
+        .btn_white {
+          @apply text-color_inverse bg-transparent shadow-none border-solid border-2 border-color_inverse;
+        }
+        .btn:hover {
+          @apply  opacity-60 duration-200;
+        }
+        a {
+          @apply no-underline;
+        }
+        /* ANCHOR - FRANCESCO-style */
+        .sub-menu > menu {
+            @apply bg-green-300 absolute  border h-max;
+        }
+        .sub-menu__trade, .sub-menu__earn, .sub-menu__game, .sub-menu__nft, .sub-menu__icon, .sub-menu__net {
+            @apply rounded-2xl
+        }
+        .sub-menu__leng > li {
+            @apply flex justify-center h-8;
+        }
+        .sub-menu > menu > li > a {
+            @apply text-color_text_sub flex items-center h-12 w-69,5 px-4;
+        }
+        .sub-menu > menu > li > button > a {
+            @apply text-color_text flex items-center h-12 px-4;
+        }
+        .sub-menu > menu > li > button > a > img {
+            @apply h-6 w-6 mr-3;
+        }
+        .sub-menu > menu > li > button > .sel {
+            @apply text-color_text flex items-center h-12 px-4 font-semibold text-color_primary;
+        }
+        .navbar__down-left{
+            @apply rounded-2xl h-12 flex flex-row items-center;
+        }
+        .navbar__down-left > a {
+            @apply w-max px-4 flex flex-row items-center text-color_text_sub;
+        }
+        .navbar__down-left:hover{
+            @apply bg-color_nav_hover;
+        }
+        .valor:hover > img {
+            @apply scale-125 ease-in-out duration-300
+        }
+      }
+    </style>
 </head>
 
-<body>
-    <nav class="navbar flex direction-column">
-        <div class="navbar__up flex direction-row">
-            <div class="navbar__up-left flex direction-row items-center">
-                <img src="../assets/img/navbar/phishing-warning-bunny.webp">
-                <div>
-                    <p><strong>PHISHING WARNING:</strong>please make sure you're visiting
-                        <strong>https://pancakeswap.finance</strong> -check the URL carefully.</p>
+<body class="font-Kanit" style="height: 10000px; width: 100vw ">
+    <nav class="navbar flex flex-col z-998 border-b-1 w-screen fixed mr-3">
+        <div
+            class=" flex flex-row items-center justify-center bg-gradient-to-b from-color_primary to-color_nav_top  z-996">
+            <div class="navbar__up flex flex-row items-center h-17,5 w-8/12 relative">
+                <img src="../assets/img/navbar/phishing-warning-bunny.webp" class="h-30,25 w-23 z-996">
+                <div
+                    class="navbar__up-left flex flex-row items-center h-14 w-10/12  bg-color_nav_top_inner rounded-2xl  z-999">
+                    <p class="text-color_warning_center font-normal text-sm pl-2"><strong
+                            class="text-color_warning_top font-bold">PHISHING WARNING:</strong> please make sure you're
+                        visiting
+                        <strong class="text-white font-bold">https://pancakeswap.finance</strong> - check the URL
+                        carefully.
+                    </p>
                 </div>
             </div>
-
-            <button>
+            <button class=" absolute right-6">
                 <img src="../assets/img/navbar/close.svg">
             </button>
         </div>
-
-        <div class="navbar__down flex direction-row">
-            <div>
-                <a href="#"><img src="../assets/img/navbar/title.svg"></a>
-            </div>
-            <div>
-                <a href="">Trade</a>
-                <menu>
-                    <li><a href="#">Swap</a></li>
-                    <li><a href="#">Liquidity</a></li>
-                    <li><a href="#" class="menu-list__adjust flex direction-row items-center">
-                            <p>Perpetual</p><img src="../assets/img/navbar/exitArrow.svg">
-                        </a></li>
-                    <li><a href="#" class="menu-list__adjust flex direction-row items-center">
-                            <p>Bridge</p><img src="../assets/img/navbar/exitArrow.svg">
-                        </a></li>
-                    <li><a href="#">Limit (V2)</a></li>
-                    <li><a href="#">Buy Crypto</a></li>
-                    <li><a href="#">Trading Reward</a></li>
-                </menu>
-            </div>
-
-            <div>
-                <a href="">Earn</a>
-                <menu>
-                    <li><a href="#" class="menu-list__adjust flex direction-row items-center">
-                            <p>CAKE Staking</p>
-                            <div>
-                                <p>NEW</p>
-                            </div>
-                        </a></li>
-                    <li><a href="#">Farms</a></li>
-                    <li><a href="#">Pools</a></li>
-                    <li><a href="#">Position Manager</a></li>
-                    <li><a href="#">Liquid Staking</a></li>
-                    <li><a href="#">Simple Staking</a></li>
-                </menu>
-            </div>
-
-            <div>
-                <a href="#">Game</a>
-                <menu>
-                    <li><a href="#" class="menu-list__adjust flex direction-row items-center">
-                            <p>Gaming Marketplace</p>
-                            <div>
-                                <p>NEW</p>
-                            </div>
-                            <img src="../assets/img/navbar/exitArrow.svg">
-                        </a></li>
-                    <li><a href="#">Prediction (BETA)</a></li>
-                    <li><a href="#">Lottery</a></li>
-                    <li><a href="#">Pottery (BETA)</a></li>
-                </menu>
-            </div>
-
-            <div>
-                <a href="">NFT</a>
-                <menu>
-                    <li><a href="#">Overview</a></li>
-                    <li><a href="#">Collections</a></li>
-                    <li><a href="#">Activity</a></li>
-                </menu>
-            </div>
-
-            <div>
-                <a href="">
-                    <img src="../assets/img/navbar/3points.svg">
-                </a>
-                <menu>
-                    <li><a href="#">info</a></li>
-                    <li><a href="#">IFO</a></li>
-                    <li><a href="#">Affiliate Program</a></li>
-                    <li><a href="#">Voting</a></li>
-                    <li><a href="#">Leaderboard</a></li>
-                    <li><a href="#" class="menu-list__adjust flex direction-row items-center">
-                            <p>Blog</p><img src="../assets/img/navbar/exitArrow.svg">
-                        </a></li>
-                    <li ><a href="#" class="menu-list__adjust flex direction-row items-center">
-                            <p>Docs</p><img src="../assets/img/navbar/exitArrow.svg">
-                        </a></li>
-                </menu>
-            </div>
-
-
-
-            <div>
-                <a href="#" class="valor__adjust flex direction-row items-center">
-                    <img src="../assets/img/navbar/pancakeswapcls.svg">
-                    <p>$2.319</p>
-                </a>
-            </div>
-
-            <div>
-                <img src="../assets/img/navbar/globalLenguage.svg">
-                <div></div>
-            </div>
-
-            <div>
-                <img src="../assets/img/navbar/impostations.svg">
-            </div>
-
-            <div class="navbar__down-right">
-                <div class="navbar__down-right-network flex direction-row items-center">
-                    <li>
-                        <a href="">
-                            <img src="../assets/img/navbar/">imgBNB Smart Chain
-                        </a>
-                    </li>
-                    <img src="../assets/img/navbar/dropdownArrow.svg">
+        <div class="navbar__down border-b-1 border flex flex-row items-center justify-between bg-red-100 z-997">
+            <div class="flex flex-row items-center ml-3">
+                <div>
+                    <a href="#"><img src="../assets/img/navbar/title.svg" class="w-40 h-14"></a>
                 </div>
-                <menu>
-                    <li>select a Network</li>
-                    <li><a href=""><img src="../assets/img/navbar/">imgBNB Smart Chain</a></li>
-                    <li><a href=""><img src="../assets/img/navbar/">Ethereum</a></li>
-                    <li><a href=""><img src="../assets/img/navbar/">Polygon zkEVM</a></li>
-                    <li><a href=""><img src="../assets/img/navbar/">zkSync Era</a></li>
-                    <li><a href=""><img src="../assets/img/navbar/">Arbitrum One</a></li>
-                    <li><a href=""><img src="../assets/img/navbar/">Linea Mainnet</a></li>
-                    <li><a href=""><img src="../assets/img/navbar/">Base</a></li>
-                    <li><a href=""><img src="../assets/img/navbar/">opBNB</a></li>
-                    <li><a href=""><img src="../assets/img/navbar/">Aptos</a></li>
-                </menu>
+                <div class="navbar__down-left ml-6">
+                        <a href="">
+                            Trade
+                        </a>
+                </div>
+
+                <div>
+                    <div class="navbar__down-left">
+                        <a href="">
+                            Earn
+                            <div class="w-2 h-2 bg-green-500 rounded-full ml-3"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="navbar__down-left">
+                        <a href="#">
+                            Game
+                            <div class="w-2 h-2 bg-green-500 rounded-full ml-3"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="navbar__down-left">
+                        <a href="">NFT</a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="navbar__down-left">
+                        <a href="" class="w-max px-4 flex flex-row items-center">
+                            <svg viewBox="0 0 24 24" color="textSubtle" width="20px" xmlns="http://www.w3.org/2000/svg"
+                                class="sc-bcPKhP Eouil h-6 w-6 fill-color_text_sub">
+                                <path
+                                    d="M6 10C4.9 10 4 10.9 4 12C4 13.1 4.9 14 6 14C7.1 14 8 13.1 8 12C8 10.9 7.1 10 6 10ZM18 10C16.9 10 16 10.9 16 12C16 13.1 16.9 14 18 14C19.1 14 20 13.1 20 12C20 10.9 19.1 10 18 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div>
-                <button><a href="">Connect Wallet</a></button>
-            </div>
 
+
+            <div class="navbar__down flex flex-row items-center">
+                <div class="mr-3">
+                    <a href="#" class="valor flex flex-row items-center ">
+                        <img src="../assets/img/navbar/pancakeswapcls.svg" class="h-6 w-6 mr-2 valor-hover:scale-125 ease-in-out duration-300">
+                        <p class="text-fs_sm font-semibold text-color_text_sub">$2.319</p>
+                    </a>
+                </div>
+
+                <div>
+                    <div class="flex flex-row items-center">
+                        <button class="px-2 hover:opacity-60 duration-200 active:translate-y-0.5">
+                            <svg viewBox="0 0 24 24" color="textSubtle" width="24px" mr="0.5rem"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="sc-bcPKhP eHEBsq h-6 w-6 mr-2 fill-color_text_sub">
+                                <path
+                                    d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM18.92 8H15.97C15.65 6.75 15.19 5.55 14.59 4.44C16.43 5.07 17.96 6.35 18.92 8ZM12 4.04C12.83 5.24 13.48 6.57 13.91 8H10.09C10.52 6.57 11.17 5.24 12 4.04ZM4.26 14C4.1 13.36 4 12.69 4 12C4 11.31 4.1 10.64 4.26 10H7.64C7.56 10.66 7.5 11.32 7.5 12C7.5 12.68 7.56 13.34 7.64 14H4.26ZM5.08 16H8.03C8.35 17.25 8.81 18.45 9.41 19.56C7.57 18.93 6.04 17.66 5.08 16ZM8.03 8H5.08C6.04 6.34 7.57 5.07 9.41 4.44C8.81 5.55 8.35 6.75 8.03 8ZM12 19.96C11.17 18.76 10.52 17.43 10.09 16H13.91C13.48 17.43 12.83 18.76 12 19.96ZM14.34 14H9.66C9.57 13.34 9.5 12.68 9.5 12C9.5 11.32 9.57 10.65 9.66 10H14.34C14.43 10.65 14.5 11.32 14.5 12C14.5 12.68 14.43 13.34 14.34 14ZM14.59 19.56C15.19 18.45 15.65 17.25 15.97 16H18.92C17.96 17.65 16.43 18.93 14.59 19.56ZM16.36 14C16.44 13.34 16.5 12.68 16.5 12C16.5 11.32 16.44 10.66 16.36 10H19.74C19.9 10.64 20 11.31 20 12C20 12.69 19.9 13.36 19.74 14H16.36Z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div></div>
+                </div>
+
+                <div class="flex flex-row items-center">
+                    <button class="px-2 hover:opacity-60 duration-200 active:translate-y-0.5">
+                        <svg viewBox="0 0 24 24" height="24" width="24" color="textSubtle"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="sc-bcPKhP Eouil h-6 w-6 mr-2 fill-color_text_sub ">
+                            <path
+                                d="M19.43 12.98C19.47 12.66 19.5 12.34 19.5 12C19.5 11.66 19.47 11.34 19.43 11.02L21.54 9.37C21.73 9.22 21.78 8.95 21.66 8.73L19.66 5.27C19.54 5.05 19.27 4.97 19.05 5.05L16.56 6.05C16.04 5.65 15.48 5.32 14.87 5.07L14.49 2.42C14.46 2.18 14.25 2 14 2H9.99996C9.74996 2 9.53996 2.18 9.50996 2.42L9.12996 5.07C8.51996 5.32 7.95996 5.66 7.43996 6.05L4.94996 5.05C4.71996 4.96 4.45996 5.05 4.33996 5.27L2.33996 8.73C2.20996 8.95 2.26996 9.22 2.45996 9.37L4.56996 11.02C4.52996 11.34 4.49996 11.67 4.49996 12C4.49996 12.33 4.52996 12.66 4.56996 12.98L2.45996 14.63C2.26996 14.78 2.21996 15.05 2.33996 15.27L4.33996 18.73C4.45996 18.95 4.72996 19.03 4.94996 18.95L7.43996 17.95C7.95996 18.35 8.51996 18.68 9.12996 18.93L9.50996 21.58C9.53996 21.82 9.74996 22 9.99996 22H14C14.25 22 14.46 21.82 14.49 21.58L14.87 18.93C15.48 18.68 16.04 18.34 16.56 17.95L19.05 18.95C19.28 19.04 19.54 18.95 19.66 18.73L21.66 15.27C21.78 15.05 21.73 14.78 21.54 14.63L19.43 12.98ZM12 15.5C10.07 15.5 8.49996 13.93 8.49996 12C8.49996 10.07 10.07 8.5 12 8.5C13.93 8.5 15.5 10.07 15.5 12C15.5 13.93 13.93 15.5 12 15.5Z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="navbar__down-right mr-2">
+                    <button
+                        class="navbar__down-right-network btn flex flex-row items-center bg-color_net text-color_text px-0 shadow-net_sha">
+                        <li class="flex flex-row items-center h-8 pr-2">
+                            <a href="" class="flex flex-row items-center h-8">
+                                <img src="../assets/img/navbar/networkIcons/bnbSmartChain.png" class="h-8 w-8">
+                                <p class="ml-2 mr-1 h-8 w-max flex flex-row items-center">BNB Smart Chain</p>
+                                <img src="../assets/img/navbar/dropdownArrow.svg " class="h-6 w-6">
+                            </a>
+
+                        </li>
+                    </button>
+                </div>
+
+                <div class="mr-7">
+                    <button class="btn btn_blue h-8 px-4">Connect Wallet</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="sub-menu">
+            <menu class="sub-menu__trade left-49">
+                <li><a href="#">Swap</a></li>
+                <li><a href="#">Liquidity</a></li>
+                <li><a href="#">
+                        <p class="text-color_text_sub">Perpetual</p>
+                        <svg viewBox="0 0 24 24" color="textSubtle" width="20px" xmlns="http://www.w3.org/2000/svg"
+                            class="sc-bcPKhP Eouil fill-color_text_sub">
+                            <path
+                                d="M16.3 8.09014C15.91 8.48014 15.91 9.10014 16.3 9.49014L18.2 11.3901H9C8.45 11.3901 8 11.8401 8 12.3901C8 12.9401 8.45 13.3901 9 13.3901H18.2L16.3 15.2901C15.91 15.6801 15.91 16.3001 16.3 16.6901C16.69 17.0801 17.31 17.0801 17.7 16.6901L21.29 13.1001C21.68 12.7101 21.68 12.0801 21.29 11.6901L17.7 8.09014C17.31 7.70014 16.69 7.70014 16.3 8.09014ZM4 19.3901H11C11.55 19.3901 12 19.8401 12 20.3901C12 20.9401 11.55 21.3901 11 21.3901H4C2.9 21.3901 2 20.4901 2 19.3901V5.39014C2 4.29014 2.9 3.39014 4 3.39014H11C11.55 3.39014 12 3.84014 12 4.39014C12 4.94014 11.55 5.39014 11 5.39014H4V19.3901Z">
+                            </path>
+                        </svg>
+                    </a></li>
+                <li><a href="#">
+                        <p class="text-color_text_sub">Bridge</p>
+                        <svg viewBox="0 0 24 24" color="textSubtle" width="20px" xmlns="http://www.w3.org/2000/svg"
+                            class="sc-bcPKhP Eouil fill-color_text_sub">
+                            <path
+                                d="M16.3 8.09014C15.91 8.48014 15.91 9.10014 16.3 9.49014L18.2 11.3901H9C8.45 11.3901 8 11.8401 8 12.3901C8 12.9401 8.45 13.3901 9 13.3901H18.2L16.3 15.2901C15.91 15.6801 15.91 16.3001 16.3 16.6901C16.69 17.0801 17.31 17.0801 17.7 16.6901L21.29 13.1001C21.68 12.7101 21.68 12.0801 21.29 11.6901L17.7 8.09014C17.31 7.70014 16.69 7.70014 16.3 8.09014ZM4 19.3901H11C11.55 19.3901 12 19.8401 12 20.3901C12 20.9401 11.55 21.3901 11 21.3901H4C2.9 21.3901 2 20.4901 2 19.3901V5.39014C2 4.29014 2.9 3.39014 4 3.39014H11C11.55 3.39014 12 3.84014 12 4.39014C12 4.94014 11.55 5.39014 11 5.39014H4V19.3901Z">
+                            </path>
+                        </svg>
+                    </a></li>
+                <li><a href="#">Limit (V2)</a></li>
+                <li><a href="#">Buy Crypto</a></li>
+                <li><a href="#">Trading Reward</a>
+                </li>
+            </menu>
+
+            <menu class="sub-menu__earn left-66,875">
+                <li><a href="#">Farms</a></li>
+                <li><a href="#">
+                        <p class="text-color_text_sub">CAKE Staking</p>
+                        <div class="border-2 border-green-500 rounded-2xl ml-2">
+                            <p class="text-green-500 px-2">NEW</p>
+                        </div>
+                    </a></li>
+                <li><a href="#">Pools</a></li>
+                <li><a href="#">Position Manager</a></li>
+                <li><a href="#">Liquid Staking</a></li>
+                <li><a href="#">Simple Staking</a></li>
+            </menu>
+
+            <menu class="sub-menu__game left-87,933">
+                <li><a href="#">
+                        <p class="text-color_text_sub">Gaming Marketplace</p>
+                        <div>
+                            <p class="text-green-500">NEW</p>
+                        </div>
+                        <svg viewBox="0 0 24 24" color="textSubtle" width="20px" xmlns="http://www.w3.org/2000/svg"
+                            class="sc-bcPKhP Eouil fill-color_text_sub">
+                            <path
+                                d="M16.3 8.09014C15.91 8.48014 15.91 9.10014 16.3 9.49014L18.2 11.3901H9C8.45 11.3901 8 11.8401 8 12.3901C8 12.9401 8.45 13.3901 9 13.3901H18.2L16.3 15.2901C15.91 15.6801 15.91 16.3001 16.3 16.6901C16.69 17.0801 17.31 17.0801 17.7 16.6901L21.29 13.1001C21.68 12.7101 21.68 12.0801 21.29 11.6901L17.7 8.09014C17.31 7.70014 16.69 7.70014 16.3 8.09014ZM4 19.3901H11C11.55 19.3901 12 19.8401 12 20.3901C12 20.9401 11.55 21.3901 11 21.3901H4C2.9 21.3901 2 20.4901 2 19.3901V5.39014C2 4.29014 2.9 3.39014 4 3.39014H11C11.55 3.39014 12 3.84014 12 4.39014C12 4.94014 11.55 5.39014 11 5.39014H4V19.3901Z">
+                            </path>
+                        </svg>
+                    </a></li>
+                <li><a href="#">Prediction (BETA)</a></li>
+                <li><a href="#">Lottery</a></li>
+                <li><a href="#">Pottery (BETA)</a></li>
+            </menu>
+            
+            <menu class="sub-menu__nft left-111,218">
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Activity</a></li>
+            </menu>
+
+            <menu class="sub-menu__icon left-126,257">
+                <li><a href="#">info</a></li>
+                <li><a href="#">IFO</a></li>
+                <li><a href="#">Affiliate Program</a></li>
+                <li><a href="#">Voting</a></li>
+                <li class="border-y"><a href="#">Leaderboard</a></li>
+                <li><a href="#">
+                        Blog
+                        <svg viewBox="0 0 24 24" color="textSubtle" width="20px" xmlns="http://www.w3.org/2000/svg"
+                            class="sc-bcPKhP Eouil fill-color_text_sub">
+                            <path
+                                d="M16.3 8.09014C15.91 8.48014 15.91 9.10014 16.3 9.49014L18.2 11.3901H9C8.45 11.3901 8 11.8401 8 12.3901C8 12.9401 8.45 13.3901 9 13.3901H18.2L16.3 15.2901C15.91 15.6801 15.91 16.3001 16.3 16.6901C16.69 17.0801 17.31 17.0801 17.7 16.6901L21.29 13.1001C21.68 12.7101 21.68 12.0801 21.29 11.6901L17.7 8.09014C17.31 7.70014 16.69 7.70014 16.3 8.09014ZM4 19.3901H11C11.55 19.3901 12 19.8401 12 20.3901C12 20.9401 11.55 21.3901 11 21.3901H4C2.9 21.3901 2 20.4901 2 19.3901V5.39014C2 4.29014 2.9 3.39014 4 3.39014H11C11.55 3.39014 12 3.84014 12 4.39014C12 4.94014 11.55 5.39014 11 5.39014H4V19.3901Z">
+                            </path>
+                        </svg>
+                    </a></li>
+                <li><a href="#">
+                        Docs
+                        <svg viewBox="0 0 24 24" color="textSubtle" width="20px" xmlns="http://www.w3.org/2000/svg"
+                            class="sc-bcPKhP Eouil fill-color_text_sub">
+                            <path
+                                d="M16.3 8.09014C15.91 8.48014 15.91 9.10014 16.3 9.49014L18.2 11.3901H9C8.45 11.3901 8 11.8401 8 12.3901C8 12.9401 8.45 13.3901 9 13.3901H18.2L16.3 15.2901C15.91 15.6801 15.91 16.3001 16.3 16.6901C16.69 17.0801 17.31 17.0801 17.7 16.6901L21.29 13.1001C21.68 12.7101 21.68 12.0801 21.29 11.6901L17.7 8.09014C17.31 7.70014 16.69 7.70014 16.3 8.09014ZM4 19.3901H11C11.55 19.3901 12 19.8401 12 20.3901C12 20.9401 11.55 21.3901 11 21.3901H4C2.9 21.3901 2 20.4901 2 19.3901V5.39014C2 4.29014 2.9 3.39014 4 3.39014H11C11.55 3.39014 12 3.84014 12 4.39014C12 4.94014 11.55 5.39014 11 5.39014H4V19.3901Z">
+                            </path>
+                        </svg>
+                    </a></li>
+            </menu>
+            
+            <menu class="sub-menu__leng overflow-y-scroll max-h-96 w-40 rounded-lg right-92">
+                <li class=""><button>العربية</button></li>
+                <li><button>বাংলা</button></li>
+                <li><button>English</button></li>
+                <li><button>Deutsch</button></li>
+                <li><button>Ελληνικά</button></li>
+                <li><button>Español</button></li>
+                <li><button>Suomalainen</button></li>
+                <li><button>Filipino</button></li>
+                <li><button>Français</button></li>
+                <li><button>हिंदी</button></li>
+                <li><button>Magyar</button></li>
+                <li><button>Bahasa Indonesia</button></li>
+                <li><button>Italiano</button></li>
+                <li><button>日本語</button></li>
+                <li><button>한국어</button></li>
+                <li><button>Nederlands</button></li>
+                <li><button>Polski</button></li>
+                <li><button>Português (Brazil)</button></li>
+                <li><button>Português</button></li>
+                <li><button>Română</button></li>
+                <li><button>Русский</button></li>
+                <li><button>Svenska</button></li>
+                <li><button>தமிழ்</button></li>
+                <li><button>Türkçe</button></li>
+                <li><button>Українська</button></li>
+                <li><button>Tiếng Việt</button></li>
+                <li><button>简体中文</button></li>
+                <li><button>繁體中文</button></li>
+            </menu>
+
+            <menu class="sub-menu__net right-37,644 w-69,5">
+                <li class="text-color_text_sub flex items-center px-4 border-b h-12">Select a Network</li>
+                <li><button><a href="#BNB" class="sel"><img
+                                src="../assets/img/navbar/networkIcons/bnbSmartChain.png">BNB Smart Chain</a></button></li>
+                <li><button><a href="#ETH"><img
+                                src="../assets/img/navbar/networkIcons/ethereum.png">Ethereum</a></button></li>
+                <li><button><a href="#PLG"><img src="../assets/img/navbar/networkIcons/polygon-zkEVM.png">Polygon zkEVM</a></button>
+                </li>
+                <li><button><a href="#ZSR"><img src="../assets/img/navbar/networkIcons/zkSyncEra.png">zkSync Era</a></button></li>
+                <li><button><a href="#ARBO"><img src="../assets/img/navbar/networkIcons/arbitrymOne.png">Arbitrum One</a></button>
+                </li>
+                <li><button><a href="#LINM"><img src="../assets/img/navbar/networkIcons/lineaMainnet.png">Linea Mainnet</a></button>
+                </li>
+                <li><button><a href="#BASE"><img src="../assets/img/navbar/networkIcons/base.png">Base</a></button></li>
+                <li><button><a href="#OPB"><img src="../assets/img/navbar/networkIcons/opBNB.png">opBNB</a></button>
+                </li>
+                <li><button><a href="#APT"><img src="../assets/img/navbar/networkIcons/aptos.png">Aptos</a></button>
+                </li>
+            </menu>
         </div>
     </nav>
 </body>
