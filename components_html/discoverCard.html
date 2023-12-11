@@ -48,6 +48,20 @@
                     padding: {
                         60: '3.75rem',
                     },
+                    width: {
+                        1152: '72rem',
+                        340: '21.25rem'
+                    },
+                    height: {
+                        417: '26rem',
+                        45: '0.45rem'
+                    },
+                    lineHeight: {
+                        120: '1.2rem',
+                    },
+                    margin: {
+                        72: '4.5rem',
+                    },
                 }
              }
         }
@@ -74,153 +88,201 @@
 </head>
 <body class="w-screen font-Kanit">
 <!-- Discover card Marta------------------------------------------------------------------------------------------------- -->
-<section class="discover pt-60"> <!--discover the ecosystem-->
+<section class="discover pt-60 bg-color_secondary relative"> <!--discover the ecosystem-->
     <div class="flex justify-center">
         <img src="../assets/img/discover_card/title_bunny.svg" alt="" class="w-12 h-12 mb-6">
     </div>
     <h3 class="pr-5 pl-5 font-semibold text-fs_xxl text-color_text text-center">Discover the <span class="text-new_title_violet">Ecosystem</span></h3>
-    <div class="discover_card"> <!--first card-->
-        <div class="discover_card-img"><!--coniglietto-->
-            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bunny.9642e689.png&w=384&q=75" alt="">
-        </div>
-        <div class="discover_card-content"> <!--card content-->
-            <h4>Trade</h4>
-            <div class="inner_card">
-                <div><!--first inner card-->
-                    <a href="">
-                        <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-swap-purple.0f7423e0.png&w=128&q=75" alt="">
-                        <div>Swap</div>
-                        <p>Trade crypto instantly across multiple chains</p>
-                        <div>Trade Now <img src="../assets/img/discover_card/symbol.svg" alt=""></div>  
-                    </a>
-                </div>
-                <div> <!--second inner card-->
-                    <a href="">
-                        <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-liquidity-purple.f6e03e35.png&w=128&q=75" alt="">
-                        <div>Liquidity</div>
-                        <p>Fund liquidity pools, earn trading fees</p>
-                        <div>Add Now <img src="../assets/img/discover_card/symbol.svg" alt=""></div>   
-                    </a>
-                </div>
-                <div> <!--third card-->
-                    <a href="">
-                        <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bridge-purple.ce50dee0.png&w=128&q=75" alt="">
-                        <div>Bridge</div>
-                        <p>Seamlessly transfer assets across chains</p>
-                        <div>Bridge Now <img src="../assets/img/discover_card/symbol.svg" alt=""></div> 
-                    </a>
-                </div>
-                <div> <!--fourth card-->
-                    <a href="">
-                        <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-perpetual-purple.ec8d03c7.png&w=128&q=75" alt="">
-                        <div>Perpetual</div>
-                        <p>Trade endlessly without expiration dates</p>
-                        <div>Trade Now <img src="../assets/img/discover_card/symbol.svg" alt=""></div>  
-                    </a>
-                </div>
-                <div> <!--fifth card-->
-                    <a href="">
-                        <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-buy-crypto-purple.9398802d.png&w=128&q=75" alt="">
-                        <div>Buy Crypto</div>
-                        <p>Buy crypto with your preferred currency and payment method</p>
-                        <div>Buy Now <img src="../assets/img/discover_card/symbol.svg" alt=""></div>    
-                    </a>
+    <div class="flex flex-col w-full items-center">
+        <div class="discover_card bg-color_tertiary w-1152 h-417 mb-12 mt-14 flex flex-row items-center gap-y-8 pt-12 pb-6 px-6 rounded-3xl justify-end"> <!--first card-->
+            <div class="discover_card-img"><!--coniglietto-->
+                <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bunny.9642e689.png&w=384&q=75" alt="" class="absolute w-340 -ml-[21rem] -mt-[10.25rem]">
+            </div>
+            <div class="discover_card-content flex flex-col ml-8 w-[73%]"> <!--card content-->
+                <h4 class="text-new_title_violet font-semibold text-fs_xl pl-3 mb-6">Trade</h4>
+                <div class="inner_card flex flex-row justify-between">
+                    <div class="p-3"><!--first inner card-->
+                        <a href="">
+                            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-swap-purple.0f7423e0.png&w=128&q=75" alt="" class="h-[45%] mb-3">
+                            <div class="text-color_text font-semibold text-fs_md mb-2">Swap</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-3">Trade crypto instantly across multiple chains</p>
+                            <div class="flex">
+                                <div class="font-semibold text-fs_sm text-color_text_sub">Trade Now </div>
+                                <img src="../assets/img/discover_card/symbol.svg" alt="">     
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-3"> <!--second inner card-->
+                        <a href="">
+                            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-liquidity-purple.f6e03e35.png&w=128&q=75" alt="" class="h-[45%] mb-3">
+                            <div class="text-color_text font-semibold text-fs_md mb-2">Liquidity</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-3">Fund liquidity pools, earn trading fees</p>
+                            <div class="flex">
+                                <div class="font-semibold text-fs_sm text-color_text_sub">Add Now</div>
+                                <img src="../assets/img/discover_card/symbol.svg" alt="">     
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-3"> <!--third card-->
+                        <a href="">
+                            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bridge-purple.ce50dee0.png&w=128&q=75" alt="" class="h-[45%] mb-3">
+                            <div class="text-color_text font-semibold text-fs_md mb-2">Bridge</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-3">Seamlessly transfer assets across chains</p>
+                            <div class="flex">
+                                <div class="font-semibold text-fs_sm text-color_text_sub">Bridge Now</div>
+                                <img src="../assets/img/discover_card/symbol.svg" alt="">    
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-3"> <!--fourth card-->
+                        <a href="">
+                            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-perpetual-purple.ec8d03c7.png&w=128&q=75" alt="" class="h-[45%] mb-3">
+                            <div class="text-color_text font-semibold text-fs_md mb-2">Perpetual</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-3">Trade endlessly without expiration dates</p>
+                            <div class="flex">
+                                <div class="font-semibold text-fs_sm text-color_text_sub">Trade Now </div>
+                                <img src="../assets/img/discover_card/symbol.svg" alt="">    
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-3"> <!--fifth card-->
+                        <a href="">
+                            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-buy-crypto-purple.9398802d.png&w=128&q=75" alt="" class="h-[45%] mb-3">
+                            <div class="text-color_text font-semibold text-fs_md mb-2">Buy Crypto</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-3">Buy crypto with your preferred currency and payment method</p>
+                            <div class="flex">
+                                <div class="font-semibold text-fs_sm text-color_text_sub">Buy Now</div>
+                                <img src="../assets/img/discover_card/symbol.svg" alt="">    
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="discover_card"> <!--second card-->
-        <div class="discover_card-img"><!--coniglietto-->
-            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-bunny.41c37da0.png&w=384&q=75" alt="">
-        </div>
-        <div class="discover_card-content"> <!--card content-->
-            <h4>Ear</h4>
-            <div class="inner_card">
-                <div><!--first inner card-->
-                    <a href="">
-                        <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-farm-purple.6b03a333.png&w=128&q=75" alt="">
-                        <div>Farm</div>
-                        <p>Stake LP tokens, harvest CAKE</p>
-                        <div>Stake Now <img src="../assets/img/discover_card/symbol.svg" alt=""></div>    
-                    </a>
-                </div>
-                <div> <!--second inner card-->
-                    <a href="">
-                        <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-pools-purple.7675dfc7.png&w=128&q=75" alt="">
-                        <div>Pools</div>
-                        <p>Stake CAKE, earn various rewards</p>
-                        <div>Stake Now <img src="../assets/img/discover_card/symbol.svg" alt=""></div>    
-                    </a>
-                </div>
-                <div> <!--third card-->
-                    <a href="">
-                        <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-liquidity-staking-purple.d6256831.png&w=128&q=75" alt="">
-                        <div>Liquid Staking</div>
-                        <p>Earn rewards while retaining asset flexibility</p>
-                        <div>Add Now <img src="../assets/img/discover_card/symbol.svg" alt=""></div>  
-                    </a>
-                </div>
-                <div> <!--fourth card-->
-                    <a href="">
-                        <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-fixed-staking-purple.bd79143e.png&w=128&q=75" alt="">
-                        <div>Simple Staking</div>
-                        <p>Earn rewards hassle-free with single-sided staking</p>
-                        <div>Stake Now <img src="../assets/img/discover_card/symbol.svg" alt=""></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="discover_card"> <!--third card-->
-        <div class="discover_card-img"><!--coniglietto-->
-            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-nft-bunny.f324ef31.png&w=384&q=75" alt="">
-        </div>
-        <div class="discover_card-content"> <!--card content-->
-            <h4>Game & NFT</h4>
-            <div class="inner_card">
-                <div><!--first inner card-->
-                    <a href="">
-                        <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-prediction-purple.f867d1e1.png&w=128&q=75" alt="">
-                        <div>Prediction</div>
-                        <p>Forecast token prices within minutes</p>
-                        <div>Try Now <img src="../assets/img/discover_card/symbol.svg" alt=""></div>    
-                    </a>
-                </div>
-                <div> <!--second inner card-->
-                    <a href="">
-                        <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pancake-protectors-purple.11e4f385.png&w=128&q=75" alt="">
-                        <div>Pancake Protectors</div>
-                        <p>Immersive PvP & PvE tower-defense GameFi</p>
-                        <div>Play Now <img src="../assets/img/discover_card/symbol.svg" alt=""></div>    
-                    </a>
-                </div>
-                <div> <!--third card-->
-                    <a href="">
-                        <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-lottery-purple.71072fed.png&w=128&q=75" alt="">
-                        <div>Lottery</div>
-                        <p>Enter for a chance to win CAKE prize pools</p>
-                        <div>Try Now <img src="../assets/img/discover_card/symbol.svg" alt=""></div>    
-                    </a>
-                </div>
-                <div> <!--fourth card-->
-                    <a href="">
-                        <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pottery-purple.4dbf4b98.png&w=128&q=75" alt="">
-                        <div>Pottery</div>
-                        <p>Stake CAKE, acquire pottery tickets, win prizes</p>
-                        <div>Try Now <img src="../assets/img/discover_card/symbol.svg" alt=""></div>   
-                    </a>
-                </div>
-                <div> <!--fifth card-->
-                    <a href="">
-                        <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft-marketplace-purple.5742e4d8.png&w=128&q=75" alt="">
-                        <div>NFT Marketplace</div>
-                        <p>Trade uniqueNFT's on BNB Chain</p>
-                        <div>Trade Now <img src="../assets/img/discover_card/symbol.svg" alt=""></div>    
-                    </a>
+        <div class="discover_card bg-color_tertiary w-1152 h-431 mb-12 flex flex-row justify-between pt-12 pb-6 px-6 rounded-3xl"> <!--second card-->
+            <div class="discover_card-content flex flex-col"> <!--card content-->
+                <h4 class="text-new_title_violet font-semibold text-fs_xl pl-3 mb-6">Ear</h4>
+                <div class="inner_card flex flex-row">
+                    <div><!--first inner card-->
+                        <a href="">
+                            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-farm-purple.6b03a333.png&w=128&q=75" alt="">
+                            <div class="text-color_text font-semibold text-fs_md">Farm</div>
+                            <p class="font-normal text-fs_xs text-color_text">Stake LP tokens, harvest CAKE</p>
+                            <div class="flex">
+                                <div class="font-semibold text-fs_sm text-color_text_sub">Stake Now</div>
+                                <img src="../assets/img/discover_card/symbol.svg" alt="">    
+                            </div>
+                                
+                        </a>
+                    </div>
+                    <div> <!--second inner card-->
+                        <a href="">
+                            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-pools-purple.7675dfc7.png&w=128&q=75" alt="">
+                            <div class="text-color_text font-semibold text-fs_md">Pools</div>
+                            <p class="font-normal text-fs_xs text-color_text">Stake CAKE, earn various rewards</p>
+                            <div class="flex">
+                                <div class="font-semibold text-fs_sm text-color_text_sub">Stake Now</div>
+                                <img src="../assets/img/discover_card/symbol.svg" alt="">    
+                            </div>
+                        </a>
+                    </div>
+                    <div> <!--third card-->
+                        <a href="">
+                            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-liquidity-staking-purple.d6256831.png&w=128&q=75" alt="">
+                            <div class="text-color_text font-semibold text-fs_md">Liquid Staking</div>
+                            <p class="font-normal text-fs_xs text-color_text">Earn rewards while retaining asset flexibility</p>
+                            <div class="flex">
+                                <div class="font-semibold text-fs_sm text-color_text_sub">Add Now</div>
+                                <img src="../assets/img/discover_card/symbol.svg" alt="">    
+                            </div>
+                        </a>
+                    </div>
+                    <div> <!--fourth card-->
+                        <a href="">
+                            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-fixed-staking-purple.bd79143e.png&w=128&q=75" alt="">
+                            <div class="text-color_text font-semibold text-fs_md">Simple Staking</div>
+                            <p class="font-normal text-fs_xs text-color_text">Earn rewards hassle-free with single-sided staking</p>
+                            <div class="flex">
+                                <div class="font-semibold text-fs_sm text-color_text_sub">Stake Now</div>
+                                <img src="../assets/img/discover_card/symbol.svg" alt="">    
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
+            <div class="discover_card-img"><!--coniglietto-->
+                <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-bunny.41c37da0.png&w=384&q=75" alt="">
+            </div>
         </div>
+        <div class="discover_card bg-color_tertiary w-1152 h-431 flex flex-row justify-between pt-12 pb-6 px-6 rounded-3xl"> <!--third card-->
+            <div class="discover_card-img"><!--coniglietto-->
+                <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-nft-bunny.f324ef31.png&w=384&q=75" alt="">
+            </div>
+            <div class="discover_card-content flex flex-col"> <!--card content-->
+                <h4 class="text-new_title_violet font-semibold text-fs_xl pl-3 mb-6">Game & NFT</h4>
+                <div class="inner_card flex flex-row">
+                    <div><!--first inner card-->
+                        <a href="">
+                            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-prediction-purple.f867d1e1.png&w=128&q=75" alt="">
+                            <div class="text-color_text font-semibold text-fs_md">Prediction</div>
+                            <p class="font-normal text-fs_xs text-color_text">Forecast token prices within minutes</p>
+                            <div class="flex">
+                                <div class="font-semibold text-fs_sm text-color_text_sub">Try Now</div>
+                                <img src="../assets/img/discover_card/symbol.svg" alt="">    
+                            </div>
+                        </a>
+                    </div>
+                    <div> <!--second inner card-->
+                        <a href="">
+                            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pancake-protectors-purple.11e4f385.png&w=128&q=75" alt="">
+                            <div class="text-color_text font-semibold text-fs_md">Pancake Protectors</div>
+                            <p class="font-normal text-fs_xs text-color_text">Immersive PvP & PvE tower-defense GameFi</p>
+                            <div class="flex">
+                                <div class="font-semibold text-fs_sm text-color_text_sub">Play Now</div>
+                                <img src="../assets/img/discover_card/symbol.svg" alt="">    
+                            </div>
+                        </a>
+                    </div>
+                    <div> <!--third card-->
+                        <a href="">
+                            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-lottery-purple.71072fed.png&w=128&q=75" alt="">
+                            <div class="text-color_text font-semibold text-fs_md">Lottery</div>
+                            <p class="font-normal text-fs_xs text-color_text">Enter for a chance to win CAKE prize pools</p>
+                            <div class="flex">
+                                <div class="font-semibold text-fs_sm text-color_text_sub">Try Now</div>
+                                <img src="../assets/img/discover_card/symbol.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div> <!--fourth card-->
+                        <a href="">
+                            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pottery-purple.4dbf4b98.png&w=128&q=75" alt="">
+                            <div class="text-color_text font-semibold text-fs_md">Pottery</div>
+                            <p class="font-normal text-fs_xs text-color_text">Stake CAKE, acquire pottery tickets, win prizes</p>
+                            <div class="flex">
+                                <div class="font-semibold text-fs_sm text-color_text_sub">Try Now</div>
+                                <img src="../assets/img/discover_card/symbol.svg" alt="">    
+                            </div>
+                               
+                        </a>
+                    </div>
+                    <div> <!--fifth card-->
+                        <a href="">
+                            <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft-marketplace-purple.5742e4d8.png&w=128&q=75" alt="">
+                            <div class="text-color_text font-semibold text-fs_md">NFT Marketplace</div>
+                            <p class="font-normal text-fs_xs text-color_text">Trade uniqueNFT's on BNB Chain</p>
+                            <div class="flex">
+                                <div class="font-semibold text-fs_sm text-color_text_sub">Trade Now</div>
+                                <img src="../assets/img/discover_card/symbol.svg" alt="">    
+                            </div>
+                                
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>    
     </div>
+    
 </section>
 <!-- Discover card Marta------------------------------------------------------------------------------------------------- -->
 </body>
