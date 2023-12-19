@@ -1,5 +1,13 @@
 tailwind.config = {
     theme: {
+        screens: {
+            //ANCHOR - FRANCESCO-media-query
+            'mq1': '1075px',
+            'mq2': '1023px',
+            'mq3': '967px',
+            'mq4': '851px',
+            //-----------------------------
+          },
         extend: {
             colors: {
                 color_primary: '#7d4ed2',
@@ -22,6 +30,12 @@ tailwind.config = {
                 color_nav_hover: '#eff4f5',
                 color_warning_top: '#ffb237',
                 color_warning_center: '#bdc2c4',
+                color_warning_mobile_up: '#5b3f91',
+                color_warning_mobile_down: '#3c2563',
+                color_darkM_button_net: '#353547',
+                color_darkM_text_nav: '#b8add2',
+                color_darkM_border_nav: '#383241',
+                color_darkM_hover: '#353547',
                 //-----------------------------
             },
             fontSize: {
@@ -42,6 +56,7 @@ tailwind.config = {
                 "bs_sha": '0px 1px 0px 0px rgba(14, 14, 14,0.4)',
                 //ANCHOR - FRANCESCO-boxShadow
                 "net_sha": '0px 2px 0px 0px rgba(215, 219, 220, 1)',
+                "net_shaD": '0px 2px 0px 0px rgba(48, 48,64, 1)',
                 //-----------------------------
             },
             spacing: {
@@ -59,6 +74,7 @@ tailwind.config = {
                 '111,218' : '27.805rem',
                 '126,257' : '31.564rem',
                 '277,75' : '69.438rem',
+                '95%' : '95%',
                 '99%' : '99%',
                 //-----------------------------
             },
