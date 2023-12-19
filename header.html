@@ -4,86 +4,305 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/template/header.css">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            Kanit: ['Kanit'],
+          },
+          colors: {
+            color_primary: '#7d4ed2',
+            color_fourth: '#27262c',
+            color_inverse: '#1fc7d4ff',
+            color_hover: '#a8a1c8',
+            color_hover_nav: '#353547',
+            color_secondary: '#faf9fa',
+            color_tertiary: '#ffffff',
+            color_text: '#280d5f',
+            color_text_sub: '#7a6eaa',
+            color_inverse_hover: '#6ddbe3',
+            color_secondary_dm: '#08060b',
+            color_text_dm: '#eef4ff',
+            color_inverse_hover_dm: '#228f99',
+            //ANCHOR - color text emilio
+            color_favourite_lm: '#7645d9',
+            color_ethereum: '#627AD8',
+          },
+          fontSize: {
+            fs_xxxl: '88px',
+            fs_xxl: '40px',
+            fs_xl: '32px',
+            fs_lg: '24px',
+            fs_md: '20px',
+            fs_sm: '16px',
+            fs_xs: '14px',
+            fs_xxs: '12px',
+            fs_xxxs: ' 9px',
+            //ANCHOR - emilio font size
+            fs_l: "1.75rem",///28px
+            fs_Spain: '4rem'
+          },
+          boxShadow: {
+            "bs_sha": '0px 1px 0px 0px rgba(14, 14, 14,0.4)'
+          },
+          //ANCHOR - emilio margin
+          margin: {
+            '31.5': '7.875rem', //126
+          },
+          //ANCHOR - emilio margin
+          padding: {
+            '7.5': '1.875rem',//30
+          },
+          //ANCHOR - emilio max-width
+          spacing: {
+            '162': '40.5rem', //648
+            '5.9xl': '70.5rem', //1128
+            '6.4xl': '75rem', //1200
+            '200': '50rem',//800px
+            '34': '8.3rem',
+            '50': '12.5rem',
+            '17': '4.25rem',
+
+          },
+          //ANCHOR - emilio lineheigth
+          lineHeight: {
+            '6.5': '1.625rem', //26
+            '24.25': '6.063rem', //97px
+          },
+          zIndex: {
+            '1': '1',
+            '2': '2',
+            '3': '3',
+            '4': '4',
+            '5': '5',
+            '6': '6',
+            '7': '7',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer components {  
+      ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7a6eaa;
+            border-radius: 8px;
+        }
+      .btn {
+        @apply rounded-2xl py-0 px-6 text-fs_sm font-semibold leading-none opacity-100 cursor-pointer;
+      }
+      .btn_blue {
+        @apply text-color_tertiary shadow-bs_sha bg-color_inverse border-none;
+      }
+      .btn_white {
+        @apply text-color_inverse bg-transparent shadow-none border-solid border-2 border-color_inverse;
+      }
+      .btn:hover {
+        @apply  opacity-60 duration-200;
+      }
+      a {
+        @apply no-underline;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <section class="header flex justify-center items-center">
-    <div class="central-header">
-      <div class="home1">
-        <div class="swipper"></div>
-      </div>
-      <div class="home2">
-        <div class="description-DEX">
-          <div class="description-DEX-textes">
+  <header class="header flex flex-col justify-center items-center mt-31.5 w-screen">
+    <div class="central-header flex flex-col w-6.4xl p-5 ">
+      <div style="border-radius: 32px;"
+        class="home1 relative z-1 max-w-5.9xl h-48  flex items-center justify-center relative">
+        <div
+          style="border-radius: 32px; background-image: url(assets/img/Header/spain-meetup-bg.webp); background-size: cover; background-repeat: no-repeat;;"
+          class="swipper w-5.9xl h-48 absolute z-1 flex flex-row">
+          <div class="swipper1-title p-6">
+            <div class="swipper1-title-pankackeSwap-img  w-32 h-5"> <img src="assets/img/Header/ethXpancakeswap.png"
+                alt=""></div>
+            <div
+              style="-webkit-text-stroke: 3px #341A57; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(252, 239, 121) 100%);"
+              class="text-fs_l font-extrabold leading-7 "> PankackeSwap Meetup</div>
+            <div
+              style="-webkit-text-stroke: 3px #341A57; background-clip: text; color: transparent; background-image: linear-gradient(166.02deg, rgb(208, 107, 107) -5.1%, rgb(255, 235, 55) 75.24%);"
+              class="text-fs_Spain ml-24 font-black">Spain</div>
+          </div>
 
-            <div class="big-Text">
-              <h2>Everyone's <span id="favourite">Favourite</span> <span class="dex">DEX</span></h2>
+          <div class="swipper1-time flex flex-row justify-center items-center space-between gap-1">
+            <div
+              class="countdown w-24 h-34 bg-color_text rounded-3xl px-2.5 flex flex-col items-center justify-center border-solid border-2 border-white">
+              <div class="font-normal text-fs_Spain font-inter text-color_tertiary">XX</div>
+              <div class="font-normal text-fs_xxs text-color_tertiary">DAYS</div>
+            </div>
+            <div
+              class="countdown w-24 h-34 bg-color_text rounded-3xl px-2.5 flex flex-col items-center justify-center border-solid border-2 border-white">
+              <div class="font-normal text-fs_Spain font-inter text-color_tertiary">XX</div>
+              <div class="font-normal text-fs_xxs text-color_tertiary">HOURS</div>
+            </div>
+            <div
+              class="countdown w-24 h-34 bg-color_text rounded-3xl px-2.5 flex flex-col items-center justify-center border-solid border-2 border-white">
+              <div class="font-normal text-fs_Spain font-inter text-color_tertiary">XX</div>
+              <div class="font-normal text-fs_xxs text-color_tertiary">MINUTES</div>
+            </div>
+            <div
+              class="countdown w-24 h-34 bg-color_text rounded-3xl px-2.5 flex flex-col items-center justify-center border-solid border-2 border-white">
+              <div class="font-normal text-fs_Spain font-inter text-color_tertiary">XX</div>
+              <div class="font-normal text-fs_xxs text-color_tertiary">SECONDS</div>
             </div>
 
-            <div class="DEX-description">
-              <p>Trade, earn, and own crypto on the all-in-one multichain DEX</p>
+          </div>
+
+          <div class="swipper1-ticket flex flex-row items-center flex-1">
+            <div class="ticket z-1 h-0.5">
+              <img src="assets/img/Header/free-ticket.png" alt="" class="h-17 w-[11.75rem]">
+            </div>
+            <div class="spain-bunny w-1/2 h-full overflow-hidden z-2 ml-auto">
+              <img src="assets/img/Header/spain-BUNNY.png" alt="Bunny_Spain"
+                class="w-50 h-60 object-cover absolute -top-12 right-6">
+            </div>
+          </div>
+
+        </div>
+        <div class="hidden swipper w-5.9xl h-40 bg-yellow-500 absolute z-2"></div>
+        <div class="hidden swipper w-5.9xl h-40 bg-blue-500 absolute z-3"></div>
+        <div class="hidden swipper w-5.9xl h-40 bg-orange-500 absolute z-4"></div>
+        <div class="hidden swipper w-5.9xl h-40 bg-pink-500 absolute z-5"></div>
+        <div class="hidden swipper w-5.9xl h-40 bg-gray-500 absolute z-6"></div>
+        <div class="hidden swipper w-5.9xl h-40   bg-teal-500 absolute z-7"></div>
+        <div class="z-4 absolute w-[6.75rem] h-2 flex flex-row top-44">
+          <span class=" bg-white h-2 w-[1rem] rounded-l-xl"></span>
+          <span class=" bg-white h-2 w-[1rem]"></span> <!-- apply con classe per quelli che non sono attivi /francesco/ -->
+          <span class=" bg-white h-2 w-[1rem]"></span>
+          <span class=" bg-white h-2 w-[1rem]"></span>
+          <span class=" bg-white h-2 w-[1rem]"></span>
+          <span class=" bg-white h-2 w-[1rem]"></span>
+          <span class=" bg-white h-2 w-[1rem] rounded-r-xl"></span>
+        </div>
+      </div>
+
+      <div class="home2 flex mt-10 pl-7.5">
+        <div class="description-DEX flex items-center justify-center w-min">
+          <div class="description-DEX-textes">
+
+            <div class="big-Text ">
+              <h2 class="text-fs_xxxl font-semibold leading-24.25 text-color_text mb-4 pr-2.5">
+                <div>Everyone's</div>
+                <div class="whitespace-nowrap"><span class="text-color_favourite_lm ">Favourite</span>DEX</div>
+              </h2>
+            </div>
+
+            <div class="DEX-description ">
+              <p class="text-color_inverse text-fs_lg leading-6.5 mb-6">Trade, earn, and own crypto on the all-in-one
+                multichain DEX</p>
             </div>
 
             <div class="DEX-buttons">
-              <button id="connetti"
-              class="general-button button-blue-lg general-button:hover"><a href="">Connetti wallet</a></button>
-              <button class=" general-button button-white-lg general-button:hover"><a href="">Scambia ora</a></button>
+              <button id="connetti" class="btn btn_blue btn:hover h-12 mr-2"><a href="">Connetti
+                  wallet</a></button>
+              <button class="btn btn_white btn:hover h-12"><a href="">Scambia ora</a></button>
             </div>
           </div>
         </div>
 
-        <div class="flyBunny">dwd</div>
-
-
+        <div class="flyBunny w-full h-162">
+          <video muted autoplay loop class="w-full h-full object-cover" style="outline: none;">
+            <source src="assets/img/Header/bunnyv2.webm" type="video/mp4">
+          </video>
+        </div>
       </div>
 
-
-
     </div>
-    <div class="home3 flex justify-center items-center">
-      <div class="home3-internal">
+    <div class="home3 flex justify-center items-center w-full">
+      <div class="home3-internal w-6.4xl flex flex-col items-center py-12 px-4">
         <div class="home3-title">
-          <p>Shaping the Future of Decentralized Trading:</p>
+          <p class="text-fs_xl mb-1 text-color_text">Shaping the Future of Decentralized Trading:</p>
         </div>
         <div class="home3-title">
-          <p>PancakeSwap’s Unstoppable Expansion</p>
+          <p class="text-fs_xl mb-12 text-color_text">PancakeSwap’s Unstoppable Expansion</p>
         </div>
-        <div class="home3-totals">
-          <div class="total">
-            <div class="total-name">
+        <div style="justify-content: space-between;" class="home3-totals flex flex-row w-200 mb-12">
+          <div class="total flex flex-col items-center">
+            <div class="total-name text-color_text text-fs_md font-semibold h-5">
               <p>Total User:</p>
             </div>
-            <div class="total-number">1,298,723</div>
-            <div class="total-days">negli ultimi 30 giorni</div>
+            <div class="total-number text-color_favourite_lm text-fs_xxl font-semibold h-11 mb-2">1,298,723</div>
+            <div class="total-days text-color_text_sub text-fs_sm font-semibold h-5 items-center">negli ultimi 30 giorni
+            </div>
           </div>
 
-          <div class="total">
-            <div class="total-name">
+          <div class="total flex flex-col items-center">
+            <div class="total-name text-color_text text-fs_md font-semibold h-5">
               <p>Total User:</p>
             </div>
-            <div class="total-number">1,298,723</div>
-            <div class="total-days">negli ultimi 30 giorni</div>
+            <div class="total-number text-color_favourite_lm text-fs_xxl font-semibold h-11 mb-2">19,666,379</div>
+            <div class="total-days text-color_text_sub text-fs_sm font-semibold h-5 items-center">negli ultimi 30 giorni
+            </div>
           </div>
 
-          <div class="total">
-            <div class="total-name">
+          <div class="total flex flex-col items-center">
+            <div class="total-name text-color_text text-fs_md font-semibold h-5 ">
               <p>Total User:</p>
             </div>
-            <div class="total-number">1,298,723</div>
-            <div class="total-days">negli ultimi 30 giorni</div>
+            <div class="total-number text-color_favourite_lm text-fs_xxl font-semibold h-11 mb-2">$1,458,599,502</div>
+            <div class="total-days text-color_text_sub text-fs_sm font-semibold h-5 items-center">negli ultimi 30 giorni
+            </div>
           </div>
 
         </div>
-        <div class="home3-swiping">
-          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        <div class="home3-swiping w-full overflow-hidden flex flex-row rounded-xl">
+          <div
+            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
+            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
+            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
+          </div>
+          <div
+            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
+            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
+            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
+          </div>
+          <div
+            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
+            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
+            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
+          </div>
+          <div
+            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
+            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
+            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
+          </div>
+          <div
+            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
+            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
+            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
+          </div>
+          <div
+            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
+            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
+            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
+          </div>
+          <div
+            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
+            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
+            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
+          </div>
+          <div
+            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
+            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
+            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
+          </div>
         </div>
       </div>
     </div>
 
-  </section>
+  </header>
 </body>
 
 </html>

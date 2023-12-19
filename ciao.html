@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch Example</title>
+</head>
+<body>
+
+  <!-- Aggiungi un pulsante per scatenare la richiesta -->
+  <button id="fetchButton">Carica dati</button>
+
+  <!-- Aggiungi un elemento div per visualizzare i dati -->
+  <div id="resultContainer"></div>
+
+  <script>
+    // Funzione che sarà chiamata quando l'utente fa clic sul pulsante
+    async function fetchData() {
+      // URL della risorsa da cui desideri ottenere i dati
+      var apiUrl = 'https://jsonplaceholder.typicode.com/todos/1';
+
+      // Sezione try-catch per gestire gli errori
+      try {
+        // Esegui la richiesta fetch
+        var response = await fetch(apiUrl);
+
+        // Controlla se la risposta è OK
+        if (!response.ok) {
+          throw new Error('Errore nella richiesta');
+        }
+
+        // Parsa la risposta JSON
+        var data = await response.json();
+
+        // Visualizza i dati ottenuti all'interno di un elemento div
+        var resultContainer = document.getElementById('resultContainer');
+        resultContainer.innerHTML = 'Dati ottenuti: ' + JSON.stringify(data.id);
+      } catch (error) {
+        console.error('Errore:', error);
+      }
+    }
+
+    // Ottenere il riferimento all'elemento HTML del pulsante
+    var fetchButton = document.getElementById('fetchButton');
+
+    // Aggiungere un event listener per l'evento 'click'
+    fetchButton.addEventListener('click', fetchData);
+  </script>
+
+</body>
+</html>

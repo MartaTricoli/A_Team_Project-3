@@ -1,4 +1,4 @@
-.header {
+/* .header {
   margin-top: 126px;
   flex-direction: column;
 }
@@ -8,7 +8,7 @@
   width: 1128px;
   height: 192px;
   padding: 20px;
-}
+} 
 
 .swipper {
   background-color: red;
@@ -29,7 +29,9 @@
   height: 648px;
   display: flex;
   align-items: center;
-}
+}*/
+
+
 
 h2 {
   font-size: var(--font-size-xxxl);
@@ -99,7 +101,7 @@ h2 {
   justify-content: space-around;
   margin-bottom: 48px;
 }
-
+//////////
 .total {
   display: flex;
   flex-direction: column;
