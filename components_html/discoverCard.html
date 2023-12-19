@@ -27,6 +27,7 @@
                         color_text_dm: '#eef4ff',
                         color_inverse_hover_dm: '#228f99',
                         new_title_violet: '#7645d9',
+                        new_border: "#e7e3eb",
                     },
                     fontSize: {
                         fs_xxxl: '88px',
@@ -82,6 +83,13 @@
             }
             a {
                 @apply no-underline;
+            }
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #7a6eaa;
+                border-radius: 8px;
             }
         }
     </style>
@@ -290,6 +298,36 @@
                 <a href="">Buy CAKE</a>
             </button>
             <a href="" class="font-semibold text-fs_sm text-color_inverse flex flex-row hover:opacity-60 hover:underline">Learn <img src="../assets/img/discover_card/learn_svg.svg" alt="" class=" ml-2"></a>   
+        </div>
+    </div>
+
+    <div>
+        <!-- moneta -->
+    </div>
+
+    <div class="flex flex-col items-center">
+        <h4 class="font-semibold text-fs_lg text-color_text mt-10">CAKE <span class="text-new_title_violet">Figures</span></h4>
+        <div class="flex mt-6 mb-[50px]">
+            <div class="flex flex-col py-3 px-4 grow justify-center items-center">
+                <div class="font-semibold text-fs_sm text-color_text">Circulating Supply</div>
+                <div class="font-semibold text-fs_lg text-new_title_violet">263,093,894</div><!--effetto aggiornamento-->
+            </div>
+            <div class="flex flex-col py-3 px-4 border-l border-new_border grow justify-center items-center">
+                <div class="font-semibold text-fs_sm text-color_text">Total supply</div>
+                <div class="font-semibold text-fs_lg text-new_title_violet">386,271,349</div><!--effetto aggiornamento-->
+            </div>
+            <div class="flex flex-col py-3 px-4 border-l border-new_border grow justify-center items-center">
+                <div class="font-semibold text-fs_sm text-color_text">Market cap</div>
+                <div class="font-semibold text-fs_lg text-new_title_violet">$590 million</div><!--effetto aggiornamento-->
+            </div>
+            <div class="flex flex-col py-3 px-4 border-l border-new_border grow justify-center items-center">
+                <div class="font-semibold text-fs_sm text-color_text">Token Burn</div>
+                <div class="font-semibold text-fs_lg text-new_title_violet">1,099,492,387</div><!--effetto aggiornamento-->
+            </div>
+            <div class="flex flex-col py-3 px-4 border-l border-new_border grow justify-center items-center">
+                <div class="font-semibold text-fs_sm text-color_text">Current emissions</div>
+                <div class="font-semibold text-fs_lg text-new_title_violet">1,36/block</div><!--effetto aggiornamento-->
+            </div>    
         </div>
     </div>
 </section>
