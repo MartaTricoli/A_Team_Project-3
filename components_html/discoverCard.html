@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: "class",
             theme: {
                 extend: {
                     colors: {
@@ -28,6 +29,11 @@
                         color_inverse_hover_dm: '#228f99',
                         new_title_violet: '#7645d9',
                         new_border: "#e7e3eb",
+                        new_black: '#08060b',
+                        new_white: '#f4eeff',
+                        new_darker_white: '#b8add2',
+                        new_light_purple: '#a881fc',
+                        new_grey: '#383241',
                     },
                     fontSize: {
                         fs_xxxl: '88px',
@@ -63,6 +69,7 @@
                     margin: {
                         72: '4.5rem',
                     },
+                    darkMode: "class",
                 }
              }
         }
@@ -91,129 +98,132 @@
                 background: #7a6eaa;
                 border-radius: 8px;
             }
+            .dm_bg {
+                @apply bg-gradient-to-br from-[#313d5c] to-[#3d2a54]
+            }
         }
     </style>
 </head>
 <body class="w-screen font-Kanit">
 <!-- Discover card Marta------------------------------------------------------------------------------------------------- -->
-<section class="discover pt-60 bg-color_secondary relative"> <!--discover the ecosystem-->
+<section class="discover pt-60 bg-color_secondary relative dark:bg-new_black"> <!--discover the ecosystem-->
     <div class="flex justify-center">
         <img src="../assets/img/discover_card/title_bunny.svg" alt="" class="w-12 h-12 mb-6">
     </div>
-    <h3 class="pr-5 pl-5 font-semibold text-fs_xxl text-color_text text-center">Discover the <span class="text-new_title_violet">Ecosystem</span></h3>
+    <h3 class="pr-5 pl-5 font-semibold text-fs_xxl text-color_text text-center dark:text-new_white">Discover the <span class="text-new_title_violet dark:text-new_light_purple">Ecosystem</span></h3>
     <div class="flex flex-col w-full items-center pb-12">
-        <div class="discover_card bg-color_tertiary w-1152 h-417 mb-12 mt-14 flex flex-row items-center gap-y-8 pt-12 pb-6 px-6 rounded-3xl justify-end"> <!--first card-->
+        <div class="discover_card bg-color_tertiary w-1152 h-417 mb-12 mt-14 flex flex-row items-center gap-y-8 pt-12 pb-6 px-6 rounded-3xl justify-end dark:dm_bg"> <!--first card-->
             <div class="discover_card-img"><!--coniglietto-->
                 <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bunny.9642e689.png&w=384&q=75" alt="" class="absolute w-340 -ml-[21rem] -mt-[10.25rem]">
             </div>
             <div class="discover_card-content flex flex-col ml-8 w-[73%]"> <!--card content-->
-                <h4 class="text-new_title_violet font-semibold text-fs_xl mb-6 pl-3">Trade</h4>
+                <h4 class="text-new_title_violet font-semibold text-fs_xl mb-6 pl-3 dark:text-new_light_purple">Trade</h4>
                 <div class="inner_card flex flex-row justify-between">
                     <div class="p-3 w-1/6">
                         <a href="" class="group"><!--first inner card-->
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-swap-purple.0f7423e0.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-swap.54b4ddab.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit">Swap</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-6 leading-4 w-fit">Trade crypto instantly across multiple chains</p>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-swap-purple.0f7423e0.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-swap.54b4ddab.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit dark:text-new_white">Swap</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-6 leading-4 w-fit dark:text-new_white">Trade crypto instantly across multiple chains</p>
                             <div class="flex">
-                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse">Trade Now </div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>     
+                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Trade Now </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>     
                             </div>
                         </a>    
                     </div>
                     
                     <div class="p-3 w-1/6"> <!--second inner card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-liquidity-purple.f6e03e35.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-liquidity.510b229a.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2">Liquidity</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-6 leading-4">Fund liquidity pools, earn trading fees</p>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-liquidity-purple.f6e03e35.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-liquidity.510b229a.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white">Liquidity</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-6 leading-4 dark:text-new_white">Fund liquidity pools, earn trading fees</p>
                             <div class="flex">
-                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse">Add Now</div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>     
+                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Add Now</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>     
                             </div>
                         </a>
                     </div>
                     <div class="p-3 w-1/6"> <!--third card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bridge-purple.ce50dee0.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bridge.8cabbcc1.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px]"></div>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bridge-purple.ce50dee0.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bridge.8cabbcc1.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0"></div>
                             <div ></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2">Bridge</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-6 leading-4">Seamlessly transfer assets across chains</p>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white">Bridge</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-6 leading-4 dark:text-new_white">Seamlessly transfer assets across chains</p>
                             <div class="flex">
-                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse">Bridge Now</div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
+                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Bridge Now</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
                             </div>
                         </a>
                     </div>
                     <div class="p-3 w-1/6"> <!--fourth card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-perpetual-purple.ec8d03c7.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-perpetual.ccae00d8.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2">Perpetual</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-6 leading-4">Trade endlessly without expiration dates</p>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-perpetual-purple.ec8d03c7.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-perpetual.ccae00d8.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white">Perpetual</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-6 leading-4 dark:text-new_white">Trade endlessly without expiration dates</p>
                             <div class="flex">
-                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse">Trade Now </div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
+                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Trade Now </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
                             </div>
                         </a>
                     </div>
                     <div class="p-3 w-1/6"> <!--fifth card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-buy-crypto-purple.9398802d.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-buy-crypto.24f53a80.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2">Buy Crypto</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-2 leading-4">Buy crypto with your preferred currency and payment method</p>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-buy-crypto-purple.9398802d.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-buy-crypto.24f53a80.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white">Buy Crypto</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-2 leading-4 dark:text-new_white">Buy crypto with your preferred currency and payment method</p>
                             <div class="flex">
-                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse">Buy Now</div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
+                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Buy Now</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
                             </div>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="discover_card bg-color_tertiary w-1152 h-431 mb-12 flex flex-row justify-between pt-12 pb-6 px-6 rounded-3xl justify-start"> <!--second card-->
+        <div class="discover_card bg-color_tertiary w-1152 h-431 mb-12 flex flex-row justify-between pt-12 pb-6 px-6 rounded-3xl justify-start dark:dm_bg"> <!--second card-->
             <div class="discover_card-content flex flex-col w-[77%]"> <!--card content-->
-                <h4 class="text-new_title_violet font-semibold text-fs_xl pl-3 mb-4">Earn</h4>
+                <h4 class="text-new_title_violet font-semibold text-fs_xl pl-3 mb-4 dark:text-new_light_purple">Earn</h4>
                 <div class="inner_card flex flex-row justify-between">
                     <div class="p-5 w-[25%] mr-[10px]"><!--first inner card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-farm-purple.6b03a333.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-farm.ee3ccfee.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit">Farm</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-3 leading-4">Stake LP tokens, harvest CAKE</p>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-farm-purple.6b03a333.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-farm.ee3ccfee.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit dark:text-new_white">Farm</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-3 leading-4 dark:text-new_white">Stake LP tokens, harvest CAKE</p>
                             <div class="flex">
-                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse">Stake Now</div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
+                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Stake Now</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
                             </div>
                         </a>
                     </div>
                     <div class="p-5 w-[25%] mr-[10px]" > <!--second inner card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-pools-purple.7675dfc7.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-pools.8c557984.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit">Pools</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-3 leading-4">Stake CAKE, earn various rewards</p>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-pools-purple.7675dfc7.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-pools.8c557984.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit dark:text-new_white">Pools</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-3 leading-4 dark:text-new_white">Stake CAKE, earn various rewards</p>
                             <div class="flex">
-                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse">Stake Now</div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
+                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Stake Now</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
                             </div>
                         </a>
                     </div>
                     <div class="p-5 w-[25%] mr-[10px]"> <!--third card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-liquidity-staking-purple.d6256831.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-liquidity-staking.373dde04.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit">Liquid Staking</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-3 leading-4">Earn rewards while retaining asset flexibility</p>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-liquidity-staking-purple.d6256831.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-liquidity-staking.373dde04.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit dark:text-new_white">Liquid Staking</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-3 leading-4 dark:text-new_white">Earn rewards while retaining asset flexibility</p>
                             <div class="flex">
-                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse">Add Now</div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
+                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Add Now</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
                             </div>
                         </a>
                     </div>
                     <div class="p-5 w-[25%]"> <!--fourth card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-fixed-staking-purple.bd79143e.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-fixed-staking.7c7edcd5.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit">Simple Staking</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-3 leading-4">Earn rewards hassle-free with single-sided staking</p>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-fixed-staking-purple.bd79143e.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-fixed-staking.7c7edcd5.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit dark:text-new_white">Simple Staking</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-3 leading-4 dark:text-new_white">Earn rewards hassle-free with single-sided staking</p>
                             <div class="flex">
-                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse">Stake Now</div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
+                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Stake Now</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
                             </div>
                         </a>
                     </div>
@@ -223,65 +233,65 @@
                 <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-bunny.41c37da0.png&w=384&q=75" alt="" class="absolute w-[296px] -ml-[14rem] -mt-[0rem]">
             </div>
         </div>
-        <div class="discover_card bg-color_tertiary w-1152 h-431 flex flex-row justify-between pt-12 pb-6 px-6 rounded-3xl justify-end"> <!--third card-->
+        <div class="discover_card bg-color_tertiary w-1152 h-431 flex flex-row justify-between pt-12 pb-6 px-6 rounded-3xl justify-end dark:dm_bg"> <!--third card-->
             <div class="discover_card-img"><!--coniglietto-->
                 <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-nft-bunny.f324ef31.png&w=384&q=75" alt="" class="absolute w-340 -ml-[4.5rem] mt-[5px]">
             </div>
             <div class="discover_card-content flex flex-col ml-8 w-[73%]"> <!--card content-->
-                <h4 class="text-new_title_violet font-semibold text-fs_xl pl-3 mb-4">Game & NFT</h4>
+                <h4 class="text-new_title_violet font-semibold text-fs_xl pl-3 mb-4 dark:text-new_light_purple">Game & NFT</h4>
                 <div class="inner_card flex flex-row justify-between">
                     <div class="p-3 w-1/6"><!--first inner card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-prediction-purple.f867d1e1.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-prediction.3db677eb.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[28px]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit">Prediction</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-6 leading-4 w-fit">Forecast token prices within minutes</p>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-prediction-purple.f867d1e1.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-prediction.3db677eb.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[28px] transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit dark:text-new_white">Prediction</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-6 leading-4 w-fit dark:text-new_white">Forecast token prices within minutes</p>
                             <div class="flex">
-                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse">Try Now</div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
+                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Try Now</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
                             </div>
                         </a>
                     </div>
                     <div class="p-3 w-1/6"> <!--second inner card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pancake-protectors-purple.11e4f385.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pancake-protectors.17ec1fff.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[27px]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit leading-5">Pancake Protectors</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-4 leading-4 w-fit">Immersive PvP & PvE tower-defense GameFi</p>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pancake-protectors-purple.11e4f385.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pancake-protectors.17ec1fff.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[27px] transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit leading-5 dark:text-new_white">Pancake Protectors</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-4 leading-4 w-fit dark:text-new_white">Immersive PvP & PvE tower-defense GameFi</p>
                             <div class="flex">
-                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse">Play Now</div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
+                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Play Now</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
                             </div>
                         </a>
                     </div>
                     <div class="p-3 w-1/6"> <!--third card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-lottery-purple.71072fed.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-lottery.1c2471cf.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[28px]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-1 w-fit">Lottery</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-7 leading-4 w-fit">Enter for a chance to win CAKE prize pools</p>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-lottery-purple.71072fed.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-lottery.1c2471cf.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[28px] transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-1 w-fit dark:text-new_white">Lottery</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-7 leading-4 w-fit dark:text-new_white">Enter for a chance to win CAKE prize pools</p>
                             <div class="flex">
-                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse">Try Now</div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>
+                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Try Now</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>
                             </div>
                         </a>
                     </div>
                     <div class="p-3 w-1/6"> <!--fourth card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pottery-purple.4dbf4b98.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pottery.d967e763.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[25px]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit">Pottery</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-3 leading-4 w-fit">Stake CAKE, acquire pottery tickets, win prizes</p>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pottery-purple.4dbf4b98.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pottery.d967e763.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[25px] transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit dark:text-new_white">Pottery</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-3 leading-4 w-fit dark:text-new_white">Stake CAKE, acquire pottery tickets, win prizes</p>
                             <div class="flex">
-                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse">Try Now</div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
+                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Try Now</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
                             </div>
                         </a>
                     </div>
                     <div class="p-3 w-1/6"> <!--fifth card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft-marketplace-purple.5742e4d8.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft-marketplace.7b24a057.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[23px]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit leading-5">NFT Marketplace</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-5 leading-4 w-fit">Trade uniqueNFT's on BNB Chain</p>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft-marketplace-purple.5742e4d8.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft-marketplace.7b24a057.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[23px] transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit leading-5 dark:text-new_white">NFT Marketplace</div>
+                            <p class="font-normal text-fs_xs text-color_text mb-5 leading-4 w-fit dark:text-new_white">Trade uniqueNFT's on BNB Chain</p>
                             <div class="flex">
-                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse">Trade Now</div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>   
+                                <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Trade Now</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>   
                             </div> 
                         </a>
                     </div>
@@ -291,8 +301,8 @@
     </div>
 
     <div class="pt-12 flex flex-col items-center">
-        <h3 class="pr-5 pl-5 font-semibold text-fs_xxl text-color_text">Unlock the Full Potential of DeFi with <span class="text-new_title_violet">CAKE</span></h3>
-        <p class="font-semibold text-fs_md text-color_text_sub text-center w-[47%] my-8" >Experience the power of community ownership, global governance, and explore infinite use cases within the PancakeSwap ecosystem</p>
+        <h3 class="pr-5 pl-5 font-semibold text-fs_xxl text-color_text dark:text-new_white">Unlock the Full Potential of DeFi with <span class="text-new_title_violet dark:text-new_light_purple">CAKE</span></h3>
+        <p class="font-semibold text-fs_md text-color_text_sub text-center w-[47%] my-8 dark:text-new_darker_white" >Experience the power of community ownership, global governance, and explore infinite use cases within the PancakeSwap ecosystem</p>
         <div class="flex flex-row items-center">
             <button class="btn btn_blue h-12 mr-3.5">
                 <a href="">Buy CAKE</a>
@@ -306,27 +316,27 @@
     </div>
 
     <div class="flex flex-col items-center">
-        <h4 class="font-semibold text-fs_lg text-color_text mt-10">CAKE <span class="text-new_title_violet">Figures</span></h4>
+        <h4 class="font-semibold text-fs_lg text-color_text mt-10 dark:text-new_white">CAKE <span class="text-new_title_violet dark:text-new_light_purple">Figures</span></h4>
         <div class="flex mt-6 mb-[50px]">
-            <div class="flex flex-col py-3 px-4 grow justify-center items-center">
-                <div class="font-semibold text-fs_sm text-color_text">Circulating Supply</div>
-                <div class="font-semibold text-fs_lg text-new_title_violet">263,093,894</div><!--effetto aggiornamento-->
+            <div class="flex flex-col py-3 px-6 grow justify-center items-center">
+                <div class="font-semibold text-fs_sm text-color_text leading-6 dark:text-new_white">Circulating Supply</div>
+                <div class="font-semibold text-fs_lg text-new_title_violet leading-[26px] dark:text-new_light_purple">263,093,894</div><!--effetto aggiornamento-->
             </div>
-            <div class="flex flex-col py-3 px-4 border-l border-new_border grow justify-center items-center">
-                <div class="font-semibold text-fs_sm text-color_text">Total supply</div>
-                <div class="font-semibold text-fs_lg text-new_title_violet">386,271,349</div><!--effetto aggiornamento-->
+            <div class="flex flex-col py-3 px-6 border-l border-new_border grow justify-center items-center dark:border-new_grey">
+                <div class="font-semibold text-fs_sm text-color_text leading-6 dark:text-new_white">Total supply</div>
+                <div class="font-semibold text-fs_lg text-new_title_violet leading-[26px] dark:text-new_light_purple">386,271,349</div><!--effetto aggiornamento-->
             </div>
-            <div class="flex flex-col py-3 px-4 border-l border-new_border grow justify-center items-center">
-                <div class="font-semibold text-fs_sm text-color_text">Market cap</div>
-                <div class="font-semibold text-fs_lg text-new_title_violet">$590 million</div><!--effetto aggiornamento-->
+            <div class="flex flex-col py-3 px-6 border-l border-new_border grow justify-center items-center dark:border-new_grey">
+                <div class="font-semibold text-fs_sm text-color_text leading-6 dark:text-new_white">Market cap</div>
+                <div class="font-semibold text-fs_lg text-new_title_violet leading-[26px] dark:text-new_light_purple">$590 million</div><!--effetto aggiornamento-->
             </div>
-            <div class="flex flex-col py-3 px-4 border-l border-new_border grow justify-center items-center">
-                <div class="font-semibold text-fs_sm text-color_text">Token Burn</div>
-                <div class="font-semibold text-fs_lg text-new_title_violet">1,099,492,387</div><!--effetto aggiornamento-->
+            <div class="flex flex-col py-3 px-6 border-l border-new_border grow justify-center items-center dark:border-new_grey">
+                <div class="font-semibold text-fs_sm text-color_text leading-6 dark:text-new_white">Token Burn</div>
+                <div class="font-semibold text-fs_lg text-new_title_violet leading-[26px] dark:text-new_light_purple">1,099,492,387</div><!--effetto aggiornamento-->
             </div>
-            <div class="flex flex-col py-3 px-4 border-l border-new_border grow justify-center items-center">
-                <div class="font-semibold text-fs_sm text-color_text">Current emissions</div>
-                <div class="font-semibold text-fs_lg text-new_title_violet">1,36/block</div><!--effetto aggiornamento-->
+            <div class="flex flex-col py-3 px-6 border-l border-new_border grow justify-center items-center dark:border-new_grey">
+                <div class="font-semibold text-fs_sm text-color_text leading-6 dark:text-new_white">Current emissions</div>
+                <div class="font-semibold text-fs_lg text-new_title_violet leading-[26px] dark:text-new_light_purple">1,36/block</div><!--effetto aggiornamento-->
             </div>    
         </div>
     </div>
