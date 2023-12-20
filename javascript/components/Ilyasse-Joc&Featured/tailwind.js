@@ -1,13 +1,14 @@
 tailwind.config = {
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
         Kanit: ["Kanit"],
       },
       colors: {
-        color_primary: "#7d4ed2" /* viola chiaro */,
-        color_fourth: "#27262c" /* viola scuro */,
-        color_inverse: "#1fc7d4ff" /* azzurro */,
+        color_primary: "#7d4ed2",
+        color_fourth: "#27262c",
+        color_inverse: "#1fc7d4ff",
         color_hover: "#a8a1c8",
         color_hover_nav: "#353547",
         color_secondary: "#faf9fa",
@@ -22,6 +23,8 @@ tailwind.config = {
         color_centralcontainerbgcolor: "rgba(255, 255, 255, 0.8)",
         color_innerboxleft: "rgb(60, 23, 134)",
         color_innerboxleftnumbers: "#ffb237",
+        color_text_dm_r: "#f4eeff",
+        color_text_sub_dm: "#b8add2",
       },
       fontSize: {
         fs_xxxl: "88px",
