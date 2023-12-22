@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="" lang="en">
+<html class="dark" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -41,6 +41,7 @@
 </head>
 
 <body class="w-screen overflow-x-hidden">
+    <button id="darkModeBtn">DarkMode</button>
     <!-- ANCHOR JoinOurCommunity-Ilyasse -->
     <svg class="w-full h-full max-h-[48px] fill-[#72b8f2] dark:fill-[#0b4576]" viewBox="0 0 1660 48"
         preserveAspectRatio="none" color="text" width="20px" xmlns="http://www.w3.org/2000/svg">
@@ -355,7 +356,7 @@
                         <div class="text-color_primary leading-normal text-fs_xxl text-center font-semibold">News</div>
                     </div>
                     <div class="flex flex-row ">
-                        <div class="flex items-center mr-2">
+                        <div id="featuredNews_leftBtn" class="flex items-center mr-2">
                             <div
                                 class="flex justify-center items-center w-8 h-8 rounded-2xl border-border2pxw border-solid border-color_inverse cursor-pointer">
                                 <svg class="self-center shrink-0" viewBox="0 0 24 24" color="#1fc7d4ff" fill="#1fc7d4ff"
@@ -366,7 +367,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <div
+                        <div id="featuredNews_sliderContainer"
                             class="whitespace-nowrap overflow-x-auto snap-x snap-mandatory scroll-smooth rounded-3xl pb-[5px] ">
                             <!-- card1 -->
                             <div
@@ -620,7 +621,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex items-center ml-2">
+                        <div id="featuredNews_rightBtn" class="flex items-center ml-2">
                             <div
                                 class="flex justify-center items-center w-8 h-8 rounded-2xl border-border2pxw border-solid border-color_inverse cursor-pointer">
                                 <svg class="self-center shrink-0" viewBox="0 0 24 24" color="#1fc7d4ff" fill="#1fc7d4ff"
