@@ -46,8 +46,8 @@
             fs_xxs: '12px',
             fs_xxxs: ' 9px',
             //ANCHOR - emilio font size
-            fs_l: "1.75rem",///28px
-            fs_Spain: '4rem'
+            fs_l: "28px",
+            fs_Spain: '64px',
           },
           boxShadow: {
             "bs_sha": '0px 1px 0px 0px rgba(14, 14, 14,0.4)'
@@ -84,6 +84,11 @@
             '5': '5',
             '6': '6',
             '7': '7',
+          },
+          screens:{
+           "screen_860":"860px",
+           "screen_970":"970px",
+           "screen_1200":"1200px",
           }
         }
       }
@@ -119,12 +124,12 @@
 
 <body>
   <header class="header flex flex-col justify-center items-center mt-31.5 w-screen">
-    <div class="central-header flex flex-col w-6.4xl p-5 ">
-      <div style="border-radius: 32px;"
-        class="home1 relative z-1 max-w-5.9xl h-48  flex items-center justify-center relative">
+    <div class="central-header flex flex-col max-w-6.4xl p-5 ">
+      <div
+        class="home1 relative z-1 max-w-5.9xl h-48  flex items-center justify-center relative rounded-[2rem]">
         <div
-          style="border-radius: 32px; background-image: url(assets/img/Header/spain-meetup-bg.webp); background-size: cover; background-repeat: no-repeat;;"
-          class="swipper w-5.9xl h-48 absolute z-1 flex flex-row">
+          style="background-image: url(assets/img/Header/spain-meetup-bg.webp); background-size: cover; background-repeat: no-repeat;;"
+          class="swipper1  w-5.9xl h-48 absolute z-1 flex flex-row rounded-[2rem]">
           <div class="swipper1-title p-6">
             <div class="swipper1-title-pankackeSwap-img  w-32 h-5"> <img src="assets/img/Header/ethXpancakeswap.png"
                 alt=""></div>
@@ -171,11 +176,42 @@
           </div>
 
         </div>
-        <div class="hidden swipper w-5.9xl h-40 bg-yellow-500 absolute z-2"></div>
-        <div class="hidden swipper w-5.9xl h-40 bg-blue-500 absolute z-3"></div>
-        <div class="hidden swipper w-5.9xl h-40 bg-orange-500 absolute z-4"></div>
-        <div class="hidden swipper w-5.9xl h-40 bg-pink-500 absolute z-5"></div>
-        <div class="hidden swipper w-5.9xl h-40 bg-gray-500 absolute z-6"></div>
+
+
+        <div style="background-image: url(assets/img/Header/isola.png); background-size: cover; background-repeat: no-repeat;;"
+        class=" swipper2 w-5.9xl h-48 absolute z-2 flex flex-row rounded-[2rem]">
+          <div class="swipper1-title p-6 flex flex-col">
+            <div class="swipper1-title-pankackeSwap-img w-32 h-5 flex flex-row justify-content items-center "> <img src="assets/img/Header/ethXpancakeswap.png"
+                alt="" class="mr-3">   <span class="w-[63rem] h-[1rem] bg-white mr-3"></span> <img src="assets/img/Header/galxe-logo.7705eef0.png" alt="" class="w-32 h-4">   </div>
+                <div ></div> <!-- non mi mette la barra verticale -->
+            <div
+              style="-webkit-text-stroke: 3px #832e00; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 178, 55) -5.1%, rgb(255, 235, 55) 75.24%);"
+              class="text-fs_xl font-extrabold leading-7 "> Traverse the Treasure Islande on Galaxe</div>
+            <div
+              class="text-fs_lg text-color_text font-bold">Claim Your Exclusice NFTs Now </div>
+              <div class="">
+                <button id="connetti" class="btn btn_blue btn:hover h-12 mr-2 mt-6">
+                    <a href="#" class="flex items-center"><p class="mr-1">Get Started</p> <img src="./assets/img/Header/open-external-link-icon.svg" alt="" class="w-5 h-5 ml-1 filter brightness-0 invert"> </a>
+                </button>
+            </div>
+          </div>
+
+          <div class="swipper2-paragliding flex flex-row items-center flex-1 relative">
+            
+            <div class="spain-bunny w-1/2 h-full overflow-hidden z-2">
+              <img src="assets/img/Header/paraglind-bunny.webp" alt="Bunny_Spain"
+                class="absolute -top-12 right-36 w-[16.375rem] h-[10.625]">
+            </div>
+            <div class="nuvola z-1 absolute -top-6 left-56">
+              <img src="assets/img/Header/nuvola.webp" alt="" class="">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="hidden swipper3 w-5.9xl h-40 bg-blue-500 absolute z-3"></div>
+        <div class="hidden swipper4 w-5.9xl h-40 bg-orange-500 absolute z-4"></div>
+        <div class="hidden swipper5 w-5.9xl h-40 bg-pink-500 absolute z-5"></div>
         <div class="hidden swipper w-5.9xl h-40   bg-teal-500 absolute z-7"></div>
         <div class="z-4 absolute w-[6.75rem] h-2 flex flex-row top-44">
           <span class=" bg-white h-2 w-[1rem] rounded-l-xl"></span>
@@ -188,23 +224,23 @@
         </div>
       </div>
 
-      <div class="home2 flex mt-10 pl-7.5">
-        <div class="description-DEX flex items-center justify-center w-min">
-          <div class="description-DEX-textes">
+      <div class="home2 flex mt-10 pl-7.5 max-screen_860:flex-col-reverse ">
+        <div class="description-DEX flex items-center justify-center max-w-1/2">
+          <div class="description-DEX-textes ">
 
-            <div class="big-Text ">
-              <h2 class="text-fs_xxxl font-semibold leading-24.25 text-color_text mb-4 pr-2.5">
-                <div>Everyone's</div>
-                <div class="whitespace-nowrap"><span class="text-color_favourite_lm ">Favourite</span>DEX</div>
+            <div class="big-Text flex ">
+              <h2 class="text-fs_xxxl max-screen_1200:text-fs_Spain max-screen_970:text-fs_xxl max-screen_970:max-w-5 font-semibold text-color_text mb-4 pr-2.5">
+                Everyone's <span class="text-color_favourite_lm">Favourite</span>DEX
               </h2>
             </div>
+            
 
             <div class="DEX-description ">
-              <p class="text-color_inverse text-fs_lg leading-6.5 mb-6">Trade, earn, and own crypto on the all-in-one
+              <p class="text-color_inverse text-fs_lg leading-6.5 mb-6 max-screen_860:text-fs_md ">Trade, earn, and own crypto on the all-in-one
                 multichain DEX</p>
             </div>
 
-            <div class="DEX-buttons">
+            <div class="DEX-buttons max-screen_860:flex max-screen_860:justify-center">
               <button id="connetti" class="btn btn_blue btn:hover h-12 mr-2"><a href="">Connetti
                   wallet</a></button>
               <button class="btn btn_white btn:hover h-12"><a href="">Scambia ora</a></button>
@@ -212,7 +248,7 @@
           </div>
         </div>
 
-        <div class="flyBunny w-full h-162">
+        <div class="flyBunny max-w-1/2 h-162">
           <video muted autoplay loop class="w-full h-full object-cover" style="outline: none;">
             <source src="assets/img/Header/bunnyv2.webm" type="video/mp4">
           </video>
@@ -220,6 +256,8 @@
       </div>
 
     </div>
+
+
     <div class="home3 flex justify-center items-center w-full">
       <div class="home3-internal w-6.4xl flex flex-col items-center py-12 px-4">
         <div class="home3-title">
@@ -228,8 +266,8 @@
         <div class="home3-title">
           <p class="text-fs_xl mb-12 text-color_text">PancakeSwap’s Unstoppable Expansion</p>
         </div>
-        <div style="justify-content: space-between;" class="home3-totals flex flex-row w-200 mb-12">
-          <div class="total flex flex-col items-center">
+        <div class="home3-totals flex flex-row w-200 mb-12 justify-center max-md:flex-col max-sm:items-center">
+          <div class="total flex flex-col items-center mr-12">
             <div class="total-name text-color_text text-fs_md font-semibold h-5">
               <p>Total User:</p>
             </div>
@@ -238,9 +276,10 @@
             </div>
           </div>
 
-          <div class="total flex flex-col items-center">
+          <div class="flex flex-row justify-center max-sm:flex-col">
+          <div class="total flex flex-col items-center mr-12">
             <div class="total-name text-color_text text-fs_md font-semibold h-5">
-              <p>Total User:</p>
+              <p>Total Traders:</p>
             </div>
             <div class="total-number text-color_favourite_lm text-fs_xxl font-semibold h-11 mb-2">19,666,379</div>
             <div class="total-days text-color_text_sub text-fs_sm font-semibold h-5 items-center">negli ultimi 30 giorni
@@ -249,14 +288,19 @@
 
           <div class="total flex flex-col items-center">
             <div class="total-name text-color_text text-fs_md font-semibold h-5 ">
-              <p>Total User:</p>
+              <p>Total value locked:</p>
             </div>
             <div class="total-number text-color_favourite_lm text-fs_xxl font-semibold h-11 mb-2">$1,458,599,502</div>
             <div class="total-days text-color_text_sub text-fs_sm font-semibold h-5 items-center">negli ultimi 30 giorni
             </div>
           </div>
-
+          </div>
         </div>
+
+
+
+
+
         <div class="home3-swiping w-full overflow-hidden flex flex-row rounded-xl">
           <div
             class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
