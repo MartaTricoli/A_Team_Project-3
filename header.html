@@ -88,6 +88,7 @@
           screens:{
            "screen_860":"860px",
            "screen_970":"970px",
+           "screen_1080":"1080px",
            "screen_1200":"1200px",
           }
         }
@@ -126,22 +127,22 @@
   <header class="header flex flex-col justify-center items-center mt-31.5 w-screen">
     <div class="central-header flex flex-col max-w-6.4xl p-5 ">
       <div
-        class="home1 relative z-1 max-w-5.9xl h-48  flex items-center justify-center relative rounded-[2rem]">
+        class="home1 relative z-1 w-full min-w-520 max-w-1128 h-48  flex items-center justify-center relative rounded-[2rem]">
         <div
           style="background-image: url(assets/img/Header/spain-meetup-bg.webp); background-size: cover; background-repeat: no-repeat;;"
-          class="swipper1  w-5.9xl h-48 absolute z-1 flex flex-row rounded-[2rem]">
+          class="swipper1 hidden w-full h-48 absolute z-1 flex flex-row rounded-[2rem]">
           <div class="swipper1-title p-6">
             <div class="swipper1-title-pankackeSwap-img  w-32 h-5"> <img src="assets/img/Header/ethXpancakeswap.png"
                 alt=""></div>
             <div
-              style="-webkit-text-stroke: 3px #341A57; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(252, 239, 121) 100%);"
+              style="-webkit-text-stroke: 2px #341A57; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(252, 239, 121) 100%);"
               class="text-fs_l font-extrabold leading-7 "> PankackeSwap Meetup</div>
             <div
-              style="-webkit-text-stroke: 3px #341A57; background-clip: text; color: transparent; background-image: linear-gradient(166.02deg, rgb(208, 107, 107) -5.1%, rgb(255, 235, 55) 75.24%);"
+              style="-webkit-text-stroke: 2px #341A57; background-clip: text; color: transparent; background-image: linear-gradient(166.02deg, rgb(208, 107, 107) -5.1%, rgb(255, 235, 55) 75.24%);"
               class="text-fs_Spain ml-24 font-black">Spain</div>
           </div>
 
-          <div class="swipper1-time flex flex-row justify-center items-center space-between gap-1">
+          <div class="swipper1-time flex flex-row justify-center items-center space-between gap-1 max-lg:hidden">
             <div
               class="countdown w-24 h-34 bg-color_text rounded-3xl px-2.5 flex flex-col items-center justify-center border-solid border-2 border-white">
               <div class="font-normal text-fs_Spain font-inter text-color_tertiary">XX</div>
@@ -165,8 +166,8 @@
 
           </div>
 
-          <div class="swipper1-ticket flex flex-row items-center flex-1">
-            <div class="ticket z-1 h-0.5">
+          <div class="swipper1-ticket flex flex-row items-center flex-1 ">
+            <div class="ticket z-1 h-0.5 max-screen_1200:hidden">
               <img src="assets/img/Header/free-ticket.png" alt="" class="h-17 w-[11.75rem]">
             </div>
             <div class="spain-bunny w-1/2 h-full overflow-hidden z-2 ml-auto">
@@ -178,15 +179,15 @@
         </div>
 
 
-        <div style="background-image: url(assets/img/Header/isola.png); background-size: cover; background-repeat: no-repeat;;"
-        class=" swipper2 w-5.9xl h-48 absolute z-2 flex flex-row rounded-[2rem]">
+        <div class="swipper2 hidden w-full min-w-520 max-w-1128 h-48 absolute z-2 flex flex-row rounded-[2rem] bg-cover bg-no-repeat bg-right"
+        style="background-image: url(assets/img/Header/isola.png);">
           <div class="swipper1-title p-6 flex flex-col">
             <div class="swipper1-title-pankackeSwap-img w-32 h-5 flex flex-row justify-content items-center "> <img src="assets/img/Header/ethXpancakeswap.png"
                 alt="" class="mr-3">   <span class="w-[63rem] h-[1rem] bg-white mr-3"></span> <img src="assets/img/Header/galxe-logo.7705eef0.png" alt="" class="w-32 h-4">   </div>
                 <div ></div> <!-- non mi mette la barra verticale -->
             <div
-              style="-webkit-text-stroke: 3px #832e00; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 178, 55) -5.1%, rgb(255, 235, 55) 75.24%);"
-              class="text-fs_xl font-extrabold leading-7 "> Traverse the Treasure Islande on Galaxe</div>
+              style="-webkit-text-stroke: 2px #832e00; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 178, 55) -5.1%, rgb(255, 235, 55) 75.24%);"
+              class="text-fs_xl font-extrabold leading-7 max-screen_860:text-fs_lg "> Traverse the Treasure Islande <span class="max-screen_1080:hidden">on Galaxe</span></div>
             <div
               class="text-fs_lg text-color_text font-bold">Claim Your Exclusice NFTs Now </div>
               <div class="">
@@ -194,22 +195,49 @@
                     <a href="#" class="flex items-center"><p class="mr-1">Get Started</p> <img src="./assets/img/Header/open-external-link-icon.svg" alt="" class="w-5 h-5 ml-1 filter brightness-0 invert"> </a>
                 </button>
             </div>
-          </div>
-
-          <div class="swipper2-paragliding flex flex-row items-center flex-1 relative">
+          
             
             <div class="spain-bunny w-1/2 h-full overflow-hidden z-2">
               <img src="assets/img/Header/paraglind-bunny.webp" alt="Bunny_Spain"
-                class="absolute -top-12 right-36 w-[16.375rem] h-[10.625]">
+                class="absolute -top-12 right-36 w-[16.375rem] h-[10.625] max-screen_970:right-4">
             </div>
-            <div class="nuvola z-1 absolute -top-6 left-56">
+            <div class="nuvola z-1 absolute -top-6 right-4">
               <img src="assets/img/Header/nuvola.webp" alt="" class="">
             </div>
           </div>
         </div>
 
 
-        <div class="hidden swipper3 w-5.9xl h-40 bg-blue-500 absolute z-3"></div>
+        <div class="swipper3  w-full min-w-520 max-w-1128 h-48 absolute z-3 flex flex-row rounded-[2rem] relative bg-[#2fd2df] overflow-hidden">
+          <div class="w-[550px] h-52 absolute top-4 right-0 z-1" style="background-image: url(assets/img/Header/web3-notification-bg.95e8aaef.png); background-size: contain; background-repeat: no-repeat; background-position:right;"></div>    
+                <div class="swipper1-title p-6 flex flex-col z-1">
+            <div class="swipper1-title-pankackeSwap-img w-32 h-5 flex flex-row justify-content items-center z-1 "> <img src="assets/img/Header/ethXpancakeswap.png"
+                alt="" class="mr-3"></div>
+                <div ></div>
+            <div
+              style="-webkit-text-stroke: 2px #8053cf; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 178, 55) 0%, rgb(255, 235, 55) 100%);"
+              class="text-fs_lg font-extrabold leading-7 relative z-3">Web Notification (BETA) trial avaible</div>
+            <div
+              class="text-fs_lg text-color_text font-bold relative z-3">All Your DeFi Updates, All in One Place </div>
+              <div class="">
+                <button id="connetti" class="rounded-2xl py-0 px-2 text-fs_sm font-semibold leading-none opacity-100 cursor-pointer bg-white btn:hover h-12 mr-2 mt-6 z-4">
+                    <a href="#" class="flex items-center text-color_inverse font-semibold relative z-3"><p class="mr-1">Learn More</p></a>
+                </button>
+            </div>
+          
+            
+            <div class="spain-bunny w-1/2 h-full overflow-visible z-1"> <!-- fare uscire il coniglio dal div -->
+              <img src="assets/img/Header/bellBunny.webp" alt="Bunny_Spain"
+                class="absolute -top-9 right-36 w-[183] h-[231px] max-screen_970:w-[151] max-screen_970:h-[207px] max-screen_970:-top-2">
+                <img src="assets/img/Header/cuoreChat.webp" alt="" 
+                class="absolute top-1 right-12 w-[80px] h-[80px] max-screen_860:hidden">
+                <img src="assets/img/Header/spuntaVerde.webp" alt="" 
+                class="absolute -top-8 right-[270px] w-[80px] h-[80px] max-screen_970:hidden"> <!-- fare uscire il whataspp dal div -->
+            </div>
+          </div>
+        </div>
+
+
         <div class="hidden swipper4 w-5.9xl h-40 bg-orange-500 absolute z-4"></div>
         <div class="hidden swipper5 w-5.9xl h-40 bg-pink-500 absolute z-5"></div>
         <div class="hidden swipper w-5.9xl h-40   bg-teal-500 absolute z-7"></div>
@@ -248,11 +276,12 @@
           </div>
         </div>
 
-        <div class="flyBunny max-w-1/2 h-162">
-          <video muted autoplay loop class="w-full h-full object-cover" style="outline: none;">
+        <div class="flyBunny max-w-1/2 h-162 max-screen_860:w-[468px] max-screen_860:h-[468]">
+          <video muted autoplay loop class="w-full h-full max-w-full max-h-full object-cover max-screen_860:w-[468px] max-screen_860:h-[468]" style="outline: none;">
             <source src="assets/img/Header/bunnyv2.webm" type="video/mp4">
           </video>
         </div>
+        
       </div>
 
     </div>
@@ -301,48 +330,50 @@
 
 
 
-        <div class="home3-swiping w-full overflow-hidden flex flex-row rounded-xl">
-          <div
-            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
-            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
-            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
-          </div>
-          <div
-            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
-            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
-            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
-          </div>
-          <div
-            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
-            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
-            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
-          </div>
-          <div
-            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
-            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
-            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
-          </div>
-          <div
-            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
-            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
-            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
-          </div>
-          <div
-            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
-            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
-            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
-          </div>
-          <div
-            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
-            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
-            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
-          </div>
-          <div
-            class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
-            <div class="w-8 h-8"><img src="./assets/img/Header/ethereum.png" alt=""></div>
-            <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
-          </div>
-        </div>
+       
+      </div>
+    </div>
+    <div class="home3-swiping w-full min-w-520 max-w-1128 overflow-hidden flex flex-row rounded-xl justify-center">
+      <div
+        class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
+        <div class="w-8 h-8"><img src="./assets/img/Header/carosello/ethereum.png"></div>
+        <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Ethereum</div>
+      </div>
+      <div
+        class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-[#7f3ce0]">
+        <div width="24px" color="invertedContrast" class="sc-eYUiRx hweqmL"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" color="text" width="20px" class="sc-bcPKhP cvmRst"><path fill="white" d="M10.3944 9.53278L13.7152 7.61529C13.8912 7.51343 14 7.32455 14 7.12182V3.28683C14 3.0841 13.8912 2.89522 13.7152 2.79337L10.3944 0.875873C10.2184 0.774016 9.99986 0.775005 9.82481 0.875873L6.50406 2.79337C6.32803 2.89522 6.21925 3.0841 6.21925 3.28683V10.14L3.89037 11.4839L1.56149 10.14V7.45113L3.89037 6.1072L5.42614 6.99425V5.19048L4.17517 4.46759C4.08914 4.41814 3.99025 4.39144 3.89037 4.39144C3.79049 4.39144 3.6916 4.41814 3.60556 4.46759L0.284806 6.38508C0.10878 6.48694 0 6.67582 0 6.87855V10.7135C0 10.9163 0.10878 11.1051 0.284806 11.207L3.60556 13.1245C3.78159 13.2254 3.99915 13.2254 4.17517 13.1245L7.49593 11.207C7.67196 11.1051 7.78074 10.9163 7.78074 10.7135V3.8604L7.82227 3.83666L10.1086 2.51647L12.4375 3.8604V6.54924L10.1086 7.89317L8.57483 7.0081V8.81187L9.82383 9.53278C9.99986 9.63365 10.2184 9.63365 10.3934 9.53278H10.3944Z"></path></svg></div>
+        <div class="carousel-element whitespace-nowrap text-fs_md font-semibold leading-7 ml-2.5">Polygon zkEVM</div>
+      </div>
+      <div
+        class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-[#686ea7]">
+        <svg viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="26px" color="invertedContrast" class="sc-bcPKhP jIIotV"><path fill="white" d="M15.3652 3.72137L7.96087 9.27481V15L0.5 7.44275L7.84783 0V3.72137H15.3652Z"></path><path fill="white" d="M19.0957 5.55343V0L26.5 7.5L19.0957 15V11.2214H11.6348L19.0957 5.55343Z"></path></svg>
+        <div class="carousel-element whitespace-nowrap text-fs_md font-semibold leading-7 ml-2.5">zkSync Era</div>
+      </div>
+      <div
+        class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
+        <div class="w-8 h-8"><img src="./assets/img/Header/carosello/arbitrymOne.png" alt=""></div>
+        <div class="carousel-element whitespace-nowrap text-fs_md font-semibold leading-7 ml-2.5">Arbitrum One</div>
+      </div>
+      <div
+        class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
+        <div class="w-8 h-8"><img src="./assets/img/Header/carosello/lineaMainnet.png" alt=""></div>
+        <div class="carousel-element whitespace-nowrap text-fs_md font-semibold leading-7 ml-2.5">Linea</div>
+      </div>
+      <div
+        class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
+        <div class="w-8 h-8"><img src="./assets/img/Header/carosello/base.png" alt=""></div>
+        <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Base</div>
+      </div>
+      <div
+        class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-[#f1ba0d]">
+        <div width="26px" color="invertedContrast" class="sc-eYUiRx hweqmL">
+          <svg viewBox="0 0 40 40" color="text" width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-bcPKhP cvmRst"><path fill="white" d="M14.2487 9.59637L10.7888 7.58546L20.1999 2.08337L29.6387 7.58546L26.1787 9.59637L20.1999 6.13313L14.2487 9.59637ZM32.1022 13.0596V17.1094L35.5622 15.0985V11.0487L32.1022 9.00986L28.6422 11.0208L32.1022 13.0596ZM16.7399 11.0487L20.1999 13.0596L23.6599 11.0487L20.1999 9.00986L16.7399 11.0487ZM29.6387 14.5119L26.1787 12.501L20.1999 15.9643L14.2487 12.501L10.7888 14.5119V18.5617L16.7399 22.0249V28.9514L20.1999 30.9623L23.6599 28.9514V22.0249L29.6387 18.5617V14.5119ZM32.1022 26.9405L26.1511 30.4038V34.4535L35.5899 28.9514V17.9752L32.1022 20.014V26.9405ZM26.1511 27.527L29.611 25.5161V21.4384L26.1511 23.4493V27.527ZM16.7399 31.8561V35.9058L20.1999 37.9168L23.6599 35.9058V31.8561L20.1999 33.867L16.7399 31.8561ZM4.80992 15.0985L8.2699 17.1094V13.0596L11.7299 11.0487L8.29758 9.00986L4.8376 11.0208V15.0985H4.80992ZM8.29758 20.014L4.8376 18.0031V28.9794L14.2764 34.4814V30.4317L8.29758 26.9405V20.014ZM14.2487 23.4773L10.7888 21.4664V25.5161L14.2487 27.527V23.4773Z"></path></svg></div>
+        <div class="carousel-element whitespace-nowrap text-fs_md font-semibold leading-7 ml-2.5">BNB Chain</div>
+      </div>
+      <div
+        class="home3-carousel flex py-3 px-6 items-center h-11 mr-3 text-color_tertiary rounded-3xl bg-color_ethereum">
+        <div class="w-8 h-8"><img src="./assets/img/Header/carosello/aptos.png" alt=""></div>
+        <div class="carousel-element text-fs_md font-semibold leading-7 ml-2.5">Aptos</div>
       </div>
     </div>
 
