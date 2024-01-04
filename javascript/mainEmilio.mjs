@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     //ANCHOR - swipper
+    console.log('pippo paperino e pluto ma non topolino');
     const spans = document.querySelectorAll('.z-6 span');
     const containerSpan = document.getElementById('span_container')
     spans[0].classList.add('active');
@@ -90,6 +91,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
+
+
     cdTiming()
 
 
@@ -103,6 +106,30 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, 1000);
 
+
+    //button for style mode
+    const btnToggle = document.getElementById('toggleMode');
+    const svgLight = document.getElementById('svgLight');
+    const svgDark = document.getElementById('svgDark');
+
+    btnToggle.addEventListener('click', function () {
+        document.body.classList.toggle('dark')
+        const activeDarkMode = document.body.classList.contains('dark')
+        if (activeDarkMode) {
+            btnToggle.innerText = 'Light Mode'
+            svgLight.classList.toggle('hidden')
+            svgDark.classList.toggle('hidden')
+        } else {
+            btnToggle.innerText = 'Dark Mode'
+            svgLight.classList.toggle('hidden')
+            svgDark.classList.toggle('hidden')
+        }
+    })
+
+
+    // carousel
+
+    const carousel = document.getElementById('containerCarousel')
 
 
 });

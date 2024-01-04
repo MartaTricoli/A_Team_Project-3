@@ -15,6 +15,7 @@
 
   <script>
     tailwind.config = {
+      darkMode: "class",
       theme: {
         extend: {
           fontFamily: {
@@ -37,7 +38,7 @@
             //ANCHOR - color text emilio
             color_favourite_lm: '#7645d9',
             color_ethereum: '#627AD8',
-            linear_gradient_home3_white: 'bg-gradient-to-b from-white to-[#d7cbec]'
+            linear_gradient_home3_white: 'bg-gradient-to-b from-white to-[#d7cbec]',
           },
           fontSize: {
             fs_xxxl: '88px',
@@ -95,15 +96,15 @@
             "screen_1080": "1080px",
             "screen_1200": "1200px",
           },
-          animation: { /* emilio */
-            'infinite-scroll': 'infinite-scroll 45s linear infinite',
+          animation: {
+            'infinite-scroll': 'infinite-scroll 4s linear infinite',
           },
-          keyframes: { /* emilio */
+          keyframes: {
             'infinite-scroll': {
               from: { transform: 'translateX(0)' },
               to: { transform: 'translateX(-100%)' },
             }
-          }
+          } 
         }
       }
     }
@@ -185,303 +186,327 @@
 
   <header
     class="header relative flex flex-col justify-center items-center mt-31.5 w-screen bg-[#e8faff] dark:bg-[#1f1834] z-3">
-    <svg viewBox="0 0 1660 339"
-      class="sc-grXZZQ ktVOoD slide-svg-light absolute bottom-[425px] z-4 max-screen_1200:bottom-[425px] max-screen_860:"
-      width="100%" color="text" xmlns="http://www.w3.org/2000/svg">
-      <path d="M804 167.023C520.5 167.023 267.5 290.522 0 304.5V339H1660V0.5C1358.83 0.5 1104 167.023 804 167.023Z"
-        fill="url(#paint0_linear_light)"></path>
-      <defs>
-        <linearGradient id="paint0_linear_light" x1="830" y1="84" x2="830" y2="339" gradientUnits="userSpaceOnUse">
-          <stop stop-color="white dark:#0d0a14" stop-opacity="0.48"></stop>
-          <stop offset="0.566389" stop-color="white dark:#0d0a14" stop-opacity="0.35"></stop>
-          <stop offset="1" stop-color="white dark:#0d0a14"></stop>
-        </linearGradient>
-      </defs>
-    </svg>
+    <button class="bg-red-500" id="toggleMode">DARK MODE</button>
+    <div class="relative w-full flex justify-center items-center">
+      <div class="central-header flex flex-col justify-center items-center max-w-6.4xl p-5 z-4">
+        <!-- ////ANCHOR - home1 -->
 
-    <div class="central-header flex flex-col max-w-6.4xl p-5 z-4">
-      <div class="home1 relative z-1 w-full h-48  flex items-center justify-center relative rounded-[2rem]">
+        <div class="w-full flex">
+          <div class="home1 z-1 w-full h-48  flex items-center justify-center rounded-[2rem] relative">
 
-        <div id="swipper1"
-          style="background-image: url(assets/img/Header/spain-meetup-bg.webp); background-size: cover; background-repeat: no-repeat;;"
-          class="swipper  w-full h-48 absolute z-1 flex flex-row rounded-[2rem]">
-          <div class="swipper1-title p-6">
-            <div class="swipper1-title-pankackeSwap-img  w-32 h-5"> <img src="assets/img/Header/ethXpancakeswap.png"
-                alt=""></div>
-            <div
-              style="-webkit-text-stroke: 2px #341A57; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(252, 239, 121) 100%);"
-              class="text-fs_l font-extrabold leading-7 h-8"> PankackeSwap Meetup</div>
-            <div
-              style="-webkit-text-stroke: 2px #341A57; background-clip: text; color: transparent; background-image: linear-gradient(166.02deg, rgb(208, 107, 107) -5.1%, rgb(255, 235, 55) 75.24%);"
-              class="text-fs_Spain ml-24 font-black">Spain</div>
-          </div>
-
-          <div id="cd_container" class="swipper1-time flex flex-row justify-center items-center space-between gap-1 max-lg:hidden">
-            <div 
-              class="countdown w-24 h-34 bg-color_text rounded-3xl px-2.5 flex flex-col items-center justify-center border-solid border-2 border-white">
-              <div id="days" class="font-normal text-fs_Spain font-inter text-color_tertiary">XX</div>
-              <div class="font-normal text-fs_xxs text-color_tertiary">DAYS</div>
-            </div>
-            <div
-              class="countdown w-24 h-34 bg-color_text rounded-3xl px-2.5 flex flex-col items-center justify-center border-solid border-2 border-white">
-              <div id="hour" class="font-normal text-fs_Spain font-inter text-color_tertiary">XX</div>
-              <div class="font-normal text-fs_xxs text-color_tertiary">HOURS</div>
-            </div>
-            <div
-              class="countdown w-24 h-34 bg-color_text rounded-3xl px-2.5 flex flex-col items-center justify-center border-solid border-2 border-white">
-              <div id="minutes" class="font-normal text-fs_Spain font-inter text-color_tertiary">XX</div>
-              <div class="font-normal text-fs_xxs text-color_tertiary">MINUTES</div>
-            </div>
-            <div
-              class="countdown w-24 h-34 bg-color_text rounded-3xl px-2.5 flex flex-col items-center justify-center border-solid border-2 border-white">
-              <div id="seconds" class="font-normal text-fs_Spain font-inter text-color_tertiary">XX</div>
-              <div class="font-normal text-fs_xxs text-color_tertiary">SECONDS</div>
-            </div>
-
-          </div>
-
-          <div class="swipper1-ticket flex flex-row items-center flex-1 ">
-            <div class="ticket z-1 h-0.5 max-screen_1200:hidden">
-              <img src="assets/img/Header/free-ticket.png" alt="" class="h-17 w-[11.75rem]">
-            </div>
-            <div class="spain-bunny w-1/2 h-full overflow-hidden z-2 ml-auto">
-              <img src="assets/img/Header/spain-BUNNY.png" alt="Bunny_Spain"
-                class="w-50 h-60 object-cover absolute -top-12 right-6">
-            </div>
-          </div>
-
-        </div>
-
-        <div id="swipper2"
-          class="swipper hidden w-full min-w-520 max-w-1128 h-48 absolute z-2 flex flex-row rounded-[2rem] bg-cover bg-no-repeat bg-right"
-          style="background-image: url(assets/img/Header/isola.png);">
-          <div class="swipper1-title p-6 flex flex-col">
-            <div class="swipper1-title-pankackeSwap-img w-32 h-5 flex flex-row justify-content items-center "> <img
-                src="assets/img/Header/ethXpancakeswap.png" alt="" class="mr-3"> <span
-                class="w-[63rem] h-[1rem] bg-white mr-3"></span> <img src="assets/img/Header/galxe-logo.7705eef0.png"
-                alt="" class="w-32 h-4"> </div>
-            <div></div> <!-- non mi mette la barra verticale -->
-            <div
-              style="-webkit-text-stroke: 2px #832e00; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 178, 55) -5.1%, rgb(255, 235, 55) 75.24%);"
-              class="text-fs_xl font-extrabold leading-7 max-screen_860:text-fs_lg "> Traverse the Treasure Islande
-              <span class="max-screen_1080:hidden">on Galaxe</span>
-            </div>
-            <div class="text-fs_lg text-color_text font-bold">Claim Your Exclusice NFTs Now </div>
-            <div class="">
-              <button id="connetti" class="btn btn_blue btn:hover h-12 mr-2 mt-6">
-                <a href="#" class="flex items-center">
-                  <p class="mr-1">Get Started</p> <img src="./assets/img/Header/open-external-link-icon.svg" alt=""
-                    class="w-5 h-5 ml-1 filter brightness-0 invert">
-                </a>
-              </button>
-            </div>
-
-            <div class="spain-bunny w-1/2 h-full overflow-hidden z-2">
-              <img id="second_animation_swipper" src="assets/img/Header/paraglind-bunny.webp" alt="Bunny_Spain"
-                class="absolute -top-12 right-36 w-[16.375rem] h-[10.625] max-screen_970:right-4">
-            </div>
-            <div class="nuvola z-1 absolute -top-6 right-4">
-              <img src="assets/img/Header/nuvola.webp" alt="" class="">
-            </div>
-          </div>
-        </div>
-
-        <div id="swipper3"
-          class="swipper hidden w-full min-w-520 max-w-1128 h-48 absolute z-3 flex flex-row rounded-[2rem] relative bg-[#2fd2df] overflow-visible">
-          <div class="w-[550px] h-52 absolute top-4 right-0 z-1"
-            style="background-image: url(assets/img/Header/web3-notification-bg.95e8aaef.png); background-size: contain; background-repeat: no-repeat; background-position:right;">
-          </div>
-          <div class="swipper1-title p-6 flex flex-col z-1">
-            <div class="swipper1-title-pankackeSwap-img w-32 h-5 flex flex-row justify-content items-center z-1 "> <img
-                src="assets/img/Header/ethXpancakeswap.png" alt="" class="mr-3"></div>
-            <div></div>
-            <div
-              style="-webkit-text-stroke: 2px #8053cf; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 178, 55) 0%, rgb(255, 235, 55) 100%);"
-              class="text-fs_lg font-extrabold leading-7 relative z-3">Web Notification (BETA) trial avaible</div>
-            <div class="text-fs_lg text-color_text font-bold relative z-3">All Your DeFi Updates, All in One Place
-            </div>
-            <div class="">
-              <button id="connetti"
-                class="rounded-2xl py-0 px-2 text-fs_sm font-semibold leading-none opacity-100 cursor-pointer bg-white btn:hover h-12 mr-2 mt-6 z-4">
-                <a href="#" class="flex items-center text-color_inverse font-semibold relative z-3">
-                  <p class="mr-1">Learn More</p>
-                </a>
-              </button>
-            </div>
-
-            <div class="spain-bunny w-1/2 h-full overflow-visible z-1">
-              <img src="assets/img/Header/bellBunny.webp" alt="Bunny_Spain"
-                class="absolute -top-10 right-36 w-[183] h-[232px] max-screen_970:w-[151] max-screen_970:h-[208px] max-screen_970:-top-4">
-              <img id="third_animation_swipper" src="assets/img/Header/cuoreChat.webp" alt=""
-                class="absolute top-1 right-20 w-[80px] h-[80px] max-screen_860:hidden">
-              <img id="third_animation_swipper" src="assets/img/Header/spuntaVerde.webp" alt=""
-                class="absolute -top-8 right-[300px] w-[80px] h-[80px] max-screen_970:hidden">
-            </div>
-          </div>
-        </div>
-
-        <div id="swipper4"
-          class="swipper hidden w-full min-w-520 max-w-1128 h-48 absolute z-4 flex flex-row rounded-[2rem] bg-cover bg-no-repeat bg-right bg-[#543297]">
-          <div class="swipper1-title p-6 flex flex-col">
-            <div class="swipper1-title-pankackeSwap-img w-32 h-5 flex flex-row justify-content items-center mb-2">
-              <p class="whitespace-nowrap font-semibold text-fs_md text-[#f5b300]">Perpetual Fututres</p>
-            </div>
-            <div
-              class="text-fs_xl font-extrabold leading-7 max-screen_860:text-fs_lg text-color_tertiary mb-4 drop-shadow-xl">
-              UP TO 1001x LEVERAGE</div>
-            <div class="">
-              <button id="connetti" class="btn btn_blue btn:hover h-12 mr-2 mt-6">
-                <a href="#" class="flex items-center">
-                  <p class="mr-1">Trade Now</p> <svg viewBox="0 0 24 24" color="invertedContrast" width="20px"
-                    xmlns="http://www.w3.org/2000/svg" class="sc-bcPKhP jIIotV">
-                    <path fill="white"
-                      d="M5 13H16.17L11.29 17.88C10.9 18.27 10.9 18.91 11.29 19.3C11.68 19.69 12.31 19.69 12.7 19.3L19.29 12.71C19.68 12.32 19.68 11.69 19.29 11.3L12.71 4.7C12.32 4.31 11.69 4.31 11.3 4.7C10.91 5.09 10.91 5.72 11.3 6.11L16.17 11H5C4.45 11 4 11.45 4 12C4 12.55 4.45 13 5 13Z">
-                    </path>
-                  </svg>
-                </a>
-              </button>
-            </div>
-
-            <div class="spain-bunny w-1/2 h-full overflow-hidden z-2">
-              <img src="assets/img/Header/candleBunny.webp" alt="Bunny_Spain"
-                class="absolute -top-10 right-4 w-[392px] h-[232px] max-screen_970:hidden">
-              <img src="assets/img/Header/candleConiglioPiccolo.webp" alt="Bunny_Spain"
-                class="absolute -top-7 right-0 w-[208px] h-[230px] screen_970:hidden">
-            </div>
-          </div>
-        </div>
-
-        <div id="swipper5"
-          class="swipper hidden w-full min-w-520 max-w-1128 h-48 absolute z-5 flex flex-row rounded-[2rem] bg-cover bg-no-repeat bg-right bg-[#373459]"
-          style="background-image: url(assets/img/Header/nerdBG.webp);">
-          <div class="swipper1-title p-6 flex flex-col">
-            <div class="swipper1-title-pankackeSwap-img w-32 h-5 flex flex-row justify-content items-center mb-2 "> <img
-                src="assets/img/Header/ethXpancakeswap.png" alt="" class="mr-3"></div>
-            <div></div>
-            <div
-              style="-webkit-text-stroke: 2px #832e00; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 178, 55) -5.1%, rgb(255, 235, 55) 75.24%);"
-              class="text-fs_xl font-extrabold max-screen_860:text-fs_lg h-13"> PancakeSwap Gaming Marketplace
-            </div>
-            <div class="text-fs_md text-[#34fba6] font-extrabold flex items-center max-sm:hidden whitespace-nowrap">
-              Explore Your <img src="assets/img/Header/game-text.webp" alt="" class=" flex h-6 mt-2 ">
-              <p class="max-screen_970:hidden"
-                style="background-clip: text; color: transparent; background:linear-gradient(90deg, rgb(136, 255, 92) 10.97%, rgb(244, 226, 59) 27.39%, rgb(255, 223, 56) 99.79%) text;">
-                1.5M Monthly Players Await</p>
-            </div>
-            <div>
-              <div>
-                <img src="./assets/img/Header/game-mobile-text.webp" alt="" class="sm:hidden">
-                <!-- aggiungere che il coniglio va sotto l'h2 -->
+            <div id="swipper1"
+              style="background-image: url(assets/img/Header/spain-meetup-bg.webp); background-size: cover; background-repeat: no-repeat;"
+              class="swipper  w-full h-48 absolute z-1 flex flex-row rounded-[2rem]">
+              <div class="swipper1-title p-6">
+                <div class="swipper1-title-pankackeSwap-img  w-32 h-5"> <img src="assets/img/Header/ethXpancakeswap.png"
+                    alt=""></div>
+                <div
+                  style="-webkit-text-stroke: 2px #341A57; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(252, 239, 121) 100%);"
+                  class="text-fs_l font-extrabold leading-7 h-8"> PankackeSwap Meetup</div>
+                <div
+                  style="-webkit-text-stroke: 2px #341A57; background-clip: text; color: transparent; background-image: linear-gradient(166.02deg, rgb(208, 107, 107) -5.1%, rgb(255, 235, 55) 75.24%);"
+                  class="text-fs_Spain ml-24 font-black">Spain</div>
               </div>
-              <button id="connetti" class="btn btn:hover h-12 -mt-1 -ml-6">
-                <a href="#" class="flex items-center text-[#0bf0bb]">
-                  <p class="mr-1">Try Now</p>
-                  <svg viewBox="0 0 24 24" color="#05FFC3" width="20px" xmlns="http://www.w3.org/2000/svg"
-                    class="sc-grXZZQ gmYgNP">
-                    <path fill="#0bf0bb"
-                      d="M18 19H6C5.45 19 5 18.55 5 18V6C5 5.45 5.45 5 6 5H11C11.55 5 12 4.55 12 4C12 3.45 11.55 3 11 3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V13C21 12.45 20.55 12 20 12C19.45 12 19 12.45 19 13V18C19 18.55 18.55 19 18 19ZM14 4C14 4.55 14.45 5 15 5H17.59L8.46 14.13C8.07 14.52 8.07 15.15 8.46 15.54C8.85 15.93 9.48 15.93 9.87 15.54L19 6.41V9C19 9.55 19.45 10 20 10C20.55 10 21 9.55 21 9V4C21 3.45 20.55 3 20 3H15C14.45 3 14 3.45 14 4Z">
-                    </path>
-                  </svg>
-                </a>
-              </button>
+
+              <div id="cd_container"
+                class="swipper1-time flex flex-row justify-center items-center space-between gap-1 max-lg:hidden">
+                <div
+                  class="countdown w-24 h-34 bg-color_text rounded-3xl px-2.5 flex flex-col items-center justify-center border-solid border-2 border-white">
+                  <div id="days" class="font-normal text-fs_Spain font-inter text-color_tertiary">XX</div>
+                  <div class="font-normal text-fs_xxs text-color_tertiary">DAYS</div>
+                </div>
+                <div
+                  class="countdown w-24 h-34 bg-color_text rounded-3xl px-2.5 flex flex-col items-center justify-center border-solid border-2 border-white">
+                  <div id="hour" class="font-normal text-fs_Spain font-inter text-color_tertiary">XX</div>
+                  <div class="font-normal text-fs_xxs text-color_tertiary">HOURS</div>
+                </div>
+                <div
+                  class="countdown w-24 h-34 bg-color_text rounded-3xl px-2.5 flex flex-col items-center justify-center border-solid border-2 border-white">
+                  <div id="minutes" class="font-normal text-fs_Spain font-inter text-color_tertiary">XX</div>
+                  <div class="font-normal text-fs_xxs text-color_tertiary">MINUTES</div>
+                </div>
+                <div
+                  class="countdown w-24 h-34 bg-color_text rounded-3xl px-2.5 flex flex-col items-center justify-center border-solid border-2 border-white">
+                  <div id="seconds" class="font-normal text-fs_Spain font-inter text-color_tertiary">XX</div>
+                  <div class="font-normal text-fs_xxs text-color_tertiary">SECONDS</div>
+                </div>
+
+              </div>
+
+              <div class="swipper1-ticket flex flex-row items-center flex-1 ">
+                <div class="ticket z-1 h-0.5 max-screen_1200:hidden">
+                  <img src="assets/img/Header/free-ticket.png" alt="" class="h-17 w-[11.75rem]">
+                </div>
+                <div class="spain-bunny w-1/2 h-full overflow-hidden z-2 ml-auto">
+                  <img src="assets/img/Header/spain-BUNNY.png" alt="Bunny_Spain"
+                    class="w-50 h-60 object-cover absolute -top-12 right-6">
+                </div>
+              </div>
+
             </div>
 
-            <div class="spain-bunny w-1/2 h-full overflow-hidden z-2">
-              <img id="first_animation_swipper" src="assets/img/Header/greenCube.webp" alt="Bunny_Spain"
-                class="absolute -top-5 right-80 w-[52px] h-[52px] ">
+            <div id="swipper2"
+              class="swipper hidden w-full min-w-520 max-w-1128 h-48 absolute z-2 flex flex-row rounded-[2rem] bg-cover bg-no-repeat bg-right"
+              style="background-image: url(assets/img/Header/isola.png);">
+              <div class="swipper1-title p-6 flex flex-col">
+                <div class="swipper1-title-pankackeSwap-img w-32 h-5 flex flex-row justify-content items-center "> <img
+                    src="assets/img/Header/ethXpancakeswap.png" alt="" class="mr-3"> <span
+                    class="w-[63rem] h-[1rem] bg-white mr-3"></span> <img
+                    src="assets/img/Header/galxe-logo.7705eef0.png" alt="" class="w-32 h-4"> </div>
+                <div></div> <!-- non mi mette la barra verticale -->
+                <div
+                  style="-webkit-text-stroke: 2px #832e00; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 178, 55) -5.1%, rgb(255, 235, 55) 75.24%);"
+                  class="text-fs_xl font-extrabold leading-7 max-screen_860:text-fs_lg "> Traverse the Treasure Islande
+                  <span class="max-screen_1080:hidden">on Galaxe</span>
+                </div>
+                <div class="text-fs_lg text-color_text font-bold">Claim Your Exclusice NFTs Now </div>
+                <div class="">
+                  <button id="connetti" class="btn btn_blue btn:hover h-12 mr-2 mt-6">
+                    <a href="#" class="flex items-center">
+                      <p class="mr-1">Get Started</p> <img src="./assets/img/Header/open-external-link-icon.svg" alt=""
+                        class="w-5 h-5 ml-1 filter brightness-0 invert">
+                    </a>
+                  </button>
+                </div>
+
+                <div class="spain-bunny w-1/2 h-full overflow-hidden z-2">
+                  <img id="second_animation_swipper" src="assets/img/Header/paraglind-bunny.webp" alt="Bunny_Spain"
+                    class="absolute -top-12 right-36 w-[16.375rem] h-[10.625] max-screen_970:right-4">
+                </div>
+                <div class="nuvola z-1 absolute -top-6 right-4">
+                  <img src="assets/img/Header/nuvola.webp" alt="" class="">
+                </div>
+              </div>
             </div>
-            <div class="nuvola z-1 absolute -top-6 right-4">
-              <img src="assets/img/Header/NerdBunny.webp" alt=""
-                class="w-[264px] h-[192px] mt-6 max-screen_970:w-[198px] max-screen_970:h-[144px] max-screen_970:mt-[72px]">
+
+            <div id="swipper3"
+              class="swipper hidden w-full min-w-520 max-w-1128 h-48 absolute z-3 flex flex-row rounded-[2rem] bg-cover bg-no-repeat bg-right"
+              style="background-image: url(assets/img/Header/vecake-bg.webp);">
+              <div class="swipper1-title p-6 flex flex-col">
+                <div class="swipper1-title-pankackeSwap-img w-32 h-5 flex flex-row justify-content items-center "> <img
+                    src="assets/img/Header/ethXpancakeswap.png" alt="" class="mr-3"></div>
+                <div></div> <!-- non mi mette la barra verticale -->
+                <div
+                  style="-webkit-text-stroke: 2px #8053cf; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 178, 55) 0%, rgb(255, 235, 55) 100%);"
+                  class="text-fs_xl font-extrabold leading-7 max-screen_860:text-fs_lg "> Your cake, Your Voice</div>
+                <div class="text-fs_lg text-color_text font-bold"><span class="text-color_text_sub">Introducing</span>
+                  Gauges Voting <span class="text-color_text_sub">and</span> veCAKE </div>
+                <div class="">
+                  <button id="connetti" class="btn btn_blue btn:hover h-12 mr-2 mt-6">
+                    <a href="#" class="flex items-center">
+                      <p class="mr-1">Get Started</p> <img src="./assets/img/Header/open-external-link-icon.svg" alt=""
+                        class="w-5 h-5 ml-1 filter brightness-0 invert">
+                    </a>
+                  </button>
+                </div>
+
+                <div class="spain-bunny w-1/2 h-full overflow-hidden z-2">
+                  <img src="assets/img/Header/image.webp" alt="Bunny_Spain"
+                    class="absolute -top-20 right-36 w-[16.375rem] h-[10.625]">
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <div id="swipper4"
+              class="swipper hidden w-full min-w-520 max-w-1128 h-48 absolute z-4 flex flex-row rounded-[2rem] bg-cover bg-no-repeat bg-right bg-[#543297]">
+              <div class="swipper1-title p-6 flex flex-col">
+                <div class="swipper1-title-pankackeSwap-img w-32 h-5 flex flex-row justify-content items-center mb-2">
+                  <p class="whitespace-nowrap font-semibold text-fs_md text-[#f5b300]">Perpetual Fututres</p>
+                </div>
+                <div
+                  class="text-fs_xl font-extrabold leading-7 max-screen_860:text-fs_lg text-color_tertiary mb-4 drop-shadow-xl">
+                  UP TO 1001x LEVERAGE</div>
+                <div class="">
+                  <button id="connetti" class="btn btn_blue btn:hover h-12 mr-2 mt-6">
+                    <a href="#" class="flex items-center">
+                      <p class="mr-1">Trade Now</p> <svg viewBox="0 0 24 24" color="invertedContrast" width="20px"
+                        xmlns="http://www.w3.org/2000/svg" class="sc-bcPKhP jIIotV">
+                        <path fill="white"
+                          d="M5 13H16.17L11.29 17.88C10.9 18.27 10.9 18.91 11.29 19.3C11.68 19.69 12.31 19.69 12.7 19.3L19.29 12.71C19.68 12.32 19.68 11.69 19.29 11.3L12.71 4.7C12.32 4.31 11.69 4.31 11.3 4.7C10.91 5.09 10.91 5.72 11.3 6.11L16.17 11H5C4.45 11 4 11.45 4 12C4 12.55 4.45 13 5 13Z">
+                        </path>
+                      </svg>
+                    </a>
+                  </button>
+                </div>
+
+                <div class="spain-bunny w-1/2 h-full overflow-hidden z-2">
+                  <img src="assets/img/Header/candleBunny.webp" alt="Bunny_Spain"
+                    class="absolute -top-10 right-4 w-[392px] h-[232px] max-screen_970:hidden">
+                  <img src="assets/img/Header/candleConiglioPiccolo.webp" alt="Bunny_Spain"
+                    class="absolute -top-7 right-0 w-[208px] h-[230px] screen_970:hidden">
+                </div>
+              </div>
+            </div>
+
+            <div id="swipper5"
+              class="swipper hidden w-full min-w-520 max-w-1128 h-48 absolute z-5 flex flex-row rounded-[2rem] bg-cover bg-no-repeat bg-right bg-[#373459]"
+              style="background-image: url(assets/img/Header/nerdBG.webp);">
+              <div class="swipper1-title p-6 flex flex-col">
+                <div class="swipper1-title-pankackeSwap-img w-32 h-5 flex flex-row justify-content items-center mb-2 ">
+                  <img src="assets/img/Header/ethXpancakeswap.png" alt="" class="mr-3">
+                </div>
+                <div></div>
+                <div
+                  style="-webkit-text-stroke: 2px #832e00; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 178, 55) -5.1%, rgb(255, 235, 55) 75.24%);"
+                  class="text-fs_xl font-extrabold max-screen_860:text-fs_lg h-13"> PancakeSwap Gaming Marketplace
+                </div>
+                <div class="text-fs_md text-[#34fba6] font-extrabold flex items-center max-sm:hidden whitespace-nowrap">
+                  Explore Your <img src="assets/img/Header/game-text.webp" alt="" class=" flex h-6 mt-2 ">
+                  <p class="max-screen_970:hidden"
+                    style="background-clip: text; color: transparent; background:linear-gradient(90deg, rgb(136, 255, 92) 10.97%, rgb(244, 226, 59) 27.39%, rgb(255, 223, 56) 99.79%) text;">
+                    1.5M Monthly Players Await</p>
+                </div>
+                <div>
+                  <div>
+                    <img src="./assets/img/Header/game-mobile-text.webp" alt="" class="sm:hidden">
+                    <!-- aggiungere che il coniglio va sotto l'h2 -->
+                  </div>
+                  <button id="connetti" class="btn btn:hover h-12 -mt-1 -ml-6">
+                    <a href="#" class="flex items-center text-[#0bf0bb]">
+                      <p class="mr-1">Try Now</p>
+                      <svg viewBox="0 0 24 24" color="#05FFC3" width="20px" xmlns="http://www.w3.org/2000/svg"
+                        class="sc-grXZZQ gmYgNP">
+                        <path fill="#0bf0bb"
+                          d="M18 19H6C5.45 19 5 18.55 5 18V6C5 5.45 5.45 5 6 5H11C11.55 5 12 4.55 12 4C12 3.45 11.55 3 11 3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V13C21 12.45 20.55 12 20 12C19.45 12 19 12.45 19 13V18C19 18.55 18.55 19 18 19ZM14 4C14 4.55 14.45 5 15 5H17.59L8.46 14.13C8.07 14.52 8.07 15.15 8.46 15.54C8.85 15.93 9.48 15.93 9.87 15.54L19 6.41V9C19 9.55 19.45 10 20 10C20.55 10 21 9.55 21 9V4C21 3.45 20.55 3 20 3H15C14.45 3 14 3.45 14 4Z">
+                        </path>
+                      </svg>
+                    </a>
+                  </button>
+                </div>
+
+                <div class="spain-bunny w-1/2 h-full overflow-hidden z-2">
+                  <img id="first_animation_swipper" src="assets/img/Header/greenCube.webp" alt="Bunny_Spain"
+                    class="absolute -top-5 right-80 w-[52px] h-[52px] ">
+                </div>
+                <div class="nuvola z-1 absolute -top-6 right-4">
+                  <img src="assets/img/Header/NerdBunny.webp" alt=""
+                    class="w-[264px] h-[192px] mt-6 max-screen_970:w-[198px] max-screen_970:h-[144px] max-screen_970:mt-[72px]">
+                </div>
+              </div>
+            </div>
+
+
+            <div id="span_container" class="z-6 absolute w-[108px] h-2 flex flex-row top-44">
+              <span reference="swipper1" id="span1"
+                class=" bg-white h-2 flex-1 rounded-l-xl cursor-pointer active"></span>
+              <span reference="swipper2" id="span2" class=" bg-white h-2 flex-1 opacity-50 cursor-pointer"></span>
+              <span reference="swipper3" id="span3" class=" bg-white h-2 flex-1 opacity-50 cursor-pointer"></span>
+              <span reference="swipper4" id="span4" class=" bg-white h-2 flex-1 opacity-50 cursor-pointer"></span>
+              <span reference="swipper5" id="span5"
+                class=" bg-white h-2 flex-1 rounded-r-xl opacity-50 cursor-pointer"></span>
             </div>
           </div>
         </div>
 
+        <!--         //ANCHOR - home2 -->
+        <div class="home2 flex mt-10 pl-7.5 max-screen_860:flex-col-reverse relative">
 
-        <div id="span_container" class="z-6 absolute w-[108px] h-2 flex flex-row top-44">
-          <span reference="swipper1" id="span1" class=" bg-white h-2 flex-1 rounded-l-xl cursor-pointer active"></span>
-          <span reference="swipper2" id="span2" class=" bg-white h-2 flex-1 opacity-50 cursor-pointer"></span>
-          <span reference="swipper3" id="span3" class=" bg-white h-2 flex-1 opacity-50 cursor-pointer"></span>
-          <span reference="swipper4" id="span4" class=" bg-white h-2 flex-1 opacity-50 cursor-pointer"></span>
-          <span reference="swipper5" id="span5" class=" bg-white h-2 flex-1 rounded-r-xl opacity-50 cursor-pointer"></span>
+
+
+
+          <div class="description-DEX flex items-center justify-center max-w-1/2">
+            <div class="description-DEX-textes ">
+
+              <div class="big-Text flex">
+                <h2
+                  class="text-fs_xxxl max-screen_1200:text-fs_Spain max-screen_970:text-fs_xxl max-screen_970:max-w-5 font-semibold text-color_text dark:text-color_tertiary mb-4 pr-2.5 max-screen_860:whitespace-nowrap max-screen_860:ml-12">
+                  Everyone's <span class="text-color_favourite_lm dark:text-[#a881fc]">Favourite</span>DEX
+                </h2>
+              </div>
+
+              <div class="DEX-description ">
+                <p
+                  class="text-color_inverse dark:text-[#b8add2] text-fs_lg leading-6.5 mb-6 max-screen_860:text-fs_md ">
+                  Trade, earn, and own
+                  crypto on the all-in-one
+                  multichain DEX</p>
+              </div>
+
+              <div class="DEX-buttons max-screen_860:flex max-screen_860:justify-center">
+                <button id="connetti" class="btn btn_blue btn:hover h-12 mr-2"><a href="">Connetti
+                    wallet</a></button>
+                <button class="btn btn_white btn:hover h-12"><a href="">Scambia ora</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="relative max-screen_860:w-[486px]"> <!-- rimpicciolire al restingimento a 860 non funziona -->
+            <div class="flyBunny ">
+              <video muted autoplay loop class=" object-cover absolute z-1">
+                <source src="assets/img/Header/video/bunnyv2.webm" type="video/mp4">
+              </video>
+
+            </div>
+            <div class="flyBunny max-w-1/2 ">
+              <video muted autoplay loop class=" object-cover absolute z-2">
+                <source src="assets/img/Header/video/rock01.webm" type="video/mp4">
+              </video>
+
+            </div>
+            <div class="flyBunny max-w-1/2">
+              <video muted autoplay loop class=" object-cover absolute z-2">
+                <source src="assets/img/Header/video/star.webm" type="video/mp4">
+              </video>
+
+            </div>
+
+            <div class="flyBunny max-w-1/2">
+              <video muted autoplay loop class=" object-cover absolute z-2">
+                <source src="assets/img/Header/video/rock02.webm" type="video/mp4">
+              </video>
+
+            </div>
+            <div class="flyBunny max-w-1/2">
+              <video muted autoplay loop class=" object-cover z-2">
+                <source src="assets/img/Header/video/rock03.webm" type="video/mp4">
+              </video>
+
+            </div>
+
+          </div>
+
         </div>
+
       </div>
+      <svg id="svgLight" viewBox="0 0 1660 339" class="sc-grXZZQ ktVOoD slide-svg-light absolute bottom-0 " width="100%"
+        color="text" xmlns="http://www.w3.org/2000/svg">
+        <path d="M804 167.023C520.5 167.023 267.5 290.522 0 304.5V339H1660V0.5C1358.83 0.5 1104 167.023 804 167.023Z"
+          fill="url(#paint0_linear_light)"></path>
+        <defs>
+          <linearGradient id="paint0_linear_light" x1="830" y1="84" x2="830" y2="339" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white" stop-opacity="0.48"></stop>
+            <stop offset="0.566389" stop-color="white" stop-opacity="0.35"></stop>
+            <stop offset="1" stop-color="white"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
 
-      <div class="home2 flex mt-10 pl-7.5 max-screen_860:flex-col-reverse relative">
-
-        <div class="description-DEX flex items-center justify-center max-w-1/2">
-          <div class="description-DEX-textes ">
-
-            <div class="big-Text flex">
-              <h2
-                class="text-fs_xxxl max-screen_1200:text-fs_Spain max-screen_970:text-fs_xxl max-screen_970:max-w-5 font-semibold text-color_text dark:text-color_tertiary mb-4 pr-2.5 max-screen_860:whitespace-nowrap max-screen_860:ml-12">
-                Everyone's <span class="text-color_favourite_lm dark:text-[#a881fc]">Favourite</span>DEX
-              </h2>
-            </div>
-
-            <div class="DEX-description ">
-              <p class="text-color_inverse dark:text-[#b8add2] text-fs_lg leading-6.5 mb-6 max-screen_860:text-fs_md ">
-                Trade, earn, and own
-                crypto on the all-in-one
-                multichain DEX</p>
-            </div>
-
-            <div class="DEX-buttons max-screen_860:flex max-screen_860:justify-center">
-              <button id="connetti" class="btn btn_blue btn:hover h-12 mr-2"><a href="">Connetti
-                  wallet</a></button>
-              <button class="btn btn_white btn:hover h-12"><a href="">Scambia ora</a></button>
-            </div>
-          </div>
-        </div>
-        <div class="relative max-screen_860:w-[486px]"> <!-- rimpicciolire al restingimento a 860 non funziona -->
-          <div class="flyBunny ">
-            <video muted autoplay loop class=" object-cover absolute z-1">
-              <source src="assets/img/Header/video/bunnyv2.webm" type="video/mp4">
-            </video>
-
-          </div>
-          <div class="flyBunny max-w-1/2 ">
-            <video muted autoplay loop class=" object-cover absolute z-2">
-              <source src="assets/img/Header/video/rock01.webm" type="video/mp4">
-            </video>
-
-          </div>
-          <div class="flyBunny max-w-1/2">
-            <video muted autoplay loop class=" object-cover absolute z-2">
-              <source src="assets/img/Header/video/star.webm" type="video/mp4">
-            </video>
-
-          </div>
-
-          <div class="flyBunny max-w-1/2">
-            <video muted autoplay loop class=" object-cover absolute z-2">
-              <source src="assets/img/Header/video/rock02.webm" type="video/mp4">
-            </video>
-
-          </div>
-          <div class="flyBunny max-w-1/2">
-            <video muted autoplay loop class=" object-cover z-2">
-              <source src="assets/img/Header/video/rock03.webm" type="video/mp4">
-            </video>
-
-          </div>
-
-        </div>
-
-      </div>
+      <svg id="svgDark" viewBox="0 0 1660 339" class="sc-grXZZQ ktVOoD slide-svg-light absolute bottom-0  hidden"
+        width="100%" color="text" xmlns="http://www.w3.org/2000/svg">
+        <path d="M804 166.523C520.5 166.523 267.5 290.022 0 304V338.5H1660V0C1358.83 0 1104 166.523 804 166.523Z"
+          fill="url(#paint0_linear_dark)"></path>
+        <defs>
+          <linearGradient id="paint0_linear_dark" x1="830" y1="83.5" x2="830" y2="338.5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#08060B" stop-opacity="0.2"></stop>
+            <stop offset="0.545554" stop-color="#08060B" stop-opacity="0.5"></stop>
+            <stop offset="1" stop-color="#08060B"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
 
     </div>
 
+    <!--   //ANCHOR - home3 -->
 
-  <!--   //ANCHOR - home3 -->
-
-    <div class="home3 flex justify-center items-center w-full relative overflow-hidden bg-linear_gradient_home3_white">
+    <div class="home3 flex justify-center items-center w-full relative overflow-hidden z-4">
       <img src="./assets/img/Header/pallaGialla.webp" alt=""
-        class="absolute w-[144px] h-[170px] ml-2 left-0 max-screen_1200:-top-12 max-screen_1200:-ml-14 max-screen_970:hidden">
+        class="absolute w-[144px] h-[170px] ml-2 left-0 max-screen_1200:-top-12 max-screen_1200:-ml-14 max-screen_1200:top-[20px]  max-screen_970:hidden">
       <img src="./assets/img/Header/palla viola.webp" alt=""
         class="absolute w-[116px] h-[232px] bottom-36 right-2 max-screen_1200:w-[70px] max-screen_1200:h-[142px] max-screen_1200:top-12 max-screen_970:hidden">
       <img src="./assets/img/Header/pallaVerde.webp" alt=""
-        class="absolute w-[84px] h-[103px] top-6 right-28 max-screen_1200:w-[53px] max-screen_1200:h-[66px] max-screen_1200:-top-10 max-screen_970:hidden">
+        class="absolute w-[84px] h-[103px] top-6 right-28 max-screen_1200:w-[53px] max-screen_1200:h-[66px] max-screen_1200:top-[20px] max-screen_970:hidden">
       <div class="home3-internal w-6.4xl flex flex-col items-center py-12 px-4">
         <div class="home3-title">
           <p class="text-fs_xl mb-1 text-color_text dark:text-[white] font-semibold">Shaping the Future of Decentralized
@@ -524,18 +549,17 @@
           </div>
         </div>
 
-        <div class="home3-swiping w-full min-w-520 max-w-1128 overflow-hidden flex flex-row rounded-xl justify-center">
+
+        <!-- //ANCHOR - carousel -->
+
+        <div
+          class="home3-swiping w-full max-screen_970:w-200  overflow-hidden flex flex-row rounded-xl justify-center max-screen_1200:w-820px [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+
+          <div class="w-full flex  mx-auto overflow-hidden flex flex-row rounded-xl justify-center max-screen_1200:w-full ">
 
 
 
-
-          <div x-data="{}" x-init="$nextTick(() => {
-            let ul = $refs.logos;
-            ul.insertAdjacentHTML('afterend', ul.outerHTML);
-            ul.nextSibling.setAttribute('aria-hidden', 'true');
-        })"
-            class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-            <ul x-ref="logos"
+            <ul 
               class="flex items-center justify-center md:justify-start [&_li]:mx-3 [&_img]:max-w-none animate-infinite-scroll">
               <li>
                 <div
@@ -659,12 +683,8 @@
           </div>
 
         </div>
-
-        <!--aggiustare l svg e ilnear gradient del viola-->
       </div>
-
-
-  </header>
+ </header>
 </body>
 
 </html>
