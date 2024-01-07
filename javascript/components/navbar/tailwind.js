@@ -1,4 +1,5 @@
 tailwind.config = {
+    darkMode: 'class',
     theme: {
         screens: {
             //ANCHOR - FRANCESCO-media-query
