@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentL2oaded', function () {
     //ANCHOR - swipper
     console.log('pippo paperino e pluto ma non topolino');
     const spans = document.querySelectorAll('.z-6 span');
@@ -111,6 +111,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnToggle = document.getElementById('toggleMode');
     const svgLight = document.getElementById('svgLight');
     const svgDark = document.getElementById('svgDark');
+    const svgArrowLight = document.getElementById('svgArrowLight');
+    const svgArrowDark = document.getElementById('svgArrowDark');
 
     btnToggle.addEventListener('click', function () {
         document.body.classList.toggle('dark')
@@ -119,17 +121,19 @@ document.addEventListener('DOMContentLoaded', function () {
             btnToggle.innerText = 'Light Mode'
             svgLight.classList.toggle('hidden')
             svgDark.classList.toggle('hidden')
+            svgArrowLight.classList.toggle('hidden')
+            svgArrowDark.classList.toggle('hidden')
         } else {
             btnToggle.innerText = 'Dark Mode'
             svgLight.classList.toggle('hidden')
             svgDark.classList.toggle('hidden')
+            svgArrowLight.classList.toggle('hidden')
+            svgArrowDark.classList.toggle('hidden')
         }
     })
 
 
-    // carousel
 
-    const carousel = document.getElementById('containerCarousel')
 
 
 });

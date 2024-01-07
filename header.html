@@ -104,7 +104,7 @@
               from: { transform: 'translateX(0)' },
               to: { transform: 'translateX(-100%)' },
             }
-          } 
+          }
         }
       }
     }
@@ -175,6 +175,20 @@
         }
         #third_animation_swipper {
             animation: 3s ease-in-out 1s infinite normal none running third_animation_swipper;
+        }
+    @keyframes forth_animation_swipper {
+            0% {
+                transform: translateX(0px) translateY(0px);
+            }
+            50% {
+                transform: translate(0px) translateY(10px);
+            }
+            100% {
+                transform: translateX(0px) translateY(0px);
+            }
+        }
+        #forth_animation_swipper {
+            animation: 3s ease-in-out 1s infinite normal none running forth_animation_swipper;
         }
 
 
@@ -253,7 +267,7 @@
                     src="assets/img/Header/ethXpancakeswap.png" alt="" class="mr-3"> <span
                     class="w-[63rem] h-[1rem] bg-white mr-3"></span> <img
                     src="assets/img/Header/galxe-logo.7705eef0.png" alt="" class="w-32 h-4"> </div>
-                <div></div> <!-- non mi mette la barra verticale -->
+                <div></div>
                 <div
                   style="-webkit-text-stroke: 2px #832e00; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 178, 55) -5.1%, rgb(255, 235, 55) 75.24%);"
                   class="text-fs_xl font-extrabold leading-7 max-screen_860:text-fs_lg "> Traverse the Treasure Islande
@@ -280,29 +294,49 @@
             </div>
 
             <div id="swipper3"
-              class="swipper hidden w-full min-w-520 max-w-1128 h-48 absolute z-3 flex flex-row rounded-[2rem] bg-cover bg-no-repeat bg-right"
+              class="swipper  w-full min-w-520 max-w-1128 h-48 absolute z-3 flex flex-row rounded-[2rem] bg-cover bg-no-repeat bg-right"
               style="background-image: url(assets/img/Header/vecake-bg.webp);">
               <div class="swipper1-title p-6 flex flex-col">
                 <div class="swipper1-title-pankackeSwap-img w-32 h-5 flex flex-row justify-content items-center "> <img
                     src="assets/img/Header/ethXpancakeswap.png" alt="" class="mr-3"></div>
-                <div></div> <!-- non mi mette la barra verticale -->
                 <div
                   style="-webkit-text-stroke: 2px #8053cf; background-clip: text; color: transparent; background-image: linear-gradient(rgb(255, 178, 55) 0%, rgb(255, 235, 55) 100%);"
-                  class="text-fs_xl font-extrabold leading-7 max-screen_860:text-fs_lg "> Your cake, Your Voice</div>
-                <div class="text-fs_lg text-color_text font-bold"><span class="text-color_text_sub">Introducing</span>
+                  class="text-fs_xl font-extrabold leading-7 max-screen_970:text-fs_lg z-1"> Your cake, Your Voice</div>
+                <div class="text-fs_lg text-color_text font-bold max-screen_970:hidden"><span
+                    class="text-color_text_sub">Introducing</span>
                   Gauges Voting <span class="text-color_text_sub">and</span> veCAKE </div>
                 <div class="">
                   <button id="connetti" class="btn btn_blue btn:hover h-12 mr-2 mt-6">
                     <a href="#" class="flex items-center">
-                      <p class="mr-1">Get Started</p> <img src="./assets/img/Header/open-external-link-icon.svg" alt=""
-                        class="w-5 h-5 ml-1 filter brightness-0 invert">
+                      <p class="mr-1 dark:text-[black]">Get Started</p>
+                      <svg id="svgArrowLight" viewBox="0 0 24 24" color="red" width="20px"
+                        xmlns="http://www.w3.org/2000/svg" class="sc-grXZZQ hxxPRP">
+                        <path fill="white"
+                          d="M5 13H16.17L11.29 17.88C10.9 18.27 10.9 18.91 11.29 19.30C11.68 19.69 12.31 19.69 12.7 19.30L19.29 12.71C19.68 12.32 19.68 11.69 19.29 11.30L12.71 4.70C12.32 4.31 11.69 4.31 11.30 4.70C10.91 5.09 10.91 5.72 11.30 6.11L16.17 11H5C4.45 11 4 11.45 4 12C4 12.55 4.45 13 5 13Z">
+                        </path>
+                      </svg>
+                      <svg id="svgArrowDark" viewBox="0 0 24 24" color="red" width="20px"
+                        xmlns="http://www.w3.org/2000/svg" class="sc-grXZZQ hxxPRP hidden">
+                        <path fill="black"
+                          d="M5 13H16.17L11.29 17.88C10.9 18.27 10.9 18.91 11.29 19.30C11.68 19.69 12.31 19.69 12.7 19.30L19.29 12.71C19.68 12.32 19.68 11.69 19.29 11.30L12.71 4.70C12.32 4.31 11.69 4.31 11.30 4.70C10.91 5.09 10.91 5.72 11.30 6.11L16.17 11H5C4.45 11 4 11.45 4 12C4 12.55 4.45 13 5 13Z">
+                        </path>
+                      </svg>
+                    </a>
+                  </button>
+                  <button id="connetti" class="btn btn_blue btn:hover h-12 mr-2 mt-6 max-screen_970:hidden">
+                    <a href="#" class="flex items-center">
+                      <p class="mr-1">Learn More</p>
                     </a>
                   </button>
                 </div>
 
                 <div class="spain-bunny w-1/2 h-full overflow-hidden z-2">
                   <img src="assets/img/Header/image.webp" alt="Bunny_Spain"
-                    class="absolute -top-20 right-36 w-[16.375rem] h-[10.625]">
+                    class="absolute -top-14 right-32 w-[235px] h-[237px] max-screen_860:w-[160px] max-screen_860:h-[180px] max-screen_860:-top-2 max-screen_860:right-40">
+                </div>
+                <div class="spain-bunny w-1/2 h-full overflow-hidden z-2 max-screen_970:hidden">
+                  <img id="forth_animation_swipper" src="assets/img/Header/rombo.webp" alt="Bunny_Spain"
+                    class="absolute -top-8 right-[370px] w-[96px] h-[101px] ">
                 </div>
 
               </div>
@@ -362,7 +396,6 @@
                 <div>
                   <div>
                     <img src="./assets/img/Header/game-mobile-text.webp" alt="" class="sm:hidden">
-                    <!-- aggiungere che il coniglio va sotto l'h2 -->
                   </div>
                   <button id="connetti" class="btn btn:hover h-12 -mt-1 -ml-6">
                     <a href="#" class="flex items-center text-[#0bf0bb]">
@@ -470,7 +503,7 @@
         </div>
 
       </div>
-      <svg id="svgLight" viewBox="0 0 1660 339" class="sc-grXZZQ ktVOoD slide-svg-light absolute bottom-0 " width="100%"
+      <svg id="svgLight" viewBox="0 0 1660 339" class="sc-grXZZQ ktVOoD slide-svg-light absolute -bottom-1" width="100%"
         color="text" xmlns="http://www.w3.org/2000/svg">
         <path d="M804 167.023C520.5 167.023 267.5 290.522 0 304.5V339H1660V0.5C1358.83 0.5 1104 167.023 804 167.023Z"
           fill="url(#paint0_linear_light)"></path>
@@ -483,7 +516,7 @@
         </defs>
       </svg>
 
-      <svg id="svgDark" viewBox="0 0 1660 339" class="sc-grXZZQ ktVOoD slide-svg-light absolute bottom-0  hidden"
+      <svg id="svgDark" viewBox="0 0 1660 339" class="sc-grXZZQ ktVOoD slide-svg-light absolute -bottom-1  hidden"
         width="100%" color="text" xmlns="http://www.w3.org/2000/svg">
         <path d="M804 166.523C520.5 166.523 267.5 290.022 0 304V338.5H1660V0C1358.83 0 1104 166.523 804 166.523Z"
           fill="url(#paint0_linear_dark)"></path>
@@ -500,7 +533,8 @@
 
     <!--   //ANCHOR - home3 -->
 
-    <div class="home3 flex justify-center items-center w-full relative overflow-hidden z-4">
+    <div class="home3 flex justify-center items-center w-full relative overflow-hidden z-4
+    bg-gradient-to-b from-white to-[#d8cbed]  dark:bg-gradient-to-b dark:from-[#09070c] dark:to-[#201335]">
       <img src="./assets/img/Header/pallaGialla.webp" alt=""
         class="absolute w-[144px] h-[170px] ml-2 left-0 max-screen_1200:-top-12 max-screen_1200:-ml-14 max-screen_1200:top-[20px]  max-screen_970:hidden">
       <img src="./assets/img/Header/palla viola.webp" alt=""
@@ -555,11 +589,12 @@
         <div
           class="home3-swiping w-full max-screen_970:w-200  overflow-hidden flex flex-row rounded-xl justify-center max-screen_1200:w-820px [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
 
-          <div class="w-full flex  mx-auto overflow-hidden flex flex-row rounded-xl justify-center max-screen_1200:w-full ">
+          <div
+            class="w-full flex  mx-auto overflow-hidden flex flex-row rounded-xl justify-center max-screen_1200:w-full ">
 
 
 
-            <ul 
+            <ul
               class="flex items-center justify-center md:justify-start [&_li]:mx-3 [&_img]:max-w-none animate-infinite-scroll">
               <li>
                 <div
@@ -684,7 +719,7 @@
 
         </div>
       </div>
- </header>
+  </header>
 </body>
 
 </html>
