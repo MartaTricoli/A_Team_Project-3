@@ -1,18 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
-const $hoverTrade = document.querySelector("#nTrade");
-const $hoverEarn = document.querySelector("#nEarn");
-const $hoverGame = document.querySelector("#nGame");
-const $hoverNFT = document.querySelector("#nNFT");
-const $hoverMenu = document.querySelector("#nMenu");
-const $hoverNetwork = document.querySelector("#nNetwork");
-const $menuTrade = document.querySelector("#nmTrade");
-const $menuEarn = document.querySelector("#nmEarn");
-const $menuGame = document.querySelector("#nmGame");
-const $menuNFT = document.querySelector("#nmNFT");
-const $menuMenu = document.querySelector("#nmMenu");
-const $menuNetwork = document.querySelector("#nmNetwork");
-
+  //desktop
+  const $hoverTrade = document.querySelector("#nTrade");
+  const $hoverEarn = document.querySelector("#nEarn");
+  const $hoverGame = document.querySelector("#nGame");
+  const $hoverNFT = document.querySelector("#nNFT");
+  const $hoverMenu = document.querySelector("#nMenu");
+  const $hoverNetwork = document.querySelector("#nNetwork");
+  const $menuTrade = document.querySelector("#nmTrade");
+  const $menuEarn = document.querySelector("#nmEarn");
+  const $menuGame = document.querySelector("#nmGame");
+  const $menuNFT = document.querySelector("#nmNFT");
+  const $menuMenu = document.querySelector("#nmMenu");
+  const $menuNetwork = document.querySelector("#nmNetwork");
+  //mobile
+  const $hoverTradeMB = document.querySelector("#nmbTrade");
+  const $hoverEarnMB = document.querySelector("#nmbEarn");
+  const $hoverGameMB = document.querySelector("#nmbGame");
+  const $hoverNFTMB = document.querySelector("#nmbNFT");
+  const $hoverMenuMB = document.querySelector("#nmbMenu");
+  const $hoverNetworkMB = document.querySelector("#nmbNetwork");
+  const $menuTradeMB = document.querySelector("#nmbmTrade");
+  const $menuEarnMB = document.querySelector("#nmbmEarn");
+  const $menuGameMB = document.querySelector("#nmbmGame");
+  const $menuNFTMB = document.querySelector("#nmbmNFT");
+  const $menuMenuMB = document.querySelector("#nmbmMenu");
+  const $menuNetworkMB = document.querySelector("#nmbmNetwork");
+  
   const setListeners = () => {
+  //desktop
     const trade = () => {
       $hoverTrade.addEventListener("mouseenter", () => {
         $menuTrade.classList.remove("hidden");
@@ -25,7 +40,6 @@ const $menuNetwork = document.querySelector("#nmNetwork");
           $menuTrade.classList.add("hidden");
         }
       });
-      $menuTrade.addEventListener("mouseover", () => {});
       $menuTrade.addEventListener("mouseout", (event) => {
         if (
           !$hoverTrade.contains(event.relatedTarget) &&
@@ -48,7 +62,6 @@ const $menuNetwork = document.querySelector("#nmNetwork");
           $menuEarn.classList.add("hidden");
         }
       });
-      $menuEarn.addEventListener("mouseover", () => {});
       $menuEarn.addEventListener("mouseout", (event) => {
         if (
           !$hoverEarn.contains(event.relatedTarget) &&
@@ -71,7 +84,6 @@ const $menuNetwork = document.querySelector("#nmNetwork");
           $menuGame.classList.add("hidden");
         }
       });
-      $menuGame.addEventListener("mouseover", () => {});
       $menuGame.addEventListener("mouseout", (event) => {
         if (
           !$hoverGame.contains(event.relatedTarget) &&
@@ -94,7 +106,6 @@ const $menuNetwork = document.querySelector("#nmNetwork");
           $menuNFT.classList.add("hidden");
         }
       });
-      $menuNFT.addEventListener("mouseover", () => {});
       $menuNFT.addEventListener("mouseout", (event) => {
         if (
           !$hoverNFT.contains(event.relatedTarget) &&
@@ -117,7 +128,6 @@ const $menuNetwork = document.querySelector("#nmNetwork");
           $menuMenu.classList.add("hidden");
         }
       });
-      $menuMenu.addEventListener("mouseover", () => {});
       $menuMenu.addEventListener("mouseout", (event) => {
         if (
           !$hoverMenu.contains(event.relatedTarget) &&
@@ -140,7 +150,6 @@ const $menuNetwork = document.querySelector("#nmNetwork");
           $menuNetwork.classList.add("hidden");
         }
       });
-      $menuNetwork.addEventListener("mouseover", () => {});
       $menuNetwork.addEventListener("mouseout", (event) => {
         if (
           !$hoverNetwork.contains(event.relatedTarget) &&
@@ -150,13 +159,152 @@ const $menuNetwork = document.querySelector("#nmNetwork");
         }
       });
     };
+//mobile
+    const mbTrade = () => {
+      $hoverTradeMB.addEventListener("mouseenter", () => {
+        $menuTradeMB.classList.remove("hidden");
+      });
+      $hoverTradeMB.addEventListener("mouseout", (event) => {
+        if (
+          !$hoverTradeMB.contains(event.relatedTarget) &&
+          !$menuTradeMB.contains(event.relatedTarget)
+        ) {
+          $menuTradeMB.classList.add("hidden");
+        }
+      });
+      $menuTradeMB.addEventListener("mouseout", (event) => {
+        if (
+          !$hoverTradeMB.contains(event.relatedTarget) &&
+          !$menuTradeMB.contains(event.relatedTarget)
+        ) {
+          $menuTradeMB.classList.add("hidden");
+        }
+      });
+    };
   
+    const mbEarn = () => {
+      $hoverEarnMB.addEventListener("mouseenter", () => {
+        $menuEarnMB.classList.remove("hidden");
+      });
+      $hoverEarnMB.addEventListener("mouseout", (event) => {
+        if (
+          !$hoverEarnMB.contains(event.relatedTarget) &&
+          !$menuEarnMB.contains(event.relatedTarget)
+        ) {
+          $menuEarnMB.classList.add("hidden");
+        }
+      });
+      $menuEarnMB.addEventListener("mouseout", (event) => {
+        if (
+          !$hoverEarnMB.contains(event.relatedTarget) &&
+          !$menuEarnMB.contains(event.relatedTarget)
+        ) {
+          $menuEarnMB.classList.add("hidden");
+        }
+      });
+    };
+  
+    const mbGame = () => {
+      $hoverGameMB.addEventListener("mouseenter", () => {
+        $menuGameMB.classList.remove("hidden");
+      });
+      $hoverGameMB.addEventListener("mouseout", (event) => {
+        if (
+          !$hoverGameMB.contains(event.relatedTarget) &&
+          !$menuGameMB.contains(event.relatedTarget)
+        ) {
+          $menuGameMB.classList.add("hidden");
+        }
+      });
+      $menuGameMB.addEventListener("mouseout", (event) => {
+        if (
+          !$hoverGameMB.contains(event.relatedTarget) &&
+          !$menuGameMB.contains(event.relatedTarget)
+        ) {
+          $menuGameMB.classList.add("hidden");
+        }
+      });
+    };
+  
+    const mbNft = () => {
+      $hoverNFTMB.addEventListener("mouseenter", () => {
+        $menuNFTMB.classList.remove("hidden");
+      });
+      $hoverNFTMB.addEventListener("mouseout", (event) => {
+        if (
+          !$hoverNFTMB.contains(event.relatedTarget) &&
+          !$menuNFTMB.contains(event.relatedTarget)
+        ) {
+          $menuNFTMB.classList.add("hidden");
+        }
+      });
+      $menuNFTMB.addEventListener("mouseout", (event) => {
+        if (
+          !$hoverNFTMB.contains(event.relatedTarget) &&
+          !$menuNFTMB.contains(event.relatedTarget)
+        ) {
+          $menuNFTMB.classList.add("hidden");
+        }
+      });
+    };
+  
+    const mbMenu = () => {
+      $hoverMenuMB.addEventListener("mouseenter", () => {
+        $menuMenuMB.classList.remove("hidden");
+      });
+      $hoverMenuMB.addEventListener("mouseout", (event) => {
+        if (
+          !$hoverMenuMB.contains(event.relatedTarget) &&
+          !$menuMenuMB.contains(event.relatedTarget)
+        ) {
+          $menuMenuMB.classList.add("hidden");
+        }
+      });
+      $menuMenuMB.addEventListener("mouseout", (event) => {
+        if (
+          !$hoverMenuMB.contains(event.relatedTarget) &&
+          !$menuMenuMB.contains(event.relatedTarget)
+        ) {
+          $menuMenuMB.classList.add("hidden");
+        }
+      });
+    };
+  
+    const mbNetwork = () => {
+      $hoverNetworkMB.addEventListener("mouseenter", () => {
+        $menuNetworkMB.classList.remove("hidden");
+      });
+      $hoverNetworkMB.addEventListener("mouseout", (event) => {
+        if (
+          !$hoverNetworkMB.contains(event.relatedTarget) &&
+          !$menuNetworkMB.contains(event.relatedTarget)
+        ) {
+          $menuNetworkMB.classList.add("hidden");
+        }
+      });
+      $menuNetworkMB.addEventListener("mouseout", (event) => {
+        if (
+          !$hoverNetworkMB.contains(event.relatedTarget) &&
+          !$menuNetworkMB.contains(event.relatedTarget)
+        ) {
+          $menuNetworkMB.classList.add("hidden");
+        }
+      });
+    };
+//desktop
     trade();
     earn();
     game();
     nft();
     menu();
     network();
+//mobile
+    mbTrade();
+    mbEarn();
+    mbGame();
+    mbNft();
+    mbMenu();
+    mbNetwork();
   };
   setListeners();
 });

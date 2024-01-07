@@ -200,7 +200,7 @@
                 </div>
             </div>
 
-            <div class="navbar__down flex flex-row items-center">
+            <div class="navbar__down flex flex-row items-center h-full">
                 <div class="mr-3 max-mq2:hidden">
                     <a href="#" class="valor flex flex-row items-center">
                         <img src="../assets/img/navbar/pancakeswapcls.svg"
@@ -238,7 +238,7 @@
                     </button>
                 </div>
 
-                <div id="nNetwork" class="navbar__down-right mr-2">
+                <div id="nNetwork" class="navbar__down-right flex flex-row items-center mr-2 h-full">
                     <button
                         class="navbar__down-right-network btn flex flex-row items-center bg-color_net text-color_text px-0 shadow-net_sha dark:bg-color_darkM_button_net dark:shadow-net_shaD">
                         <div class="flex flex-row items-center h-8">
@@ -405,8 +405,8 @@
                 </div>
             </menu>
 
-            <menu id=""
-                class="nmGame menus dark:bg-color_fourth dark:border-color_darkM_border_nav sub-menu__game left-87,933 hidden">
+            <menu id="nmGame"
+                class=" menus dark:bg-color_fourth dark:border-color_darkM_border_nav sub-menu__game left-87,933 hidden">
                 <div>
                     <a href="#" class="flex flex-row justify-between">
                         <div class="flex flex-row">
@@ -700,7 +700,7 @@
         <!-- //ANCHOR - nav-mobile -->
         <div class="mobile-nav max-mq3:flex flex-row fixed inset-x-0 bottom-0 hidden dark:bg-color_fourth">
             <div class="w-screen flex flex-row justify-evenly">
-                <div
+                <div id="nmbTrade"
                     class="mobile-nav__down hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover flex flex-col items-center justify-center">
                     <div>
                         <svg viewBox="0 0 24 24" color="textSubtle" width="20px" xmlns="http://www.w3.org/2000/svg"
@@ -721,7 +721,7 @@
                     </a>
                 </div>
 
-                <div>
+                <div id="nmbEarn">
                     <div
                         class="mobile-nav__down hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover relative flex flex-col items-center justify-center">
                         <div>
@@ -753,7 +753,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div id="nmbGame">
                     <div
                         class="mobile-nav__down hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover relative flex flex-col items-center justify-center">
                         <div>
@@ -813,7 +813,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div id="nmbNFT">
                     <div
                         class="mobile-nav__down hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover flex flex-col items-center justify-center">
                         <div>
@@ -828,7 +828,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div id="nmbMenu">
                     <div
                         class="mobile-nav__down hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover pb-1 flex flex-col items-center justify-center">
                         <a href="" class="w-max px-4 flex flex-row items-center">
@@ -844,7 +844,7 @@
             </div>
             <!-- //ANCHOR - nav-mobile-menu -->
             <div>
-                <menu
+                <menu id="nmbmEarn"
                     class="menus dark:bg-color_fourth dark:border-color_darkM_border_nav m-mobile sub-menu__earn-m left-0 bottom-12 w-95% hidden">
                     <div>
                         <a href="#" class="text-color_text_sub dark:text-color_darkM_text_nav">Farms</a>
@@ -873,7 +873,7 @@
                     </div>
                 </menu>
 
-                <menu
+                <menu id="nmbmGame"
                     class="menus dark:bg-color_fourth dark:border-color_darkM_border_nav m-mobile sub-menu__game-m left-5 bottom-12 w-95% hidden">
                     <div>
                         <a href="#" class="flex flex-row justify-between">
@@ -904,7 +904,7 @@
                     </div>
                 </menu>
 
-                <menu
+                <menu id="nmbmNFT"
                     class="menus dark:bg-color_fourth dark:border-color_darkM_border_nav m-mobile sub-menu__nft-m left-8 bottom-12 w-95% hidden">
                     <div>
                         <a href="#" class="text-color_text_sub dark:text-color_darkM_text_nav">Overview</a>
@@ -917,7 +917,7 @@
                     </div>
                 </menu>
 
-                <menu
+                <menu id="nmbmMenu"
                     class="menus dark:bg-color_fourth dark:border-color_darkM_border_nav sub-menu__icon-m left-8 bottom-12 w-95% hidden">
                     <div>
                         <a href="#" class="text-color_text_sub dark:text-color_darkM_text_nav">info</a>
