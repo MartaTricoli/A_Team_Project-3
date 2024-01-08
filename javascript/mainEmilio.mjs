@@ -1,7 +1,5 @@
-
-document.addEventListener('DOMContentL2oaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     //ANCHOR - swipper
-    console.log('pippo paperino e pluto ma non topolino');
     const spans = document.querySelectorAll('.z-6 span');
     const containerSpan = document.getElementById('span_container')
     spans[0].classList.add('active');
@@ -113,6 +111,7 @@ document.addEventListener('DOMContentL2oaded', function () {
     const svgDark = document.getElementById('svgDark');
     const svgArrowLight = document.getElementById('svgArrowLight');
     const svgArrowDark = document.getElementById('svgArrowDark');
+
 
     btnToggle.addEventListener('click', function () {
         document.body.classList.toggle('dark')
