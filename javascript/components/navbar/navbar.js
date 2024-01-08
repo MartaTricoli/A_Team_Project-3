@@ -13,18 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const $menuMenu = document.querySelector("#nmMenu");
   const $menuNetwork = document.querySelector("#nmNetwork");
   //mobile
-  const $hoverTradeMB = document.querySelector("#nmbTrade");
   const $hoverEarnMB = document.querySelector("#nmbEarn");
   const $hoverGameMB = document.querySelector("#nmbGame");
   const $hoverNFTMB = document.querySelector("#nmbNFT");
   const $hoverMenuMB = document.querySelector("#nmbMenu");
-  const $hoverNetworkMB = document.querySelector("#nmbNetwork");
-  const $menuTradeMB = document.querySelector("#nmbmTrade");
   const $menuEarnMB = document.querySelector("#nmbmEarn");
   const $menuGameMB = document.querySelector("#nmbmGame");
   const $menuNFTMB = document.querySelector("#nmbmNFT");
   const $menuMenuMB = document.querySelector("#nmbmMenu");
-  const $menuNetworkMB = document.querySelector("#nmbmNetwork");
   
   const setListeners = () => {
   //desktop
@@ -160,28 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     };
 //mobile
-    const mbTrade = () => {
-      $hoverTradeMB.addEventListener("mouseenter", () => {
-        $menuTradeMB.classList.remove("hidden");
-      });
-      $hoverTradeMB.addEventListener("mouseout", (event) => {
-        if (
-          !$hoverTradeMB.contains(event.relatedTarget) &&
-          !$menuTradeMB.contains(event.relatedTarget)
-        ) {
-          $menuTradeMB.classList.add("hidden");
-        }
-      });
-      $menuTradeMB.addEventListener("mouseout", (event) => {
-        if (
-          !$hoverTradeMB.contains(event.relatedTarget) &&
-          !$menuTradeMB.contains(event.relatedTarget)
-        ) {
-          $menuTradeMB.classList.add("hidden");
-        }
-      });
-    };
-  
     const mbEarn = () => {
       $hoverEarnMB.addEventListener("mouseenter", () => {
         $menuEarnMB.classList.remove("hidden");
@@ -270,27 +244,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     };
   
-    const mbNetwork = () => {
-      $hoverNetworkMB.addEventListener("mouseenter", () => {
-        $menuNetworkMB.classList.remove("hidden");
-      });
-      $hoverNetworkMB.addEventListener("mouseout", (event) => {
-        if (
-          !$hoverNetworkMB.contains(event.relatedTarget) &&
-          !$menuNetworkMB.contains(event.relatedTarget)
-        ) {
-          $menuNetworkMB.classList.add("hidden");
-        }
-      });
-      $menuNetworkMB.addEventListener("mouseout", (event) => {
-        if (
-          !$hoverNetworkMB.contains(event.relatedTarget) &&
-          !$menuNetworkMB.contains(event.relatedTarget)
-        ) {
-          $menuNetworkMB.classList.add("hidden");
-        }
-      });
-    };
 //desktop
     trade();
     earn();
@@ -299,12 +252,10 @@ document.addEventListener("DOMContentLoaded", () => {
     menu();
     network();
 //mobile
-    mbTrade();
     mbEarn();
     mbGame();
     mbNft();
     mbMenu();
-    mbNetwork();
   };
   setListeners();
 });
