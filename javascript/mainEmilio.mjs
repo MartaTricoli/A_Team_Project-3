@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const spans = document.querySelectorAll('.z-6 span');
     const containerSpan = document.getElementById('span_container')
     spans[0].classList.add('active');
+    let timer;
 
     const cleanSpan = () => {
         spans.forEach((otherSpan) => {
@@ -20,6 +21,38 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
+    const setSwiperInterval = () => {
+        timer = setInterval(() => {
+
+            const activeElement = containerSpan.querySelector('.active');
+
+            const nextElement = activeElement.nextElementSibling;
+            const firstElement = spans[0];
+            const idSwipper = nextElement ? nextElement.getAttribute('reference') : firstElement.getAttribute('reference');
+            const swipperSelected = document.getElementById(idSwipper);
+            cleanSwipper()
+
+            swipperSelected.classList.remove('hidden')
+
+            if (nextElement) {
+                cleanSpan()
+
+                nextElement.classList.remove('opacity-50');
+                nextElement.classList.add('active');
+            } else {
+                cleanSpan()
+                firstElement.classList.remove('opacity-50');
+                firstElement.classList.add('active');
+            }
+
+
+
+        }, 10000);
+    }
+    const clearSwipperInteval = () => {
+        clearInterval(timer)
+    }
+
     containerSpan.addEventListener('click', function (event) {
         const element = event.target
         const idSwipper = element.getAttribute('reference');
@@ -31,37 +64,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const swipperSelected = document.getElementById(idSwipper)
         cleanSwipper()
 
-        swipperSelected.classList.remove('hidden')
-
-
+        swipperSelected.classList.remove('hidden');
+        clearSwipperInteval();
+        setSwiperInterval();
     })
 
-    setInterval(() => {
-
-        const activeElement = containerSpan.querySelector('.active');
-
-        const nextElement = activeElement.nextElementSibling;
-        const firstElement = spans[0];
-        const idSwipper = nextElement ? nextElement.getAttribute('reference') : firstElement.getAttribute('reference');
-        const swipperSelected = document.getElementById(idSwipper);
-        cleanSwipper()
-
-        swipperSelected.classList.remove('hidden')
-
-        if (nextElement) {
-            cleanSpan()
-
-            nextElement.classList.remove('opacity-50');
-            nextElement.classList.add('active');
-        } else {
-            cleanSpan()
-            firstElement.classList.remove('opacity-50');
-            firstElement.classList.add('active');
-        }
+    setSwiperInterval()
 
 
 
-    }, 10000);
 
     //ANCHOR - countdown
 
