@@ -1,7 +1,10 @@
 const $html = document.querySelector("#html");
-const $darkModeLabel = document.querySelector("#darkmode-label");
+const $containerBelowBg = document.querySelector("#container__below-bg");
+const $darkModeLabel = document.querySelectorAll(".darkmode-label");
+const $darkModeInputFooter = document.querySelector("#darkmode-toggle-footer");
+const $darkModeInputNav = document.querySelector("#darkmode-toggle-nav");
 const $containerBelow = document.querySelector("#container__below");
-const $connectWalletBtn = document.querySelector("#connect_wallet_btn");
+const $connectWalletBtn = document.querySelectorAll(".connect_wallet_btn");
 const $containerBelowBtnOne = document.querySelector("#container__below-btn-one");
 const $containerBelowBtnTwo = document.querySelector("#container__below-btn-two");
 const $containerBelowBoxFirst = document.querySelector("#container__below-box-first");
@@ -10,91 +13,208 @@ const $containerBelowBoxSecondOne = document.querySelector("#container__below-bo
 const $containerBelowBoxSecondTwo = document.querySelector("#container__below-box-second-two");
 const $containerBelowBoxSecondBtnOne = document.querySelector("#container__below-box-second-btn-one");
 const $containerBelowBoxSecondBtnTwo = document.querySelector("#container__below-box-second-btn-two");
+const $containerBelowBoxFirstBtns = document.querySelectorAll(".container__below-box-first-btn-hide");
 const $containerBelowBoxFirstBtnMore = document.querySelector("#container__below-box-first-btn-more");
-const $containerBelowBoxFirstHideOne = document.querySelector("#container__below-box-first-hide-one");
-const $containerBelowBoxFirstHideTwo = document.querySelector("#container__below-box-first-hide-two");
-const $containerBelowBoxFirstHideThree = document.querySelector("#container__below-box-first-hide-three");
-const $containerBelowBoxFirstHideFour = document.querySelector("#container__below-box-first-hide-four");
-const $containerBelowBoxFirstHideFive = document.querySelector("#container__below-box-first-hide-five");
-const $containerBelowBoxFirstHideSix = document.querySelector("#container__below-box-first-hide-six");
+const $containerBelowBoxFirstSvgBtn = document.querySelector("#container__below-box-first-svg-btn");
+// const $containerBelowBoxSecondScroll = document.querySelector("#container__below-box-second-scroll");
 
 const utilities = {
     activeDarkMode: () => {
         $html.classList.toggle("dark");
     },
+
     appearItem: (item) => {
         item.classList.remove("hidden");  
     },
+
     disappearItem: (item) => {
         item.classList.add("hidden");
-    }
+    },
+
+    disappearItemFade: (item) => {
+        item.animate({ opacity: "0" }, 400, () => {
+            item.classList.remove("connect_wallet_appear");
+        });  
+    },
+
+    transformFadeLeft: (item) => {
+        item.animate({ transform: "translateX(-150%)", transition: "transform 0.5s ease-in-out" }, 300, () => {
+            item.classList.add("hidden");
+        });
+    },
+
+    transformFadeRight: (item) => {
+        item.animate({ transform: "translateX(+150%)", transition: "transform 0.5s ease-in-out" }, 300, () => {
+            item.classList.add("hidden");
+        });
+    },
+
+    buttonMoreToggle: () => {
+        $containerBelowBoxFirstBtns.forEach((btn) => {
+            btn.classList.toggle("hidden");
+        })
+
+        $containerBelowBoxFirstBtnMore.classList.toggle("hidden");
+    },
+
+    checkWalletUI: () => {
+        if ($html.classList.contains("dark")) {
+            if (!$containerBelowBoxFirst.classList.contains("hidden")) {
+                $containerBelowBtnOne.classList.add("dark:bg-color_dark_grey_tab_on");
+                $containerBelowBtnOne.classList.remove("dark:bg-color_dark_grey_tab");
+                $containerBelowBtnOne.classList.remove("dark:text-color_dark_grey_tab_on");
+                $containerBelowBtnOne.classList.add("dark:text-color_dark_grey_tab");
+                $containerBelowBtnTwo.classList.remove("dark:bg-color_dark_grey_tab_on");
+                $containerBelowBtnTwo.classList.add("dark:bg-color_dark_grey_tab");
+                $containerBelowBtnTwo.classList.remove("dark:text-color_dark_grey_tab");
+                $containerBelowBtnTwo.classList.add("dark:text-color_dark_grey_tab_on");
+
+            } else if(!$containerBelowBoxSecond.classList.contains("hidden")) {
+                $containerBelowBtnTwo.classList.remove("dark:bg-color_dark_grey_tab");
+                $containerBelowBtnTwo.classList.add("dark:bg-color_dark_grey_tab_on");
+                $containerBelowBtnTwo.classList.remove("dark:text-color_dark_grey_tab_on");
+                $containerBelowBtnTwo.classList.add("dark:text-color_dark_grey_tab");
+                $containerBelowBtnOne.classList.remove("dark:bg-color_dark_grey_tab_on");
+                $containerBelowBtnOne.classList.add("dark:bg-color_dark_grey_tab");
+                $containerBelowBtnOne.classList.remove("dark:text-color_dark_grey_tab");
+                $containerBelowBtnOne.classList.add("dark:text-color_dark_grey_tab_on");
+
+                if (!$containerBelowBoxSecondOne.classList.contains("hidden")) {
+                    $containerBelowBoxSecondBtnTwo.classList.remove("dark:bg-color_btn_slider_on");
+                    $containerBelowBoxSecondBtnTwo.classList.add("dark:bg-[#262130]");
+                    $containerBelowBoxSecondBtnOne.classList.remove("dark:bg-[#262130]");
+                    $containerBelowBoxSecondBtnOne.classList.add("dark:bg-color_btn_slider_on");
+                    
+
+                } else if(!$containerBelowBoxSecondTwo.classList.contains("hidden")) {
+                    $containerBelowBoxSecondBtnOne.classList.remove("dark:bg-color_btn_slider_on");
+                    $containerBelowBoxSecondBtnOne.classList.add("dark:bg-[#262130]");
+                    $containerBelowBoxSecondBtnTwo.classList.remove("dark:bg-[#262130]");
+                    $containerBelowBoxSecondBtnTwo.classList.add("dark:bg-color_btn_slider_on");
+
+                }
+            }
+
+        } else {
+            if (!$containerBelowBoxFirst.classList.contains("hidden")) {
+                $containerBelowBtnOne.classList.add("bg-color_new_gray");
+                $containerBelowBtnOne.classList.remove("bg-color_btn_footer");
+                $containerBelowBtnOne.classList.remove("text-color_tertiary");
+                $containerBelowBtnOne.classList.add("text-color_btn_footer");
+                $containerBelowBtnTwo.classList.remove("bg-color_new_gray");
+                $containerBelowBtnTwo.classList.add("bg-color_btn_footer");
+                $containerBelowBtnTwo.classList.remove("text-color_btn_footer");
+                $containerBelowBtnTwo.classList.add("text-color_tertiary");
+
+            } else if(!$containerBelowBoxSecond.classList.contains("hidden")) {
+                $containerBelowBtnOne.classList.add("text-color_tertiary");
+                $containerBelowBtnOne.classList.remove("text-color_btn_footer");
+                $containerBelowBtnOne.classList.remove("bg-color_new_gray");
+                $containerBelowBtnOne.classList.add("bg-color_btn_footer");
+                $containerBelowBtnTwo.classList.remove("text-color_tertiary");
+                $containerBelowBtnTwo.classList.add("text-color_btn_footer");
+                $containerBelowBtnTwo.classList.add("bg-color_new_gray");
+                $containerBelowBtnTwo.classList.remove("bg-color_btn_footer");
+
+                if (!$containerBelowBoxSecondOne.classList.contains("hidden")) {
+                    $containerBelowBoxSecondBtnOne.classList.add("bg-color_btn_slider_on");
+                    $containerBelowBoxSecondBtnTwo.classList.remove("bg-color_btn_slider_on");
+
+                } else if(!$containerBelowBoxSecondTwo.classList.contains("hidden")) {
+                    $containerBelowBoxSecondBtnTwo.classList.add("bg-color_btn_slider_on");
+                    $containerBelowBoxSecondBtnOne.classList.remove("bg-color_btn_slider_on");
+
+                }
+            }
+        }
+    },
+    
+    // transformFadeDown: (item) => {
+    //     item.animate({ transform: "translateY(-150%)", transition: "transform 0.5s ease-in-out" }, 200, () => {
+    //         item.classList.remove("connect_wallet_appear");
+    //     });
+    // }
 }
 
+$darkModeInputFooter.addEventListener("change", () => {
+    $darkModeInputNav.checked = $darkModeInputFooter.checked
+})
 
-$darkModeLabel.addEventListener("click", () => {
-    utilities.activeDarkMode();
+$connectWalletBtn.forEach((button) => {
+    button.addEventListener("click", () => {
+        $containerBelow.classList.remove("hidden");
+        $containerBelow.classList.add("connect_wallet_appear");
+    })
 });
 
-$connectWalletBtn.addEventListener('click', () => {
-    utilities.appearItem($containerBelow);
+$darkModeLabel.forEach((button) => {
+    button.addEventListener("click", () => {
+        utilities.activeDarkMode();
+        utilities.checkWalletUI();
+    })
 });
 
 $containerBelowBtnTwo.addEventListener("click", () => {
     utilities.disappearItem($containerBelowBoxFirst);
     utilities.appearItem($containerBelowBoxSecond);
-
-    if(!$containerBelowBoxSecond.classList.contains("hidden")) {
-        if($html.classList.contains("dark")) {
-            $containerBelowBtnOne.classList.remove("dark:bg-color_dark_grey_tab_on");
-            $containerBelowBtnTwo.classList.add("dark:bg-color_dark_grey_tab_on");
-        } else {
-            $containerBelowBtnOne.classList.remove("bg-color_new_gray");
-            $containerBelowBtnTwo.classList.add("bg-color_new_gray");
-        }
-    }
+    utilities.checkWalletUI();
 });
 
 $containerBelowBtnOne.addEventListener("click", () => {
     utilities.disappearItem($containerBelowBoxSecond);
     utilities.appearItem($containerBelowBoxFirst);
-
-    if(!$containerBelowBoxFirst.classList.contains("hidden")) {
-        if($html.classList.contains("dark")) {
-            $containerBelowBtnOne.classList.add("dark:bg-color_dark_grey_tab_on");
-            $containerBelowBtnTwo.classList.remove("dark:bg-color_dark_grey_tab_on");
-        } else {
-            $containerBelowBtnOne.classList.add("bg-color_new_gray");
-            $containerBelowBtnTwo.classList.remove("bg-color_new_gray");
-        }
-    }
+    utilities.checkWalletUI();
 });
 
 $containerBelowBoxSecondBtnTwo.addEventListener("click", () => {
-    utilities.disappearItem($containerBelowBoxSecondOne);
-    utilities.appearItem($containerBelowBoxSecondTwo);
+    utilities.transformFadeLeft($containerBelowBoxSecondOne);
+    // $containerBelowBoxSecondScroll.scrollLeft += $containerBelowBoxSecondScroll.clientWidth;
 
-    if(!$containerBelowBoxSecondTwo.classList.contains("hidden")) {
-        $containerBelowBoxSecondBtnTwo.classList.add("bg-color_btn_slider_on");
-        $containerBelowBoxSecondBtnOne.classList.remove("bg-color_btn_slider_on");
-    }
+    setTimeout(() => {
+        utilities.disappearItem($containerBelowBoxSecondOne);
+        utilities.appearItem($containerBelowBoxSecondTwo);
+        utilities.checkWalletUI();
+    }, 100);
+    // utilities.disappearItem($containerBelowBoxSecondOne);
+    // utilities.appearItem($containerBelowBoxSecondTwo);
+    // utilities.checkWalletUI();
 });
 
 $containerBelowBoxSecondBtnOne.addEventListener("click", () => {
-    utilities.disappearItem($containerBelowBoxSecondTwo);
-    utilities.appearItem($containerBelowBoxSecondOne);
+    utilities.transformFadeRight($containerBelowBoxSecondTwo);
+    // $containerBelowBoxSecondScroll.scrollLeft -= $containerBelowBoxSecondScroll.clientWidth;
 
-    if(!$containerBelowBoxSecondOne.classList.contains("hidden")) {
-        $containerBelowBoxSecondBtnOne.classList.add("bg-color_btn_slider_on");
-        $containerBelowBoxSecondBtnTwo.classList.remove("bg-color_btn_slider_on");
-    }
+    setTimeout(() => {
+        utilities.disappearItem($containerBelowBoxSecondTwo);
+        utilities.appearItem($containerBelowBoxSecondOne);
+        utilities.checkWalletUI();
+    }, 100);
+    // utilities.disappearItem($containerBelowBoxSecondTwo);
+    // utilities.appearItem($containerBelowBoxSecondOne);
+    // utilities.checkWalletUI();
 });
 
 $containerBelowBoxFirstBtnMore.addEventListener("click", () => {
-    utilities.disappearItem($containerBelowBoxFirstBtnMore);
-    utilities.appearItem($containerBelowBoxFirstHideOne);
-    utilities.appearItem($containerBelowBoxFirstHideTwo);
-    utilities.appearItem($containerBelowBoxFirstHideThree);
-    utilities.appearItem($containerBelowBoxFirstHideFour);
-    utilities.appearItem($containerBelowBoxFirstHideFive);
-    utilities.appearItem($containerBelowBoxFirstHideSix);
+    utilities.buttonMoreToggle();
 });
+
+$containerBelowBg.addEventListener("click", () => {
+    utilities.disappearItemFade($containerBelow);
+
+    setTimeout(() => {
+        $containerBelow.classList.remove("connect_wallet_appear")
+        utilities.disappearItem($containerBelow);
+
+        if($containerBelowBoxFirstBtnMore.classList.contains("hidden")) {
+            utilities.buttonMoreToggle();
+        }
+    }, 390)
+});
+
+// .addEventListener("click", () => {
+//     utilities.transformFadeDown($containerBelow);
+
+//     setTimeout(() => {
+//         $containerBelow.classList.add("hidden");
+//     }, 390)
+// })
