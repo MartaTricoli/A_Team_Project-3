@@ -10,7 +10,7 @@
     href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../javascript/components/navbar/tailwind.js"></script>
+  <script src="../javascript/components/tailwind.js"></script>
   <style type="text/tailwindcss">
     @layer components {
         ::-webkit-scrollbar {
@@ -156,9 +156,9 @@
 </head>
 
 <body class="font-Kanit " style="height: 10000px; width: 100vw ">
+  <!-- //ANCHOR - nav -->
   <nav
     class="navbar flex flex-col z-998 border border-t-0 border-l-0 dark:border-t-0 dark:border-l-0 border-b-1 dark:border dark:border-b-1 w-screen fixed mr-3">
-    <!-- //ANCHOR - nav -->
     <div id=""
       class="warning flex flex-row items-center justify-center bg-gradient-to-b from-color_primary to-color_nav_top z-996 max-mq3:hidden">
       <div class="navbar__up flex flex-row items-center h-17,5 w-8/12 relative">
@@ -782,10 +782,10 @@
             </div>
           </div>
           <menu id="nmbmEarn"
-            class="menus dark:bg-color_fourth dark:border-color_darkM_border_nav m-mobile sub-menu__earn-m left-0 bottom-12 w-95% hidden group-hover/item:block">
+            class="menus bg-white dark:bg-color_fourth dark:border-color_darkM_border_nav m-mobile sub-menu__earn-m left-0 bottom-12 w-95% hidden group-hover/item:block">
             <div>
               <a href="#"
-                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text_sub dark:text-color_darkM_text_nav">Farms</a>
+                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text_sub dark:text-color_darkM_text_nav rounded-t-xl">Farms</a>
             </div>
             <div>
               <a href="#" class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover ">
@@ -813,7 +813,7 @@
             </div>
             <div>
               <a href="#"
-                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text_sub dark:text-color_darkM_text_nav">Simple
+                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text_sub dark:text-color_darkM_text_nav rounded-b-xl">Simple
                 Staking</a>
             </div>
           </menu>
@@ -877,12 +877,12 @@
             </div>
           </div>
           <menu id="nmbmGame"
-            class="menus dark:bg-color_fourth dark:border-color_darkM_border_nav m-mobile sub-menu__game-m left-5 bottom-12 w-95% hidden group-hover/item:block">
+            class="menus bg-white dark:bg-color_fourth dark:border-color_darkM_border_nav m-mobile sub-menu__game-m left-5 bottom-12 w-95% hidden group-hover/item:block">
             <div>
               <a href="#"
-                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover flex flex-row justify-between">
+                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover flex flex-row justify-between rounded-t-xl">
                 <div class="flex flex-row">
-                  <p class="text-color_text_sub dark:text-color_darkM_text_nav">
+                  <p class="text-color_text_sub dark:text-color_darkM_text_nav ">
                     Gaming Marketplace
                   </p>
                   <div class="border-2 border-green-500 rounded-2xl ml-2">
@@ -908,7 +908,7 @@
             </div>
             <div>
               <a href="#"
-                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text_sub dark:text-color_darkM_text_nav">Pottery
+                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text_sub dark:text-color_darkM_text_nav rounded-b-xl">Pottery
                 (BETA)</a>
             </div>
           </menu>
@@ -928,10 +928,10 @@
             <a href="" class="text-color_text_sub dark:text-color_darkM_text_nav">NFT</a>
           </div>
           <menu id="nmbmNFT"
-            class="menus dark:bg-color_fourth dark:border-color_darkM_border_nav m-mobile sub-menu__nft-m left-8 bottom-12 w-95% hidden group-hover/item:block">
+            class="menus bg-white dark:bg-color_fourth dark:border-color_darkM_border_nav m-mobile sub-menu__nft-m left-8 bottom-12 w-95% hidden group-hover/item:block">
             <div>
               <a href="#"
-                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text_sub dark:text-color_darkM_text_nav">Overview</a>
+                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text_sub dark:text-color_darkM_text_nav rounded-t-xl">Overview</a>
             </div>
             <div>
               <a href="#"
@@ -939,7 +939,7 @@
             </div>
             <div>
               <a href="#"
-                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text_sub dark:text-color_darkM_text_nav">Activity</a>
+                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text_sub dark:text-color_darkM_text_nav rounded-b-xl">Activity</a>
             </div>
           </menu>
         </div>
@@ -957,10 +957,10 @@
             </a>
           </div>
           <menu id="nmbmMenu"
-            class="menus dark:bg-color_fourth dark:border-color_darkM_border_nav sub-menu__icon-m left-8 bottom-12 w-95% hidden group-hover/item:block">
+            class="menus bg-white dark:bg-color_fourth dark:border-color_darkM_border_nav sub-menu__icon-m left-8 bottom-12 w-95% hidden group-hover/item:block">
             <div>
               <a href="#"
-                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text_sub dark:text-color_darkM_text_nav">info</a>
+                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text_sub dark:text-color_darkM_text_nav rounded-t-xl">info</a>
             </div>
             <div>
               <a href="#"
@@ -998,7 +998,7 @@
             </div>
             <div>
               <a href="#"
-                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover flex flex-row justify-between text-color_text_sub dark:text-color_darkM_text_nav">
+                class="hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover flex flex-row justify-between text-color_text_sub dark:text-color_darkM_text_nav rounded-b-xl">
                 Docs
                 <svg viewBox="0 0 24 24" color="textSubtle" width="20px" xmlns="http://www.w3.org/2000/svg"
                   class="sc-bcPKhP Eouil fill-color_text_sub dark:fill-color_darkM_text_nav">
@@ -1033,7 +1033,7 @@
           </svg>
         </div>
       </div>
-      <div class="px-6 dark:bg-color_fourth">
+      <div class="px-6 dark:bg-color_fourth ">
         <h6 class=" text-color_title_settings text-xs font-semibold mb-7 pt-7">GLOBAL</h6>
         <div class="flex flex-row items-center justify-between mb-6">
           <p class="text-color_text dark:text-white">Dark mode</p>
