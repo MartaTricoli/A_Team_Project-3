@@ -59,8 +59,8 @@ const setListeners = () => {
   const closingWarning = () => {
     $closeWarningButton.forEach((btn) => {
       btn.addEventListener("click", () => {
-        // $header.classList.remove("mt-31.5");
-        // $header.classList.add("mt-[54px]");
+        $header.classList.remove("pt-37,644");
+        $header.classList.add("pt-[78.576px]");
         $warningDiv.forEach((div) => {
           div.classList.add("hidden");
           div.classList.remove("max-mq3:flex");
@@ -145,7 +145,7 @@ const setListeners = () => {
       console.log(selectMap);
       Object.entries(selectMap).forEach(([key, item], index) => {
         $menuItemList.innerHTML += `
-                  <li data-id="${key}" class="${last === key ? "rounded-b-lg" : ""} flex items-center h-12 w-full px-4 hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text dark:text-white group/element flex gap-[10px] cursor-pointer mb-[5px] menu-item${index == 0 ? " active" : ""}">
+                  <li data-id="${key}" class="${last === key ? "rounded-b-lg" : ""} flex bg-white dark:bg-color_fourth items-center h-12 w-full px-4 hover:bg-color_nav_hover dark:hover:bg-color_darkM_hover text-color_text dark:text-white group/element flex gap-[10px] cursor-pointer mb-[5px] menu-item${index == 0 ? " active" : ""}">
                         <img data-id="${key}" class="w-6 h-6 menu-item" src="${item.imgSrc}" />
                         <span data-id="${key}" class="menu-item">${item.name}</span>
                   </li>`;

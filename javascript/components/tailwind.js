@@ -3,9 +3,13 @@ tailwind.config = {
     theme: {
         screens: {
             //ANCHOR - FRANCESCO-media-query
+            "screen_1200": "1200px",
+            "screen_1080": "1080px",
             'mq1': '1075px',
             'mq2': '1023px',
+            "screen_970": "970px",
             'mq3': '967px',
+            "screen_860": "860px",
             'mq4': '851px',
             //-----------------------------
           },
@@ -40,6 +44,8 @@ tailwind.config = {
                 color_darkM_text_nav: '#b8add2',
                 color_darkM_border_nav: '#383241',
                 color_darkM_hover: '#353547',
+                color_ethereum: '#627AD8',
+                linear_gradient_home3_white: 'bg-gradient-to-b from-white to-[#d7cbec]',
                 //-----------------------------
             },
             fontSize: {
@@ -52,6 +58,8 @@ tailwind.config = {
                 fs_xs: '14px',
                 fs_xxs: '12px',
                 fs_xxxs: ' 9px',
+                fs_l: "28px",
+                fs_Spain: '64px',
             },
             fontFamily: {
                 Kanit: ['Kanit'],
@@ -65,14 +73,19 @@ tailwind.config = {
             },
             spacing: {
                 //ANCHOR - FRANCESCO-spacing
+                '6.5': '1.625rem',
+                '7.5': '1.875rem',
                 '14,5' : '3.563rem',
+                '17': '4.25rem',
                 '17,5' : '4.375rem',
                 '17,9': '4.469rem',
                 '23' : '5.75rem',
                 '30,25' : '7.563rem',
                 '31,5' : '7.875rem',
+                '34': '8.3rem',
                 '37,644' : '9.411rem',
                 '49' : '12.25rem',
+                '50': '12.5rem',
                 '66,875' : '16.719rem',
                 '69,5' : '17.375rem',
                 '87,933' : '21.983rem',
@@ -81,17 +94,36 @@ tailwind.config = {
                 '120,75' : '30.188rem',
                 '126,257' : '31.564rem',
                 '134,75' : '33.688rem',
+                '162': '40.5rem',
+                '200': '50rem',//800px
                 '277,75' : '69.438rem',
+                '6,4': '75rem',
                 '95%' : '95%',
                 '99%' : '99%',
                 //-----------------------------
             },
             zIndex: {
                 //ANCHOR - FRANCESCO-zindex
+                '1': '1',
+                '2': '2',
+                '3': '3',
+                '4': '4',
+                '5': '5',
+                '6': '6',
+                '7': '7',
                 '996': '996',
                 '997': '997',
                 '998': '998',
                 //-----------------------------
+            },
+            animation: {
+                'infinite-scroll': 'infinite-scroll 38s linear infinite',
+            },
+            keyframes: {
+                'infinite-scroll': {
+                  from: { transform: 'translateX(0)' },
+                  to: { transform: 'translateX(-100%)' },
+                }
             }
         }
     }
