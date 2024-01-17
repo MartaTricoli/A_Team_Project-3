@@ -1,4 +1,4 @@
-const $cirSup = document.querySelector("#cirSup");
+
 const $left_panel = document.querySelector("#left_panel");
 const $right_panel = document.querySelector("#right_panel");
 
@@ -7,15 +7,6 @@ let h = 0; //apertura verticale pannello sinistra
 let hh = 0;//apertura verticale pannello destra
 let x = 0;//apertura orizzontale pannello sopra
 let xx = 0; //apertura orizzontale pannello sotto
-//aggiornamento numeri-----------------------------------------------
-/*const cirSupInterval = setInterval(() => {
-    c ++;
-    $cirSup.innerHTML = Intl.NumberFormat('en-US').format(c);
-    if (c === 100) {
-        clearInterval(cirSupInterval);
-    }
-}, 1)*/
-//aggiornamento numeri-----------------------------------------------
 
 //apertura verticale pannello sinistra-------------------------------
 setTimeout(( )=> {
