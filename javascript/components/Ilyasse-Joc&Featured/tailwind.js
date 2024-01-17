@@ -21,6 +21,7 @@ tailwind.config = {
         color_inverse_hover_dm: "#228f99",
         /* ANCHOR ILYASSE */
         color_centralcontainerbgcolor: "rgba(255, 255, 255, 0.8)",
+        color_centralcontainerdarkbgcolor: "rgba(0, 0, 0, 0.8)",
         color_innerboxleft: "rgb(60, 23, 134)",
         color_innerboxleftnumbers: "#ffb237",
         color_text_dm_r: "#f4eeff",

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -15,6 +16,7 @@
         @layer components {  
             ::-webkit-scrollbar {
             width: 8px;
+            background-color:white;
         }
         ::-webkit-scrollbar-thumb {
             background: #7a6eaa;
@@ -35,6 +37,29 @@
         a {
           @apply no-underline;
         }
+        /* ANCHOR ilyasse */
+        .hiddenScrollbar::-webkit-scrollbar{
+         display: none;
+        }
+        .hidden {
+         opacity: 0;
+        pointer-events: none;
+        }
+      }
+      @keyframes jocDivToggleAnimation {
+        0% {
+          opacity: 0;
+          display: hidden;
+            }
+        100% {
+          opacity: 1;
+          display: block;
+        }
+        }
+
+      .jocDivToggleAnimation {
+
+        animation: 0.4s ease-out 0s 1 jocDivToggleAnimation forwards;
       }
     </style>
 
@@ -78,7 +103,7 @@
                 src="../assets/img/head/joinOurCommunity/JOC-BG-IMGS/JOC.RIGHT BG IMG/img/Bell.webp" alt="">
         </div>
         <div
-            class="p-10  relative w-full max-w-[968px] bg-color_centralcontainerbgcolor dark:bg-black z-[10] rounded-borderRadius72px">
+            class="p-10  relative w-full max-w-[968px] bg-color_centralcontainerbgcolor dark:bg-color_centralcontainerdarkbgcolor z-[10] rounded-borderRadius72px">
             <div class="joc__h2-titles flex flex-row justify-center items-center gap-2 mb-3">
                 <h2 class="font-semibold text-fs_xxl leading-[1.1] text-color_text dark:text-color_text_dm_r">
                     Join our
@@ -132,7 +157,7 @@
                 </div>
                 <!-- FIXME hidden to to thebelow div -->
                 <div id="joc_firstDiv"
-                    class="p-6 bg-white dark:bg-color_fourth w-[340px] h-[340px] relative rounded-borderRadius32px borded-[1px] border-[#e7e3e] dark:border-[#383241] border-solid shadow-innerboxrightshadow dark:shadow-[#383241]">
+                    class="jocDivToggleAnimation p-6 bg-white dark:bg-color_fourth w-[340px] h-[340px] relative rounded-borderRadius32px borded-[1px] border-[#e7e3e] dark:border-[#383241] border-solid shadow-innerboxrightshadow dark:shadow-[#383241]">
                     <div class="text-violet-950 dark:text-color_tertiary text-[16px] font-semibold leading-normal mb-6">
                         Top Tweet of the week
                     </div>
@@ -239,7 +264,7 @@
                 </div>
                 <!-- FIXME hidden to the below div -->
                 <div id="joc_secondDiv"
-                    class="hidden p-6 bg-white dark:bg-color_fourth w-[340px] h-[340px] relative rounded-borderRadius32px borded-[1px] border-[#e7e3e] dark:border-[#383241] border-solid shadow-innerboxrightshadow dark:shadow-[#383241]">
+                    class="jocDivToggleAnimation hidden p-6 bg-white dark:bg-color_fourth w-[340px] h-[340px] relative rounded-borderRadius32px borded-[1px] border-[#e7e3e] dark:border-[#383241] border-solid shadow-innerboxrightshadow dark:shadow-[#383241]">
                     <div class="mb-6 text-color_text dark:text-color_tertiary font-semibold leading-normal text-[16px]">
                         Latest Blog Post
                     </div>
@@ -368,7 +393,7 @@
                             </div>
                         </div>
                         <div id="featuredNews_sliderContainer"
-                            class="whitespace-nowrap overflow-x-auto snap-x snap-mandatory scroll-smooth rounded-3xl pb-[5px] ">
+                            class="hiddenScrollbar whitespace-nowrap overflow-x-auto snap-x snap-mandatory scroll-smooth rounded-3xl pb-[5px] ">
                             <!-- card1 -->
                             <div
                                 class="align-top w-w280px h-h387px rounded-3xl bg-color_tertiary dark:bg-color_fourth shadow-innerboxrightshadow inline-block mr-[34px] cursor-pointer snap-start dark:shadow-[#383241]">
