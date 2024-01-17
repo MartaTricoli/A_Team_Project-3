@@ -71,13 +71,12 @@
                     margin: {
                         72: '4.5rem',
                     },
-                    darkMode: "class",
                     animation: {
                         'infinite-scroll': 'infinite-scroll 15s linear infinite',
                         'infinite-scroll_dx': 'infinite-scroll_dx 10s linear infinite',
                         'infinite-scroll_x': 'infinite-scroll_x 30s linear infinite',
-                        'infinite-scroll_x_2': 'infinite-scroll_x_2 40s linear infinite',
-                        'infinite-scroll_x_dx': 'infinite-scroll_x_dx 30s linear infinite',
+                        'infinite-scroll_x_2': 'infinite-scroll_x_2 20s linear infinite',
+                        'infinite-scroll_x_dx': 'infinite-scroll_x_dx 5s linear infinite',
                     },
                     keyframes: {
                         'infinite-scroll': {
@@ -164,6 +163,15 @@
             .inner_container::-webkit-scrollbar {
                display: none;
             }
+            .cake_figures {
+                @apply flex flex-col py-3 px-6 justify-center items-center
+            }
+            .cake_figures_inner {
+                @apply font-semibold text-fs_sm text-color_text leading-6 dark:text-new_white
+            }
+            .cake_figures_num {
+                @apply font-semibold text-fs_lg text-new_title_violet leading-[26px] dark:text-new_light_purple
+            }
         }
     </style>
 </head>
@@ -175,18 +183,18 @@
     </div>
     <h3 class="pr-5 pl-5 font-semibold text-fs_xxl text-color_text text-center dark:text-new_white">Discover the <span class="text-new_title_violet dark:text-new_light_purple">Ecosystem</span></h3>
     <div class="flex flex-col w-full items-center pb-12">
-        <div class="discover_card bg-color_tertiary w-1152 h-417 mb-12 mt-14 flex flex-row items-center gap-y-8 pt-12 pb-6 px-6 rounded-3xl justify-end dark:dm_bg max-[1024px]:h-fit max-[1024px]:mx-auto max-[1024px]:w-[95%] max-[850px]:flex-col"> <!--first card-->
+        <div class="bg-color_tertiary w-1152 flex flex-row pt-12 pb-6 px-6 rounded-3xl dark:dm_bg max-[1024px]:h-fit max-[1024px]:mx-auto h-417 mb-12 mt-14 items-center gap-y-8 justify-end max-[1024px]:w-[98%] max-[850px]:flex-col"> <!--first card-->
             <div class="discover_card-img"><!--coniglietto-->
-                <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bunny.9642e689.png&w=384&q=75" alt="" class="absolute w-340 -ml-[21rem] -mt-[10.25rem] max-[1024px]:-ml-[28%] max-[850px]:-ml-[54%] max-[850px]:-mt-[0px]">
+                <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bunny.9642e689.png&w=384&q=75" alt="" class="absolute w-340 -ml-[21rem] -mt-40 max-[1024px]:-ml-[28%] max-[850px]:-ml-[54%] max-[850px]:-mt-0">
             </div>
-            <div class="discover_card-content flex flex-col ml-8 w-[73%] max-[1024px]:pl-[60px] max-[850px]:pt-[330px] max-[850px]:w-[100%] max-[850px]:ml-0 max-[850px]:pl-0"> <!--card content-->
-                <h4 class="text-new_title_violet font-semibold text-fs_xl mb-6 pl-3 dark:text-new_light_purple max-[850px]:mb-4">Trade</h4>
+            <div class="flex flex-col max-[850px]:w-full ml-8 w-[73%] max-[1024px]:pl-14 max-[850px]:pt-[330px] max-[850px]:ml-0 max-[850px]:pl-0"> <!--card content-->
+                <h4 class="text-new_title_violet font-semibold text-fs_xl pl-3 dark:text-new_light_purple mb-6 max-[850px]:mb-4">Trade</h4>
                 <div class="inner_card flex flex-row justify-between max-[1024px]:flex-wrap max-[1024px]:justify-start ">
-                    <div class="p-3 w-1/6 max-[1024px]:w-[30%] max-[640px]:w-[50%]">
+                    <div class="p-3 w-1/6 max-[1024px]:w-[30%] max-[640px]:w-6/12">
                         <a href="" class="group"><!--first inner card-->
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-swap-purple.0f7423e0.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-swap.54b4ddab.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0 max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-swap.54b4ddab.png&w=128&q=75)]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit dark:text-new_white">Swap</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-6 leading-4 w-fit dark:text-new_white max-[850px]:mb-4">Trade crypto instantly across multiple chains</p>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-swap-purple.0f7423e0.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-swap.54b4ddab.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-4 transition-filter duration-200 ease-linear delay-0 max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-swap.54b4ddab.png&w=128&q=75)]"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white w-fit">Swap</div>
+                            <p class="font-normal text-fs_xs text-color_text leading-4 dark:text-new_white mb-6 w-fit max-[850px]:mb-4">Trade crypto instantly across multiple chains</p>
                             <div class="flex">
                                 <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Trade Now </div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>     
@@ -194,45 +202,45 @@
                         </a>    
                     </div>
                     
-                    <div class="p-3 w-1/6 max-[1024px]:w-[34%] max-[1024px]:pl-[35px] max-[640px]:w-[50%]"> <!--second inner card-->
+                    <div class="p-3 w-1/6 max-[1024px]:w-[34%] max-[1024px]:pl-9 max-[640px]:w-6/12"> <!--second inner card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-liquidity-purple.f6e03e35.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-liquidity.510b229a.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0 max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-liquidity.510b229a.png&w=128&q=75)]"></div>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-liquidity-purple.f6e03e35.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-liquidity.510b229a.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-4 transition-filter duration-200 ease-linear delay-0 max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-liquidity.510b229a.png&w=128&q=75)]"></div>
                             <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white">Liquidity</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-6 leading-4 dark:text-new_white max-[850px]:mb-4">Fund liquidity pools, earn trading fees</p>
+                            <p class="font-normal text-fs_xs text-color_text leading-4 dark:text-new_white mb-6 max-[850px]:mb-4">Fund liquidity pools, earn trading fees</p>
                             <div class="flex">
                                 <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Add Now</div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>     
                             </div>
                         </a>
                     </div>
-                    <div class="p-3 w-1/6 max-[1024px]:w-[36%] max-[1024px]:pl-[40px] max-[640px]:w-[50%] max-[640px]:pl-0 max-[640px]:mt-[10px]"> <!--third card-->
+                    <div class="p-3 w-1/6 max-[1024px]:w-[36%] max-[1024px]:pl-10 max-[640px]:w-6/12 max-[640px]:pl-0 max-[640px]:mt-2.5"> <!--third card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bridge-purple.ce50dee0.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bridge.8cabbcc1.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0 max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bridge.8cabbcc1.png&w=128&q=75)]"></div>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bridge-purple.ce50dee0.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bridge.8cabbcc1.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-4 transition-filter duration-200 ease-linear delay-0 max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-bridge.8cabbcc1.png&w=128&q=75)]"></div>
                             <div ></div>
                             <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white">Bridge</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-6 leading-4 dark:text-new_white max-[850px]:mb-4">Seamlessly transfer assets across chains</p>
+                            <p class="font-normal text-fs_xs text-color_text leading-4 dark:text-new_white mb-6 max-[850px]:mb-4">Seamlessly transfer assets across chains</p>
                             <div class="flex">
                                 <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Bridge Now</div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
                             </div>
                         </a>
                     </div>
-                    <div class="p-3 w-1/6 max-[1024px]:w-[46%] max-[850px]:mt-[25px] max-[640px]:w-[50%] max-[640px]:mt-[10px]"> <!--fourth card-->
+                    <div class="p-3 w-1/6 max-[1024px]:w-[46%] max-[850px]:mt-6 max-[640px]:w-6/12 max-[640px]:mt-2.5"> <!--fourth card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-perpetual-purple.ec8d03c7.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-perpetual.ccae00d8.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0 max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-perpetual.ccae00d8.png&w=128&q=75)]"></div>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-perpetual-purple.ec8d03c7.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-perpetual.ccae00d8.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-4 transition-filter duration-200 ease-linear delay-0 max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-perpetual.ccae00d8.png&w=128&q=75)]"></div>
                             <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white">Perpetual</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-6 leading-4 dark:text-new_white max-[850px]:mb-4">Trade endlessly without expiration dates</p>
+                            <p class="font-normal text-fs_xs text-color_text leading-4 dark:text-new_white mb-6 max-[850px]:mb-4">Trade endlessly without expiration dates</p>
                             <div class="flex">
                                 <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Trade Now </div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
                             </div>
                         </a>
                     </div>
-                    <div class="p-3 w-1/6 max-[1024px]:w-[50%] max-[1024px]:pr-[0px] max-[1024px]:pl-[50px] max-[850px]:w-[53%] max-[850px]:mt-[25px] max-[640px]:w-[100%] max-[640px]:pl-0 max-[640px]:mt-[10px]"> <!--fifth card-->
+                    <div class="p-3 w-1/6 max-[1024px]:w-6/12 max-[1024px]:pr-0 max-[1024px]:pl-[50px] max-[850px]:w-[53%] max-[850px]:mt-6 max-[640px]:w-full max-[640px]:pl-0 max-[640px]:mt-2.5"> <!--fifth card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-buy-crypto-purple.9398802d.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-buy-crypto.24f53a80.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0 max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-buy-crypto.24f53a80.png&w=128&q=75)] max-[850px]:mb-[10px]"></div>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-buy-crypto-purple.9398802d.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-buy-crypto.24f53a80.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-4 transition-filter duration-200 ease-linear delay-0 max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftrade-buy-crypto.24f53a80.png&w=128&q=75)] max-[850px]:mb-2.5"></div>
                             <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white max-[850px]:mb-1">Buy Crypto</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-2 leading-4 dark:text-new_white max-[640px]:mb-7">Buy crypto with your preferred currency and payment method</p>
+                            <p class="font-normal text-fs_xs text-color_text leading-4 dark:text-new_white mb-2 max-[640px]:mb-7">Buy crypto with your preferred currency and payment method</p>
                             <div class="flex">
                                 <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Buy Now</div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
@@ -243,14 +251,14 @@
             </div>
         </div>
         <!----------------------------------------------------------------------------------------------------------------->
-        <div class="discover_card bg-color_tertiary w-1152 h-431 mb-12 flex flex-row justify-between pt-12 pb-6 px-6 rounded-3xl justify-start dark:dm_bg max-[1024px]:h-fit max-[1024px]:mx-auto max-[1024px]:w-[98%] max-[850px]:flex-col max-[850px]:mx-auto max-[850px]:w-[95%]"> <!--second card-->
-            <div class="discover_card-content flex flex-col w-[77%] max-[850px]:order-2 max-[850px]:mt-[390px] max-[850px]:w-[100%]"> <!--card content-->
-                <h4 class="text-new_title_violet font-semibold text-fs_xl pl-3 mb-4 dark:text-new_light_purple max-[850px]:mb-0">Earn</h4>
+        <div class="bg-color_tertiary w-1152 flex flex-row pt-12 pb-6 px-6 rounded-3xl dark:dm_bg max-[1024px]:h-fit max-[1024px]:mx-auto h-431 mb-12 justify-between justify-start max-[1024px]:w-[98%] max-[850px]:flex-col max-[850px]:mx-auto max-[850px]:w-[95%]"> <!--second card-->
+            <div class="flex flex-col max-[850px]:w-full w-9/12 max-[850px]:order-2 max-[850px]:mt-[390px]"> <!--card content-->
+                <h4 class="text-new_title_violet font-semibold text-fs_xl pl-3 dark:text-new_light_purple mb-4 max-[850px]:mb-0">Earn</h4>
                 <div class="inner_card flex flex-row justify-between max-[1024px]:flex-wrap max-[1024px]:justify-start max-[850px]:justify-between">
-                    <div class="p-5 w-[25%] mr-[10px] max-[1024px]:w-[30%] max-[850px]:w-[32%] max-[850px]:mr-[0px] max-[640px]:w-[50%] max-[640px]:pl-0"><!--first inner card-->
+                    <div class="p-5 w-1/4 mr-2.5 max-[1024px]:w-[30%] max-[850px]:w-[32%] max-[850px]:mr-0 max-[640px]:w-6/12 max-[640px]:pl-0"><!--first inner card-->
                         <a href="" class="group">
                             <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-farm-purple.6b03a333.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-farm.ee3ccfee.png&w=128&q=75)] max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-farm.ee3ccfee.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[30px] transition-filter duration-200 ease-linear delay-0 max-[1024px]:mb-3"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit dark:text-new_white">Farm</div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white w-fit">Farm</div>
                             <p class="font-normal text-fs_xs text-color_text mb-8 leading-4 dark:text-new_white max-[1024px]:mb-3 max-[850px]:mb-5">Stake LP tokens, harvest CAKE</p>
                             <div class="flex">
                                 <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Stake Now</div>
@@ -258,10 +266,10 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-5 w-[25%] mr-[10px] max-[1024px]:w-[33%] max-[1024px]:pl-[30px] max-[850px]:ml-[0px] max-[850px]:w-[34%] max-[850px]:mr-0 max-[640px]:w-[50%]"> <!--second inner card-->
+                    <div class="p-5 w-3/12 mr-2.5 max-[1024px]:w-4/12 max-[1024px]:pl-[30px] max-[850px]:ml-0 max-[850px]:w-[34%] max-[850px]:mr-0 max-[640px]:w-6/12"> <!--second inner card-->
                         <a href="" class="group">
                             <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-pools-purple.7675dfc7.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-pools.8c557984.png&w=128&q=75)] max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-pools.8c557984.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[30px] transition-filter duration-200 ease-linear delay-0 max-[1024px]:mb-3"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit dark:text-new_white">Pools</div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white w-fit">Pools</div>
                             <p class="font-normal text-fs_xs text-color_text mb-8 leading-4 dark:text-new_white max-[1024px]:mb-3 max-[850px]:mb-5">Stake CAKE, earn various rewards</p>
                             <div class="flex">
                                 <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Stake Now</div>
@@ -269,10 +277,10 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-5 w-[25%] mr-[10px] max-[1024px]:w-[32%] max-[1024px]:pl-[20px] max-[850px]:pl-[30px] max-[850px]:w-[34%] max-[850px]:mr-0 max-[640px]:w-[50%] max-[640px]:pl-0"> <!--third card-->
+                    <div class="p-5 w-1/4 mr-2.5 max-[1024px]:w-[32%] max-[1024px]:pl-5 max-[850px]:pl-[30px] max-[850px]:w-[34%] max-[850px]:mr-0 max-[640px]:w-6/12 max-[640px]:pl-0"> <!--third card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-liquidity-staking-purple.d6256831.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-liquidity-staking.373dde04.png&w=128&q=75)] max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-liquidity-staking.373dde04.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit dark:text-new_white leading-5">Liquid Staking</div>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-liquidity-staking-purple.d6256831.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-liquidity-staking.373dde04.png&w=128&q=75)] max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-liquidity-staking.373dde04.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-4 transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white w-fit leading-5">Liquid Staking</div>
                             <p class="font-normal text-fs_xs text-color_text mb-5 leading-4 dark:text-new_white max-[850px]:mb-3">Earn rewards while retaining asset flexibility</p>
                             <div class="flex">
                                 <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Add Now</div>
@@ -280,10 +288,10 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-5 w-[25%] max-[1024px]:w-[45%] max-[1024px]:mt-3 max-[850px]:w-[47%] max-[850px]:mt-6 max-[640px]:w-[50%] max-[640px]:mt-0"> <!--fourth card-->
+                    <div class="p-5 w-1/4 max-[1024px]:w-[45%] max-[1024px]:mt-3 max-[850px]:w-[47%] max-[850px]:mt-6 max-[640px]:w-6/12 max-[640px]:mt-0"> <!--fourth card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-fixed-staking-purple.bd79143e.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-fixed-staking.7c7edcd5.png&w=128&q=75)] max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-fixed-staking.7c7edcd5.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit dark:text-new_white leading-5">Simple Staking</div>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-fixed-staking-purple.bd79143e.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-fixed-staking.7c7edcd5.png&w=128&q=75)] max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-fixed-staking.7c7edcd5.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-4 transition-filter duration-200 ease-linear delay-0"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white w-fit leading-5">Simple Staking</div>
                             <p class="font-normal text-fs_xs text-color_text mb-3 leading-4 dark:text-new_white">Earn rewards hassle-free with single-sided staking</p>
                             <div class="flex">
                                 <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Stake Now</div>
@@ -292,10 +300,10 @@
                         </a>
                     </div>
 
-                    <div class="p-5 w-[25%] max-[1024px]:w-[45%] max-[1024px]:ml-10 max-[640px]:w-[100%] max-[640px]:ml-0 max-[640px]:pl-0"> <!--fifth card-->
+                    <div class="p-5 w-1/4 max-[1024px]:w-[45%] max-[1024px]:ml-10 max-[640px]:w-full max-[640px]:ml-0 max-[640px]:pl-0"> <!--fifth card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://assets.pancakeswap.finance/web/landing/earn-pm-purple.png)] group-hover:bg-[url(https://assets.pancakeswap.finance/web/landing/earn-pm.png)] max-[968px]:bg-[url(https://assets.pancakeswap.finance/web/landing/earn-pm.png)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[15px] transition-filter duration-200 ease-linear delay-0 max-[1024px]:mt-6"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit dark:text-new_white leading-5">Position Manager</div>
+                            <div class="bg-[url(https://assets.pancakeswap.finance/web/landing/earn-pm-purple.png)] group-hover:bg-[url(https://assets.pancakeswap.finance/web/landing/earn-pm.png)] max-[968px]:bg-[url(https://assets.pancakeswap.finance/web/landing/earn-pm.png)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-4 transition-filter duration-200 ease-linear delay-0 max-[1024px]:mt-6"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white w-fit leading-5">Position Manager</div>
                             <p class="font-normal text-fs_xs text-color_text mb-3 leading-4 dark:text-new_white">Automate your PancakeSwap v3 liquidity</p>
                             <div class="flex">
                                 <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Stake Now</div>
@@ -306,21 +314,21 @@
                 </div>
             </div>
             <div class="discover_card-img max-[850px]:order-1"><!--coniglietto-->
-                <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-bunny.41c37da0.png&w=384&q=75" alt="" class="absolute w-[296px] -ml-[14rem] -mt-[0rem] max-[1024px]:-ml-[15rem] max-[1024px]:mt-[8rem] max-[850px]:-ml-0 max-[850px]:-mt-[0px]">
+                <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fearn-bunny.41c37da0.png&w=384&q=75" alt="" class="absolute w-[296px] -ml-[14rem] -mt-0 max-[1024px]:-ml-60 max-[1024px]:mt-32 max-[850px]:-ml-0 max-[850px]:-mt-0">
             </div>
         </div>
         <!------------------------------------------------------------------------------------------------------------>
-        <div class="discover_card bg-color_tertiary w-1152 h-431 flex flex-row justify-between pt-12 pb-6 px-6 rounded-3xl justify-end dark:dm_bg max-[1024px]:h-fit max-[1024px]:mx-auto max-[1024px]:w-[95%]"> <!--third card-->
+        <div class="bg-color_tertiary w-1152 flex flex-row pt-12 pb-6 px-6 rounded-3xl dark:dm_bg max-[1024px]:h-fit max-[1024px]:mx-auto h-431 justify-between justify-end max-[1024px]:w-[95%]"> <!--third card-->
             <div class="discover_card-img"><!--coniglietto-->
-                <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-nft-bunny.f324ef31.png&w=384&q=75" alt="" class="absolute w-340 -ml-[4.5rem] mt-[5px] max-[850px]:-ml-[75px] max-[850px]:-mt-[0px]">
+                <img src="https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-nft-bunny.f324ef31.png&w=384&q=75" alt="" class="absolute w-340 -ml-[4.5rem] mt-[5px] max-[850px]:-ml-[75px] max-[850px]:-mt-0">
             </div>
-            <div class="discover_card-content flex flex-col ml-8 w-[73%]  max-[1024px]:pl-[60px] max-[1024px]:mt-[30px] max-[850px]:w-[100%] max-[850px]:mt-[380px] max-[850px]:justify-between max-[850px]:pl-0 max-[850px]:ml-0"> <!--card content-->
-                <h4 class="text-new_title_violet font-semibold text-fs_xl pl-3 mb-4 dark:text-new_light_purple">Game & NFT</h4>
+            <div class="flex flex-col max-[850px]:w-full ml-8 w-[73%] max-[1024px]:pl-[60px] max-[1024px]:mt-[30px] max-[850px]:mt-[380px] max-[850px]:justify-between max-[850px]:pl-0 max-[850px]:ml-0"> <!--card content-->
+                <h4 class="text-new_title_violet font-semibold text-fs_xl pl-3 dark:text-new_light_purple  mb-4">Game & NFT</h4>
                 <div class="inner_card flex flex-row justify-between max-[1024px]:flex-wrap max-[1024px]:justify-start max-[850px]:justify-between">
-                    <div class="p-3 w-1/3 max-[1024px]:w-[30%] max-[850px]:pr-0 max-[640px]:w-[50%] max-[640px]:pl-0  max-[640px]:mb-7"> <!--first inner card-->
+                    <div class="p-3 w-1/3 max-[1024px]:w-[30%] max-[850px]:pr-0 max-[640px]:w-6/12 max-[640px]:pl-0  max-[640px]:mb-7"> <!--first inner card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pancake-protectors-purple.11e4f385.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pancake-protectors.17ec1fff.png&w=128&q=75)] max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pancake-protectors.17ec1fff.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[40px] transition-filter duration-200 ease-linear delay-0 max-[1024px]:mb-[15px]"></div>
-                            <div class="text-color_text font-semibold text-fs_md mb-2 w-fit leading-5 dark:text-new_white">Gaming Marketplace</div>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pancake-protectors-purple.11e4f385.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pancake-protectors.17ec1fff.png&w=128&q=75)] max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-pancake-protectors.17ec1fff.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-10 transition-filter duration-200 ease-linear delay-0 max-[1024px]:mb-4"></div>
+                            <div class="text-color_text font-semibold text-fs_md mb-2 dark:text-new_white w-fit leading-5">Gaming Marketplace</div>
                             <p class="font-normal text-fs_xs text-color_text mb-8 leading-4 w-fit dark:text-new_white max-[1024px]:mb-3 max-[640px]:mb-6">Play, Build and Connect on PancakeSwap</p>
                             <div class="flex">
                                 <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Play Now</div>
@@ -328,20 +336,20 @@
                             </div>
                         </a>
                     </div>
-                    <div class="p-3 w-1/4 max-[1024px]:w-[30%] max-[1024px]:pl-8 max-[640px]:w-[50%]"><!--second inner card-->
+                    <div class="p-3 w-1/4 max-[1024px]:w-[30%] max-[1024px]:pl-8 max-[640px]:w-6/12"><!--second inner card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-prediction-purple.f867d1e1.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-prediction.3db677eb.png&w=128&q=75)] max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-prediction.3db677eb.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[35px] transition-filter duration-200 ease-linear delay-0 max-[1024px]:mb-3"></div>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-prediction-purple.f867d1e1.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-prediction.3db677eb.png&w=128&q=75)] max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgame-prediction.3db677eb.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-9 transition-filter duration-200 ease-linear delay-0 max-[1024px]:mb-3"></div>
                             <div class="text-color_text font-semibold text-fs_md mb-2 w-fit dark:text-new_white max-[1024px]:mb-1">Prediction</div>
-                            <p class="font-normal text-fs_xs text-color_text mb-7 leading-4 w-fit dark:text-new_white max-[1024px]:mb-3  max-[640px]:mb-6">Forecast token prices within minutes</p>
+                            <p class="font-normal text-fs_xs text-color_text mb-7 leading-4 w-fit dark:text-new_white max-[1024px]:mb-3 max-[640px]:mb-6">Forecast token prices within minutes</p>
                             <div class="flex">
                                 <div class="font-semibold text-fs_sm text-color_text_sub group-hover:text-color_inverse duration-200 ease-in-out delay-0 dark:text-new_darker_white">Try Now</div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" class="sc-bcPKhP Eouil group-hover:fill-[#1fc7d4ff] duration-200 ease-in-out delay-0 dark:fill-[#b8add2]" color="var(--colors-textSubtle)" viewBox="0 0 24 24" fill="#7a6eaa"><path d="M9.29 15.88 13.17 12 9.29 8.12a.996.996 0 1 1 1.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 0 1-1.41 0c-.38-.39-.39-1.03 0-1.42Z"/></svg>    
                             </div>
                         </a>
                     </div>
-                    <div class="p-3 w-1/3  max-[1024px]:w-[30%] max-[1024px]:ml-8 max-[850px]:w-[31%] max-[640px]:w-[100%] max-[640px]:ml-0 max-[640px]:pl-0"> <!--third card-->
+                    <div class="p-3 w-1/3  max-[1024px]:w-[30%] max-[1024px]:ml-8 max-[850px]:w-[31%] max-[640px]:w-full max-[640px]:ml-0 max-[640px]:pl-0"> <!--third card-->
                         <a href="" class="group">
-                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft-marketplace-purple.5742e4d8.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft-marketplace.7b24a057.png&w=128&q=75)] max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft-marketplace.7b24a057.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-[45px] transition-filter duration-200 ease-linear delay-0 max-[1024px]:mb-5"></div>
+                            <div class="bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft-marketplace-purple.5742e4d8.png&w=128&q=75)] group-hover:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft-marketplace.7b24a057.png&w=128&q=75)] max-[968px]:bg-[url(https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnft-marketplace.7b24a057.png&w=128&q=75)] w-[110px] h-[110px] bg-contain bg-center bg-no-repeat mb-11 transition-filter duration-200 ease-linear delay-0 max-[1024px]:mb-5"></div>
                             <div class="text-color_text font-semibold text-fs_md mb-2 w-fit leading-5 dark:text-new_white">NFT Marketplace</div>
                             <p class="font-normal text-fs_xs text-color_text mb-11 leading-4 w-fit dark:text-new_white max-[1024px]:mb-3">Trade uniqueNFT's on BNB Chain</p>
                             <div class="flex">
@@ -356,7 +364,7 @@
     </div>
 
     <div class="pt-12 flex flex-col items-center">
-        <h3 class="pr-5 pl-5 font-semibold text-fs_xxl text-color_text dark:text-new_white max-[865px]:w-[80%] max-[865px]:text-center max-[865px]:leading-[110%] max-[850px]:text-fs_xl max-[850px]:w-[100%] max-[709px]:w-[82%]">Unlock the Full Potential of DeFi with <span class="text-new_title_violet dark:text-new_light_purple">CAKE</span></h3>
+        <h3 class="pr-5 pl-5 font-semibold text-fs_xxl text-color_text dark:text-new_white max-[865px]:w-4/5 max-[865px]:text-center max-[865px]:leading-[110%] max-[850px]:text-fs_xl max-[850px]:w-full max-[709px]:w-[82%]">Unlock the Full Potential of DeFi with <span class="text-new_title_violet dark:text-new_light_purple">CAKE</span></h3>
         <p class="font-semibold text-fs_md text-color_text_sub text-center w-[900px] my-8 dark:text-new_darker_white max-[960px]:w-[850px] max-[850px]:text-fs_sm max-[850px]:w-[90%]" >Experience the power of community ownership, global governance, and explore infinite use cases within the PancakeSwap ecosystem</p>
         <div class="flex flex-row items-center mb-8">
             <button id="btn_discover" class="btn btn_blue h-12 mr-3.5">
@@ -369,7 +377,7 @@
     <div class="flex justify-center max-[968px]:flex-col max-[968px]:items-center"> 
         <div class="mt-32 mr-4 max-[968px]:flex max-[968px]:flex-col max-[968px]:mt-8 max-[968px]:mr-0"><!--pannello di sinistra-->
             <div class="font-semibold text-fs_xxl leading-[60px] text-color_text dark:text-new_white max-[968px]:mx-auto max-[968px]:mb-5">Ecosystem</div>
-            <div class="big_container [mask-image:_linear-gradient(to_bottom,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] max-[968px]:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] max-[968px]:flex max-[968px]:flex-row max-[968px]:w-screen h-[0px]" id="left_panel">
+            <div class="big_container [mask-image:_linear-gradient(to_bottom,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] max-[968px]:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] max-[968px]:flex max-[968px]:flex-row h-0 max-[968px]:h-[235px] max-[968px]:w-0" id="left_panel">
                 <div class="min-[968px]:inner_container flex flex-col max-[968px]:flex-row animate-infinite-scroll max-[968px]:animate-infinite-scroll_x max-[968px]:inner_container_x">
                     <div class="discover_container flex bg-color_tertiary w-fit py-2 px-4 rounded-3xl shadow-little_sha mb-5 dark:bg-color_fourth dark:shadow-dark_sha max-[968px]:ml-4 max-[968px]:items-center max-[968px]:h-fit">
                         <svg viewBox="0 0 24 24" color="var(--colors-secondary)" width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-bcPKhP kHFuOR" fill="#7645d9"><path d="M7.5 13C7.5 11.8954 8.39543 11 9.5 11H12.5C13.6046 11 14.5 11.8954 14.5 13V15C14.5 16.1046 13.6046 17 12.5 17H9.5C8.39543 17 7.5 16.1046 7.5 15V13Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 2C8.39543 2 7.5 2.89543 7.5 4V6.49482C7.5 6.93167 7.2113 7.30895 6.81834 7.49981C5.15004 8.31009 4 10.0207 4 12V17C4 19.2091 5.79086 21 8 21H14C16.2091 21 18 19.2091 18 17V12C18 11.4175 17.9004 10.8583 17.7173 10.3385L17.7892 10.297C19.4786 9.32167 20.0574 7.16153 19.082 5.47221C18.1552 3.86682 16.1534 3.25957 14.5 4.05146V4C14.5 2.89543 13.6046 2 12.5 2H9.5ZM9.5 6.25V4H12.5V6.25H9.5ZM9.22663 7.75C8.89473 8.46917 8.30318 9.00205 7.69211 9.29884C6.68638 9.78731 6 10.8154 6 12V17C6 18.1046 6.89543 19 8 19H14C15.1046 19 16 18.1046 16 17V12C16 10.8154 15.3136 9.78731 14.3079 9.29884C13.6968 9.00205 13.1053 8.46917 12.7734 7.75H9.22663ZM14.5 6.3226V6.49482C14.5 6.93167 14.7887 7.30895 15.1817 7.49981C15.7529 7.77726 16.2634 8.16029 16.6878 8.62352L16.7892 8.56495C17.522 8.1419 17.773 7.20495 17.35 6.47221C16.9346 5.75269 16.0213 5.49542 15.2914 5.89229L14.5 6.3226Z"></path></svg>
@@ -416,7 +424,7 @@
                         <div class="text-color_text leading-normal font-normal text-fs_sm pl-2 dark:text-new_white whitespace-nowrap">Farm Booster</div>
                     </div>
                 </div>
-                <div class="min-[968px]:inner_container flex flex-col max-[968px]:flex-row animate-infinite-scroll max-[968px]:animate-infinite-scroll_x max-[968px]:inner_container_x max-[968]hidden">
+                <div class="min-[968px]:inner_container flex flex-col max-[968px]:flex-row animate-infinite-scroll max-[968px]:animate-infinite-scroll_x max-[968px]:inner_container_x">
                     <div class="discover_container flex bg-color_tertiary w-fit py-2 px-4 rounded-3xl shadow-little_sha mb-5 dark:bg-color_fourth dark:shadow-dark_sha max-[968px]:ml-4 max-[968px]:items-center max-[968px]:h-fit">
                         <svg viewBox="0 0 24 24" color="var(--colors-secondary)" width="20px" xmlns="http://www.w3.org/2000/svg" class="sc-bcPKhP kHFuOR" fill="#7645d9"><path d="M7.5 13C7.5 11.8954 8.39543 11 9.5 11H12.5C13.6046 11 14.5 11.8954 14.5 13V15C14.5 16.1046 13.6046 17 12.5 17H9.5C8.39543 17 7.5 16.1046 7.5 15V13Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 2C8.39543 2 7.5 2.89543 7.5 4V6.49482C7.5 6.93167 7.2113 7.30895 6.81834 7.49981C5.15004 8.31009 4 10.0207 4 12V17C4 19.2091 5.79086 21 8 21H14C16.2091 21 18 19.2091 18 17V12C18 11.4175 17.9004 10.8583 17.7173 10.3385L17.7892 10.297C19.4786 9.32167 20.0574 7.16153 19.082 5.47221C18.1552 3.86682 16.1534 3.25957 14.5 4.05146V4C14.5 2.89543 13.6046 2 12.5 2H9.5ZM9.5 6.25V4H12.5V6.25H9.5ZM9.22663 7.75C8.89473 8.46917 8.30318 9.00205 7.69211 9.29884C6.68638 9.78731 6 10.8154 6 12V17C6 18.1046 6.89543 19 8 19H14C15.1046 19 16 18.1046 16 17V12C16 10.8154 15.3136 9.78731 14.3079 9.29884C13.6968 9.00205 13.1053 8.46917 12.7734 7.75H9.22663ZM14.5 6.3226V6.49482C14.5 6.93167 14.7887 7.30895 15.1817 7.49981C15.7529 7.77726 16.2634 8.16029 16.6878 8.62352L16.7892 8.56495C17.522 8.1419 17.773 7.20495 17.35 6.47221C16.9346 5.75269 16.0213 5.49542 15.2914 5.89229L14.5 6.3226Z"></path></svg>
                         <div class="text-color_text leading-normal font-normal text-fs_sm pl-2 dark:text-new_white whitespace-nowrap">Staking</div>
@@ -475,12 +483,12 @@
                 <source src="../assets/img/discover_card/moneta_media_dm.mp4" type="video/mp4" id="coin_video">
             </video>
             <video class="bg-video__content w-[425px] hidden max-[968px]:block dark:max-[968px]:hidden max-[968px]:w-[900px] max-[968px]:-mt-[180px]" autoplay muted >
-                <source src="../assets/img/discover_card/moneta_media_lm.mp4" type="video/mp4" id="coin_video">
+                <source src="../assets/img/discover_card/moneta_orizzontale_lm.mp4" type="video/mp4" id="coin_video">
             </video><!--moneta-->
         </div><!--moneta-->
         <div class="mt-2 ml-7 max-[968px]:flex max-[968px]:flex-col max-[968px]:ml-0"><!--pannello di destra-->
-            <div class="font-semibold text-fs_xxl leading-[60px] text-color_text dark:text-new_white max-[968px]:mx-auto max-[968px]:-mt-[10px] max-[968px]:mb-5">Partners</div>
-            <div class="big_container [mask-image:_linear-gradient(to_bottom,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] max-[968px]:[mask-image:_linear-gradient(to_left,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] max-[968px]:flex max-[968px]:flex-row h-[0px]" id="right_panel">
+            <div class="font-semibold text-fs_xxl leading-[60px] text-color_text dark:text-new_white max-[968px]:mx-auto max-[968px]:-mt-2.5 max-[968px]:mb-5">Partners</div>
+            <div class="big_container [mask-image:_linear-gradient(to_bottom,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] max-[968px]:[mask-image:_linear-gradient(to_left,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] max-[968px]:flex max-[968px]:flex-row h-[0px] max-[968px]:h-[235px] max-[968px]:w-[0px]" id="right_panel">
                 <div class="inner_container max-[968px]:flex max-[968px]:flex-row animate-infinite-scroll_dx max-[968px]:animate-infinite-scroll_x_dx">
                     <div class="flex bg-color_tertiary w-fit py-2 px-4 rounded-3xl shadow-little_sha mb-5 dark:bg-color_fourth dark:shadow-dark_sha max-[968px]:ml-4 max-[968px]:h-fit">
                         <svg viewBox="0 0 21 20" color="black" width="21" xmlns="http://www.w3.org/2000/svg" class="sc-bcPKhP gVLnIt dark:fill-[#f4eeff]"><path d="M13.0184 18.3036V19.4997H21V14.105H19.8371V18.3036H13.0184ZM13.0184 0.5V1.69617H19.8371V5.89499H21V0.5H13.0184ZM9.15624 5.89499H7.99329V14.1047H13.2384V13.0258H9.15624V5.89499ZM0 14.105V19.5H7.9817V18.3036H1.16295V14.105H0ZM0 0.5V5.89499H1.16295V1.69617H7.9817V0.5H0Z "></path></svg>
@@ -541,26 +549,26 @@
     <div class="flex flex-col items-center">
         <h4 class="font-semibold text-fs_lg text-color_text mt-10 dark:text-new_white max-[968px]:-mt-[120px]">CAKE <span class="text-new_title_violet dark:text-new_light_purple">Figures</span></h4>
         <div class="flex mt-6 mb-[50px] flex-wrap">
-            <div class="flex flex-col py-3 px-6 grow justify-center items-center max-[968px]:w-[30%] max-[576px]:w-[50%] max-[576px]:border-b max-[576px]:border-new_border">
-                <div class="font-semibold text-fs_sm text-color_text leading-6 dark:text-new_white">Circulating Supply</div>
-                <div class="font-semibold text-fs_lg text-new_title_violet leading-[26px] dark:text-new_light_purple">272,055,190
+            <div class="cake_figures grow max-[968px]:w-[30%] max-[576px]:w-6/12 max-[576px]:border-b max-[576px]:border-new_border">
+                <div class="cake_figures_inner">Circulating Supply</div>
+                <div class="cake_figures_num">272,055,190
                 </div><!--effetto aggiornamento-->
             </div>
-            <div class="flex flex-col py-3 px-6 border-l border-new_border grow justify-center items-center dark:border-new_grey max-[968px]:w-[30%] max-[576px]:w-[50%] max-[576px]:border-b">
-                <div class="font-semibold text-fs_sm text-color_text leading-6 dark:text-new_white">Total supply</div>
-                <div class="font-semibold text-fs_lg text-new_title_violet leading-[26px] dark:text-new_light_purple">386,271,349</div><!--effetto aggiornamento-->
+            <div class="cake_figures border-l border-new_border grow dark:border-new_grey max-[968px]:w-[30%] max-[576px]:w-6/12 max-[576px]:border-b">
+                <div class="cake_figures_inner">Total supply</div>
+                <div class="cake_figures_num">386,271,349</div><!--effetto aggiornamento-->
             </div>
-            <div class="flex flex-col py-3 px-6 border-l border-new_border grow justify-center items-center dark:border-new_grey max-[968px]:w-[30%] max-[576px]:w-[50%] max-[576px]:border-b">
-                <div class="font-semibold text-fs_sm text-color_text leading-6 dark:text-new_white">Market cap</div>
-                <div class="font-semibold text-fs_lg text-new_title_violet leading-[26px] dark:text-new_light_purple">$590 million</div><!--effetto aggiornamento-->
+            <div class="cake_figures border-l border-new_border grow dark:border-new_grey max-[968px]:w-[30%] max-[576px]:w-6/12 max-[576px]:border-b">
+                <div class="cake_figures_inner">Market cap</div>
+                <div class="cake_figures_num">$590 million</div><!--effetto aggiornamento-->
             </div>
-            <div class="flex flex-col py-3 px-6 border-l border-new_border grow justify-center items-center dark:border-new_grey max-[576px]:w-[50%] max-[576px]:border-b">
-                <div class="font-semibold text-fs_sm text-color_text leading-6 dark:text-new_white">Token Burn</div>
-                <div class="font-semibold text-fs_lg text-new_title_violet leading-[26px] dark:text-new_light_purple">1,099,492,387</div><!--effetto aggiornamento-->
+            <div class="cake_figures border-l border-new_border grow dark:border-new_grey max-[576px]:w-[50%] max-[576px]:border-b">
+                <div class="cake_figures_inner">Token Burn</div>
+                <div class="cake_figures_num">1,099,492,387</div><!--effetto aggiornamento-->
             </div>
-            <div class="flex flex-col py-3 px-6 border-l border-new_border grow justify-center items-center dark:border-new_grey">
-                <div class="font-semibold text-fs_sm text-color_text leading-6 dark:text-new_white">Current emissions</div>
-                <div class="font-semibold text-fs_lg text-new_title_violet leading-[26px] dark:text-new_light_purple">1,36/block</div><!--effetto aggiornamento-->
+            <div class="cake_figures border-l border-new_border grow dark:border-new_grey">
+                <div class="cake_figures_inner">Current emissions</div>
+                <div class="cake_figures_num">1,36/block</div><!--effetto aggiornamento-->
             </div>    
         </div>
     </div>

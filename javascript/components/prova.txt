@@ -1,0 +1,44 @@
+w-[98%], 2 volte
+w-[95%], 3 volte
+w-[90%]
+w-[82%]
+w-[73%], 3 volte
+w-[53%]
+w-[47%]
+w-[46%]
+w-[45%]
+w-[36%]
+w-[34%]
+w-[32%]
+w-[31%]
+w-[30%]
+w-[900px]
+w-[850px]
+w-[425px]
+w-[296px]
+w-[110px]
+mt-[390px]
+mt-[380px]
+-mt-[180px]
+-mt-[120px]
+mt-[30px]
+mt-[5px]
+ml-[21rem], 1 volta
+-ml-[14rem]
+-ml-[4.5rem]
+-ml-[28%], 1 volta
+-ml-[54%], 1 volta
+-ml-[75px]
+mb-[50px]
+mb-[30px]
+pt-[330px]
+pl-[60px]
+pl-[50px]
+pl-[30px]
+h-[110px]
+h-[235px]
+leading-[110%]
+leading-[60px]
+leading-[26px]
+
+discover_innercard_title

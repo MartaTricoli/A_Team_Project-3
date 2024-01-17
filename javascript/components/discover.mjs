@@ -2,18 +2,22 @@ const $cirSup = document.querySelector("#cirSup");
 const $left_panel = document.querySelector("#left_panel");
 const $right_panel = document.querySelector("#right_panel");
 
-let c = 50;
-let h = 0;
-let hh = 0;
-
-const cirSupInterval = setInterval(() => {
+let c = 50; //aggiornamento numeri
+let h = 0; //apertura verticale pannello sinistra
+let hh = 0;//apertura verticale pannello destra
+let x = 0;//apertura orizzontale pannello sopra
+let xx = 0; //apertura orizzontale pannello sotto
+//aggiornamento numeri-----------------------------------------------
+/*const cirSupInterval = setInterval(() => {
     c ++;
     $cirSup.innerHTML = Intl.NumberFormat('en-US').format(c);
     if (c === 100) {
         clearInterval(cirSupInterval);
     }
-}, 1)
+}, 1)*/
+//aggiornamento numeri-----------------------------------------------
 
+//apertura verticale pannello sinistra-------------------------------
 setTimeout(( )=> {
     const leftPanel = setInterval(() => {
         $left_panel.classList.remove(`h-[${h}px]`);
@@ -24,7 +28,9 @@ setTimeout(( )=> {
         }
     }, 1)    
 }, 1000)
+//apertura verticale pannello sinistra-------------------------------
 
+//apertura verticale pannello destra----------------------------------
 setTimeout(( )=> {
     const rightPanel = setInterval(() => {
         $right_panel.classList.remove(`h-[${hh}px]`);
@@ -35,3 +41,30 @@ setTimeout(( )=> {
         }
     }, 1)    
 }, 2000)
+//apertura verticale pannello destra----------------------------------
+
+//apertura orizzontale pannello sopra---------------------------------
+setTimeout(( )=> {
+    const leftPanel = setInterval(() => {
+        $left_panel.classList.remove(`max-[968px]:w-[${x}px]`);
+        x += 50;
+        $left_panel.classList.add(`max-[968px]:w-[${x}px]`);
+        if (x === 800) {
+            clearInterval(leftPanel);
+        }
+    }, 1)    
+}, 1500)
+//apertura orizzontale pannello sopra---------------------------------
+
+//apertura orizzontale pannello sotto---------------------------------
+setTimeout(( )=> {
+    const rightPanel = setInterval(() => {
+        $right_panel.classList.remove(`max-[968px]:w-[${xx}px]`);
+        xx += 50;
+        $right_panel.classList.add(`max-[968px]:w-[${xx}px]`);
+        if (xx === 800) {
+            clearInterval(rightPanel);
+        }
+    }, 1)    
+}, 2500)
+//apertura orizzontale pannello sotto---------------------------------
