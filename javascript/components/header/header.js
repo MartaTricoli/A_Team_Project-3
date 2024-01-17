@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     //ANCHOR - swipper
     const spans = document.querySelectorAll('.z-6 span');
     const containerSpan = document.getElementById('span_container')
