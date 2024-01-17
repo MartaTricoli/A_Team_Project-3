@@ -81,12 +81,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const hour = cdContainer.querySelector('#hour')
     const minutes = cdContainer.querySelector('#minutes')
     const seconds = cdContainer.querySelector('#seconds')
+    let distance = 0;
 
     const cdTiming = () => {
         const countDownDate = new Date("Jan 30, 2024 15:37:25").getTime();
         const now = new Date().getTime();
 
-        const distance = countDownDate - now;
+        distance = countDownDate - now;
 
         const daysTime = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hoursTime = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -122,6 +123,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const svgDark = document.getElementById('svgDark');
     const svgArrowLight = document.getElementById('svgArrowLight');
     const svgArrowDark = document.getElementById('svgArrowDark');
+    const ligthCarousel = document.getElementById('ligthCarousel')
+    const darkCarousel = document.getElementById('darkCarousel')
+    const ligthCarousel2 = document.getElementById('ligthCarousel2')
+    const darkCarousel2 = document.getElementById('darkCarousel2')
 
 
     btnToggle.addEventListener('click', function () {
@@ -133,17 +138,20 @@ document.addEventListener('DOMContentLoaded', function () {
             svgDark.classList.toggle('hidden')
             svgArrowLight.classList.toggle('hidden')
             svgArrowDark.classList.toggle('hidden')
+            ligthCarousel.classList.toggle('hidden')
+            darkCarousel.classList.toggle('hidden')
+            ligthCarousel2.classList.toggle('hidden')
+            darkCarousel2.classList.toggle('hidden')
         } else {
             btnToggle.innerText = 'Dark Mode'
             svgLight.classList.toggle('hidden')
             svgDark.classList.toggle('hidden')
             svgArrowLight.classList.toggle('hidden')
             svgArrowDark.classList.toggle('hidden')
+            ligthCarousel.classList.toggle('hidden')
+            darkCarousel.classList.toggle('hidden')
+            ligthCarousel2.classList.toggle('hidden')
+            darkCarousel2.classList.toggle('hidden')
         }
     })
-
-
-
-
-
 });
