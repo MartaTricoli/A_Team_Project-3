@@ -16,7 +16,6 @@ const $containerBelowBoxSecondBtnTwo = document.querySelector("#container__below
 const $containerBelowBoxFirstBtns = document.querySelectorAll(".container__below-box-first-btn-hide");
 const $containerBelowBoxFirstBtnMore = document.querySelector("#container__below-box-first-btn-more");
 const $containerBelowBoxFirstSvgBtn = document.querySelector("#container__below-box-first-svg-btn");
-// const $containerBelowBoxSecondScroll = document.querySelector("#container__below-box-second-scroll");
 
 const utilities = {
     activeDarkMode: () => {
@@ -128,12 +127,6 @@ const utilities = {
             }
         }
     },
-    
-    // transformFadeDown: (item) => {
-    //     item.animate({ transform: "translateY(-150%)", transition: "transform 0.5s ease-in-out" }, 200, () => {
-    //         item.classList.remove("connect_wallet_appear");
-    //     });
-    // }
 }
 
 $darkModeInputFooter.addEventListener("change", () => {
@@ -168,30 +161,22 @@ $containerBelowBtnOne.addEventListener("click", () => {
 
 $containerBelowBoxSecondBtnTwo.addEventListener("click", () => {
     utilities.transformFadeLeft($containerBelowBoxSecondOne);
-    // $containerBelowBoxSecondScroll.scrollLeft += $containerBelowBoxSecondScroll.clientWidth;
 
     setTimeout(() => {
         utilities.disappearItem($containerBelowBoxSecondOne);
         utilities.appearItem($containerBelowBoxSecondTwo);
         utilities.checkWalletUI();
     }, 100);
-    // utilities.disappearItem($containerBelowBoxSecondOne);
-    // utilities.appearItem($containerBelowBoxSecondTwo);
-    // utilities.checkWalletUI();
 });
 
 $containerBelowBoxSecondBtnOne.addEventListener("click", () => {
     utilities.transformFadeRight($containerBelowBoxSecondTwo);
-    // $containerBelowBoxSecondScroll.scrollLeft -= $containerBelowBoxSecondScroll.clientWidth;
 
     setTimeout(() => {
         utilities.disappearItem($containerBelowBoxSecondTwo);
         utilities.appearItem($containerBelowBoxSecondOne);
         utilities.checkWalletUI();
     }, 100);
-    // utilities.disappearItem($containerBelowBoxSecondTwo);
-    // utilities.appearItem($containerBelowBoxSecondOne);
-    // utilities.checkWalletUI();
 });
 
 $containerBelowBoxFirstBtnMore.addEventListener("click", () => {
@@ -210,11 +195,3 @@ $containerBelowBg.addEventListener("click", () => {
         }
     }, 390)
 });
-
-// .addEventListener("click", () => {
-//     utilities.transformFadeDown($containerBelow);
-
-//     setTimeout(() => {
-//         $containerBelow.classList.add("hidden");
-//     }, 390)
-// })
