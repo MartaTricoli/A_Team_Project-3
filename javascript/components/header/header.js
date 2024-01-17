@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnToggle.addEventListener('click', function () {
         document.body.classList.toggle('dark')
-        const activeDarkMode = document.body.classList.contains('dark')
-        if (activeDarkMode) {
+        const activeDarkModeEmilio = document.body.classList.contains('dark')
+        if (activeDarkModeEmilio) {
             btnToggle.innerText = 'Light Mode'
             svgLight.classList.toggle('hidden')
             svgDark.classList.toggle('hidden')
