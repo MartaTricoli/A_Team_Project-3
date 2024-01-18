@@ -4,7 +4,6 @@ export const discover = () => {
 const $left_panel = document.querySelector("#left_panel");
 const $right_panel = document.querySelector("#right_panel");
 
-let c = 50; //aggiornamento numeri
 let h = 0; //apertura verticale pannello sinistra
 let hh = 0;//apertura verticale pannello destra
 let x = 0;//apertura orizzontale pannello sopra
@@ -33,7 +32,7 @@ setTimeout(( )=> {
             clearInterval(rightPanel);
         }
     }, 1)    
-}, 2000)
+}, 1700)
 //apertura verticale pannello destra----------------------------------
 
 //apertura orizzontale pannello sopra---------------------------------
