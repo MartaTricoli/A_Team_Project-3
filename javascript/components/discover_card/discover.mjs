@@ -1,3 +1,5 @@
+export const discover = () => {
+
 
 const $left_panel = document.querySelector("#left_panel");
 const $right_panel = document.querySelector("#right_panel");
@@ -59,3 +61,4 @@ setTimeout(( )=> {
     }, 1)    
 }, 2500)
 //apertura orizzontale pannello sotto---------------------------------
+}

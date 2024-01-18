@@ -1,3 +1,5 @@
+export const footer = () => {
+
 const $html = document.querySelector("#html");
 const $containerBelowBg = document.querySelector("#container__below-bg");
 const $darkModeLabel = document.querySelectorAll(".darkmode-label");
@@ -15,11 +17,30 @@ const $containerBelowBoxSecondBtnOne = document.querySelector("#container__below
 const $containerBelowBoxSecondBtnTwo = document.querySelector("#container__below-box-second-btn-two");
 const $containerBelowBoxFirstBtns = document.querySelectorAll(".container__below-box-first-btn-hide");
 const $containerBelowBoxFirstBtnMore = document.querySelector("#container__below-box-first-btn-more");
-const $containerBelowBoxFirstSvgBtn = document.querySelector("#container__below-box-first-svg-btn");
+
+// if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+//     document.documentElement.classList.add('dark')
+//     $darkModeInputFooter.setAttribute("checked", "true");
+//     $darkModeInputNav.setAttribute("checked", "true");
+//   } else {
+//     document.documentElement.classList.remove('dark')
+//     $darkModeInputFooter.setAttribute("checked", "false");
+//     $darkModeInputNav.setAttribute("checked", "false");
+//   }
+  
+//   // Whenever the user explicitly chooses light mode
+//   localStorage.theme = 'light'
+  
+//   // Whenever the user explicitly chooses dark modes
+//   localStorage.theme = 'dark'
+  
+//   // Whenever the user explicitly chooses to respect the OS preference
+//    localStorage.removeItem('theme')
 
 const utilities = {
     activeDarkMode: () => {
-        $html.classList.toggle("dark");
+        // $html.classList.toggle("dark");
+        $html.classList.toggle('dark')
     },
 
     appearItem: (item) => {
@@ -60,36 +81,36 @@ const utilities = {
         if ($html.classList.contains("dark")) {
             if (!$containerBelowBoxFirst.classList.contains("hidden")) {
                 $containerBelowBtnOne.classList.add("dark:bg-color_dark_grey_tab_on");
-                $containerBelowBtnOne.classList.remove("dark:bg-color_dark_grey_tab");
+                $containerBelowBtnOne.classList.remove("dark:bg-color_darkM_text_nav");
                 $containerBelowBtnOne.classList.remove("dark:text-color_dark_grey_tab_on");
-                $containerBelowBtnOne.classList.add("dark:text-color_dark_grey_tab");
+                $containerBelowBtnOne.classList.add("dark:text-color_darkM_text_nav");
                 $containerBelowBtnTwo.classList.remove("dark:bg-color_dark_grey_tab_on");
-                $containerBelowBtnTwo.classList.add("dark:bg-color_dark_grey_tab");
-                $containerBelowBtnTwo.classList.remove("dark:text-color_dark_grey_tab");
+                $containerBelowBtnTwo.classList.add("dark:bg-color_darkM_text_nav");
+                $containerBelowBtnTwo.classList.remove("dark:text-color_darkM_text_nav");
                 $containerBelowBtnTwo.classList.add("dark:text-color_dark_grey_tab_on");
 
             } else if(!$containerBelowBoxSecond.classList.contains("hidden")) {
-                $containerBelowBtnTwo.classList.remove("dark:bg-color_dark_grey_tab");
+                $containerBelowBtnTwo.classList.remove("dark:bg-color_darkM_text_nav");
                 $containerBelowBtnTwo.classList.add("dark:bg-color_dark_grey_tab_on");
                 $containerBelowBtnTwo.classList.remove("dark:text-color_dark_grey_tab_on");
-                $containerBelowBtnTwo.classList.add("dark:text-color_dark_grey_tab");
+                $containerBelowBtnTwo.classList.add("dark:text-color_darkM_text_nav");
                 $containerBelowBtnOne.classList.remove("dark:bg-color_dark_grey_tab_on");
-                $containerBelowBtnOne.classList.add("dark:bg-color_dark_grey_tab");
-                $containerBelowBtnOne.classList.remove("dark:text-color_dark_grey_tab");
+                $containerBelowBtnOne.classList.add("dark:bg-color_darkM_text_nav");
+                $containerBelowBtnOne.classList.remove("dark:text-color_darkM_text_nav");
                 $containerBelowBtnOne.classList.add("dark:text-color_dark_grey_tab_on");
 
                 if (!$containerBelowBoxSecondOne.classList.contains("hidden")) {
-                    $containerBelowBoxSecondBtnTwo.classList.remove("dark:bg-color_btn_slider_on");
+                    $containerBelowBoxSecondBtnTwo.classList.remove("dark:bg-color_title_settings");
                     $containerBelowBoxSecondBtnTwo.classList.add("dark:bg-[#262130]");
                     $containerBelowBoxSecondBtnOne.classList.remove("dark:bg-[#262130]");
-                    $containerBelowBoxSecondBtnOne.classList.add("dark:bg-color_btn_slider_on");
+                    $containerBelowBoxSecondBtnOne.classList.add("dark:bg-color_title_settings");
                     
 
                 } else if(!$containerBelowBoxSecondTwo.classList.contains("hidden")) {
-                    $containerBelowBoxSecondBtnOne.classList.remove("dark:bg-color_btn_slider_on");
+                    $containerBelowBoxSecondBtnOne.classList.remove("dark:bg-color_title_settings");
                     $containerBelowBoxSecondBtnOne.classList.add("dark:bg-[#262130]");
                     $containerBelowBoxSecondBtnTwo.classList.remove("dark:bg-[#262130]");
-                    $containerBelowBoxSecondBtnTwo.classList.add("dark:bg-color_btn_slider_on");
+                    $containerBelowBoxSecondBtnTwo.classList.add("dark:bg-color_title_settings");
 
                 }
             }
@@ -97,31 +118,31 @@ const utilities = {
         } else {
             if (!$containerBelowBoxFirst.classList.contains("hidden")) {
                 $containerBelowBtnOne.classList.add("bg-color_new_gray");
-                $containerBelowBtnOne.classList.remove("bg-color_btn_footer");
+                $containerBelowBtnOne.classList.remove("bg-color_text_sub");
                 $containerBelowBtnOne.classList.remove("text-color_tertiary");
-                $containerBelowBtnOne.classList.add("text-color_btn_footer");
+                $containerBelowBtnOne.classList.add("text-color_text_sub");
                 $containerBelowBtnTwo.classList.remove("bg-color_new_gray");
-                $containerBelowBtnTwo.classList.add("bg-color_btn_footer");
-                $containerBelowBtnTwo.classList.remove("text-color_btn_footer");
+                $containerBelowBtnTwo.classList.add("bg-color_text_sub");
+                $containerBelowBtnTwo.classList.remove("text-color_text_sub");
                 $containerBelowBtnTwo.classList.add("text-color_tertiary");
 
             } else if(!$containerBelowBoxSecond.classList.contains("hidden")) {
                 $containerBelowBtnOne.classList.add("text-color_tertiary");
-                $containerBelowBtnOne.classList.remove("text-color_btn_footer");
+                $containerBelowBtnOne.classList.remove("text-color_text_sub");
                 $containerBelowBtnOne.classList.remove("bg-color_new_gray");
-                $containerBelowBtnOne.classList.add("bg-color_btn_footer");
+                $containerBelowBtnOne.classList.add("bg-color_text_sub");
                 $containerBelowBtnTwo.classList.remove("text-color_tertiary");
-                $containerBelowBtnTwo.classList.add("text-color_btn_footer");
+                $containerBelowBtnTwo.classList.add("text-color_text_sub");
                 $containerBelowBtnTwo.classList.add("bg-color_new_gray");
-                $containerBelowBtnTwo.classList.remove("bg-color_btn_footer");
+                $containerBelowBtnTwo.classList.remove("bg-color_text_sub");
 
                 if (!$containerBelowBoxSecondOne.classList.contains("hidden")) {
-                    $containerBelowBoxSecondBtnOne.classList.add("bg-color_btn_slider_on");
-                    $containerBelowBoxSecondBtnTwo.classList.remove("bg-color_btn_slider_on");
+                    $containerBelowBoxSecondBtnOne.classList.add("bg-color_title_settings");
+                    $containerBelowBoxSecondBtnTwo.classList.remove("bg-color_title_settings");
 
                 } else if(!$containerBelowBoxSecondTwo.classList.contains("hidden")) {
-                    $containerBelowBoxSecondBtnTwo.classList.add("bg-color_btn_slider_on");
-                    $containerBelowBoxSecondBtnOne.classList.remove("bg-color_btn_slider_on");
+                    $containerBelowBoxSecondBtnTwo.classList.add("bg-color_title_settings");
+                    $containerBelowBoxSecondBtnOne.classList.remove("bg-color_title_settings");
 
                 }
             }
@@ -133,10 +154,15 @@ $darkModeInputFooter.addEventListener("change", () => {
     $darkModeInputNav.checked = $darkModeInputFooter.checked
 })
 
+$darkModeInputNav.addEventListener("change", () => {
+    $darkModeInputFooter.checked = $darkModeInputNav.checked
+})
+
 $connectWalletBtn.forEach((button) => {
     button.addEventListener("click", () => {
         $containerBelow.classList.remove("hidden");
         $containerBelow.classList.add("connect_wallet_appear");
+        document.body.classList.add("overflow-y-hidden");
     })
 });
 
@@ -187,6 +213,7 @@ $containerBelowBg.addEventListener("click", () => {
     utilities.disappearItemFade($containerBelow);
 
     setTimeout(() => {
+        document.body.classList.remove("overflow-y-hidden")
         $containerBelow.classList.remove("connect_wallet_appear")
         utilities.disappearItem($containerBelow);
 
@@ -195,3 +222,4 @@ $containerBelowBg.addEventListener("click", () => {
         }
     }, 390)
 });
+}

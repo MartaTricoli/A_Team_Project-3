@@ -1,3 +1,5 @@
+export const header = () => {
+
 document.addEventListener('DOMContentLoaded', () => {
     //ANCHOR - swipper
     const spans = document.querySelectorAll('.z-6 span');
@@ -118,40 +120,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     //button for style mode
-    const btnToggle = document.getElementById('toggleMode');
-    const svgLight = document.getElementById('svgLight');
-    const svgDark = document.getElementById('svgDark');
-    const svgArrowLight = document.getElementById('svgArrowLight');
-    const svgArrowDark = document.getElementById('svgArrowDark');
-    const ligthCarousel = document.getElementById('ligthCarousel')
-    const darkCarousel = document.getElementById('darkCarousel')
-    const ligthCarousel2 = document.getElementById('ligthCarousel2')
-    const darkCarousel2 = document.getElementById('darkCarousel2')
+    // const btnToggle = document.getElementById('toggleMode');
+    // const svgLight = document.getElementById('svgLight');
+    // const svgDark = document.getElementById('svgDark');
+    // const svgArrowLight = document.getElementById('svgArrowLight');
+    // const svgArrowDark = document.getElementById('svgArrowDark');
+    // const ligthCarousel = document.getElementById('ligthCarousel')
+    // const darkCarousel = document.getElementById('darkCarousel')
+    // const ligthCarousel2 = document.getElementById('ligthCarousel2')
+    // const darkCarousel2 = document.getElementById('darkCarousel2')
 
 
-    btnToggle.addEventListener('click', function () {
-        document.body.classList.toggle('dark')
-        const activeDarkModeEmilio = document.body.classList.contains('dark')
-        if (activeDarkModeEmilio) {
-            btnToggle.innerText = 'Light Mode'
-            svgLight.classList.toggle('hidden')
-            svgDark.classList.toggle('hidden')
-            svgArrowLight.classList.toggle('hidden')
-            svgArrowDark.classList.toggle('hidden')
-            ligthCarousel.classList.toggle('hidden')
-            darkCarousel.classList.toggle('hidden')
-            ligthCarousel2.classList.toggle('hidden')
-            darkCarousel2.classList.toggle('hidden')
-        } else {
-            btnToggle.innerText = 'Dark Mode'
-            svgLight.classList.toggle('hidden')
-            svgDark.classList.toggle('hidden')
-            svgArrowLight.classList.toggle('hidden')
-            svgArrowDark.classList.toggle('hidden')
-            ligthCarousel.classList.toggle('hidden')
-            darkCarousel.classList.toggle('hidden')
-            ligthCarousel2.classList.toggle('hidden')
-            darkCarousel2.classList.toggle('hidden')
-        }
-    })
+    // btnToggle.addEventListener('click', function () {
+    //     document.body.classList.toggle('dark')
+    //     const activeDarkModeEmilio = document.body.classList.contains('dark')
+    //     if (activeDarkModeEmilio) {
+    //         btnToggle.innerText = 'Light Mode'
+    //         svgLight.classList.toggle('hidden')
+    //         svgDark.classList.toggle('hidden')
+    //         svgArrowLight.classList.toggle('hidden')
+    //         svgArrowDark.classList.toggle('hidden')
+    //         ligthCarousel.classList.toggle('hidden')
+    //         darkCarousel.classList.toggle('hidden')
+    //         ligthCarousel2.classList.toggle('hidden')
+    //         darkCarousel2.classList.toggle('hidden')
+    //     } else {
+    //         btnToggle.innerText = 'Dark Mode'
+    //         svgLight.classList.toggle('hidden')
+    //         svgDark.classList.toggle('hidden')
+    //         svgArrowLight.classList.toggle('hidden')
+    //         svgArrowDark.classList.toggle('hidden')
+    //         ligthCarousel.classList.toggle('hidden')
+    //         darkCarousel.classList.toggle('hidden')
+    //         ligthCarousel2.classList.toggle('hidden')
+    //         darkCarousel2.classList.toggle('hidden')
+    //     }
+    // })
 });
+}
