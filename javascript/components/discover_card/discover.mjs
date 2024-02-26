@@ -60,5 +60,4 @@ export const discover = () => {
         }, 1)    
     }, 2500)
     //apertura orizzontale pannello sotto---------------------------------
-    videoScroll
 }
